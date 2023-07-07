@@ -1,5 +1,7 @@
 # grupo_2_nombre
 
+**Temática: Ropa Urbana**
+
 **Descripción:**
 
 Se llevará a cabo una página ecommerce con el fin de proveer productos de indumentaria, brindándole a los clientes una amplia variedad de talles y precios.
