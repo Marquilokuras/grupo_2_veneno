@@ -15,7 +15,7 @@ La página contendrá una sección de armar tu outfit donde se podrá acceder a 
 - Esteban Ezequiel Villanueva
 - Matias Rueda Velez
 
-**Links de Guía:**
+**Sitios de Referencia:**
 
 https://ninayco.com/93-buzos : Fue elegido por la disposición de los productos y su diseño de página para mostrar los mismos.
 
