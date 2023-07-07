@@ -12,10 +12,11 @@ La página contendrá una sección de armar tu outfit donde se podrá acceder a 
 
 
 **Integrantes del Equipo:**
-
+- Sergio Balero |
 - Sergio Eliel Balero
 - Leandro Agustín Montero
 - Marcos Quinteros
+- Elisa Soruco
 - Esteban Ezequiel Villanueva
 - Matias Rueda Velez
 
