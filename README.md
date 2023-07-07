@@ -2,6 +2,9 @@
 
 **Descripción:**
 
+Se llevará a cabo una página ecommerce con el fin de proveer productos de indumentaria, brindándole a los clientes una amplia variedad de talles y precios.
+
+La página contendrá una sección de armar tu outfit donde se podrá acceder a todas las prendas y seleccionar a gusto, se podrá observar todos los outfit de los clientes y realizar un comentario al respecto. También se brindarán ofertas exclusivas para miembros frecuentes del sitio y contendrá una sección internacional, que brindará diferentes estilos de todo el mundo.
 
 
 **Integrantes del Equipo:**
