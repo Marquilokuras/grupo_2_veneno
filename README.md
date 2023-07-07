@@ -1,6 +1,8 @@
-# grupo_2_nombre
+# grupo_2_Veneno
 
 **Temática: Ropa Urbana**
+
+**Logo: https://drive.google.com/file/d/1JE_qp4FxV8KwyDFR-TDuGuJwTTpO5VT7/view?usp=sharing**
 
 **Descripción:**
 
