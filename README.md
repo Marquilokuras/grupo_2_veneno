@@ -19,6 +19,7 @@ La página contendrá una sección de armar tu outfit donde se podrá acceder a 
 - Elisa Soruco
 - Esteban Ezequiel Villanueva
 - Matias Rueda Velez
+- Joaquin Alessandro Yarbi Aiza
 
 **Sitios de Referencia:**
 
