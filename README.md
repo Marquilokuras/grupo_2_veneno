@@ -13,7 +13,6 @@ La página contendrá una sección de armar tu outfit donde se podrá acceder a 
 La página apunta a personas de entre 15 a 30 años con estilos de moda urbana.
 
 **Integrantes del Equipo:**
-- Sergio Balero
 - Sergio Eliel Balero
 - Leandro Agustín Montero
 - Marcos Quinteros
