@@ -10,6 +10,7 @@ Se llevará a cabo una página ecommerce con el fin de proveer productos de indu
 
 La página contendrá una sección de armar tu outfit donde se podrá acceder a todas las prendas y seleccionar a gusto, se podrá observar todos los outfit de los clientes y realizar un comentario al respecto. También se brindarán ofertas exclusivas para miembros frecuentes del sitio y contendrá una sección internacional, que brindará diferentes estilos de todo el mundo.
 
+La página apunta a personas de entre 15 a 30 años con estilos de moda urbana.
 
 **Integrantes del Equipo:**
 - Sergio Balero
