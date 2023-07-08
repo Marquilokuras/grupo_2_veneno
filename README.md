@@ -6,9 +6,9 @@
 
 **Descripción:**
 
-Se llevará a cabo una página ecommerce con el fin de proveer productos de indumentaria, brindándole a los clientes una amplia variedad de talles y precios.
+Veneno es una empresa ecommerce de Jujuy, con el fin de proveer indumentaria, brindándole a los clientes una amplia variedad de talles y precios.
 
-La página contendrá una sección de armar tu outfit donde se podrá acceder a todas las prendas y seleccionar a gusto, se podrá observar todos los outfit de los clientes y realizar un comentario al respecto. También se brindarán ofertas exclusivas para miembros frecuentes del sitio y contendrá una sección internacional, que brindará diferentes estilos de todo el mundo.
+En la página se puede observar diferentes indumentarias al mejor estilo urbano, se podra seleccionar la indumentaria que más se adapte a tus necesidades, se podra seleccionar entre diferentes métodos de pagos. También contendrá una sección de armar tu outfit donde se podrá acceder a todas las prendas y seleccionar a gusto, se podrá observar todos los outfit de los clientes y realizar un comentario al respecto. También se brindarán ofertas exclusivas para miembros frecuentes del sitio.
 
 La página apunta a personas de entre 15 a 30 años con estilos de moda urbana.
 
