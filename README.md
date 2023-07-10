@@ -14,6 +14,13 @@ Nos enorgullece ofrecer productos confeccionados con materiales duraderos y cóm
 
 ¡Únete a la cultura urbana y encuentra tu estilo hoy mismo!
 
+Paleta de colores:
+- HEX : #ffffff
+- HEX : #202020
+- HEX : #9bcf29
+- HEX : #202020
+- HEX : #fdeae7
+
 **Integrantes del Equipo:**
 - Sergio Eliel Balero
 - Leandro Agustín Montero
