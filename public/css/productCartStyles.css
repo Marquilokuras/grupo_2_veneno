@@ -1,0 +1,35 @@
+* {
+   align-content: center;
+  text-align: center; 
+}
+
+body, html {
+    height: 100%;
+    margin: 2px;
+    padding: 0;
+  }
+
+// Cabecera de Seccion Carrito
+
+.close {
+
+}
+
+.productoComprar {
+  justify-content: center;
+  align-items: center;
+//  height: 100vh;
+}
+
+img {
+
+}
+
+// Pie de Seccion Carrito
+
+.productoCompra{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
