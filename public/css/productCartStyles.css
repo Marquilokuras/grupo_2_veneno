@@ -1,35 +1,125 @@
 * {
-   align-content: center;
-  text-align: center; 
+  box-sizing: border-box; /* Incluye el padding y borde dentro del ancho del elemento */
+  margin: 0;
+  padding: 0;
 }
 
-body, html {
-    height: 100%;
-    margin: 2px;
-    padding: 0;
-  }
+body,
+html {
+  height: 100%;
+}
 
-// Cabecera de Seccion Carrito
+/* Cabecera de Sección Carrito */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 .close {
-
+  margin-right: auto; /* Desplaza el ícono de cierre a la derecha */
 }
 
 .productoComprar {
-  justify-content: center;
+  display: flex;
   align-items: center;
-//  height: 100vh;
+  border-bottom: 1px solid grey;
+  padding: 10px;
 }
 
 img {
-
+  width: 75px;
+  margin-right: 10px;
 }
 
-// Pie de Seccion Carrito
+#borrar {
+  margin-left: auto; /* Desplaza el ícono de borrar a la derecha */
+}
 
-.productoCompra{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh;
+/* Cuerpo del Carrito */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ /*  height: 100%; */
+  padding: 10px;
+}
+
+.productoSubtotal {
+  border-bottom: 1px solid grey;
+  padding: 10px;
+}
+
+/* Sección Envío */
+
+.envio{
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.productoEnvio {
+  margin-top: 5px;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.productoEnvio svg {
+  margin-right: 5px;
+}
+
+.productoEnvio input {
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.productoEnvio button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.productoEnvio a {
+  margin-left: auto;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Sección Regalo */
+
+.productoRegalo {
+  margin-top: 5px;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Pie de Sección Carrito */
+
+.productoCompra {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.productoCompra button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.productoCompra button:last-child {
+  background-color: #28a745; /* Color verde para el botón "Ver más Productos" */
 }
