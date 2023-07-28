@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: #202020;
+    text-align: center;
+}
+
+main{
+    background-color: #ebedeb;
+    height: 80vh;
+}
+
+footer{
+    background-color: #202020;
+    text-align: center;
+}
+
+footer a{
+    padding: 0px 10px;
+}
+
+footer p{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: #9bcf29;
+}
+
+button{
+    font-size: 20px;
+    padding: 2px 25px;
+    background-color: #9bcf29;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
