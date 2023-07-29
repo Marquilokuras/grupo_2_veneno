@@ -41,3 +41,6 @@ https://dropoversized.com.ar/ : Fue elegido por el carrusel que muestra los prod
 https://www.1992wear.com/ : Se eligió por contener un footer diferente a otras páginas, también por incluir videos y una indicación del precio en cuotas en cada productos.
 
 https://www.luxo.com.ar/?gclid=Cj0KCQjw756lBhDMARIsAEI0AgklQ-iFL70iTeRd5kn_tCdUP4OdUwTfFy-hk6F2VbjQzbhq_vpzgEEaAtEDEALw_wcB :  Fue elegido por su header, ya que es muy agradable con el usuario que lo utiliza.
+
+**Enlace al Tablero de Trabajo**
+https://trello.com/invite/b/h6mfb9Vw/ATTI8d56fcae08cb2335090ea82c30828ee73928275A/digital-house-grupo-02
