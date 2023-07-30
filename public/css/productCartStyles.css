@@ -2,6 +2,7 @@
   box-sizing: border-box; /* Incluye el padding y borde dentro del ancho del elemento */
   margin: 0;
   padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body,
@@ -122,4 +123,17 @@ main {
 
 .productoCompra button:last-child {
   background-color: #28a745; /* Color verde para el botón "Ver más Productos" */
+}
+
+
+/* Estilos para tablets (ancho mínimo 361px) */
+@media screen and (min-width: 768px) {
+
+
+}
+
+/* Estilos para desktops (ancho mínimo 769px) */
+@media screen and (min-width: 1024px) {
+ 
+
 }
