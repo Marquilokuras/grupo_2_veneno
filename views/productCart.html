@@ -52,7 +52,7 @@
 
         <div class="productoSubtotal">
             <h3>Subtotal (sin envío) :</h3>
-            <p id="precioSinEnvio">$ ACA VA EL PRECIO</p>
+            <p id="precioSinEnvio">$ ......,..</p>
         </div>
 
         <div class="envio">
@@ -66,20 +66,25 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
                 <path
                     d="M36.8 192H603.2c20.3 0 36.8-16.5 36.8-36.8c0-7.3-2.2-14.4-6.2-20.4L558.2 21.4C549.3 8 534.4 0 518.3 0H121.7c-16 0-31 8-39.9 21.4L6.2 134.7c-4 6.1-6.2 13.2-6.2 20.4C0 175.5 16.5 192 36.8 192zM64 224V384v80c0 26.5 21.5 48 48 48H336c26.5 0 48-21.5 48-48V384 224H320V384H128V224H64zm448 0V480c0 17.7 14.3 32 32 32s32-14.3 32-32V224H512z" />
-            </svg> Retirá <strong>GRATIS</strong> en nuestras sucursales | Ver opciones
+            </svg> Retirá GRATIS en nuestras sucursales | Ver opciones
         </div>
 
         <div class="productoEnvio">
-            <div>
+            <div class="codigoP">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
                     <path
                         d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z" />
                 </svg>
                 <p>Tu código postal</p>
             </div>
-            <input type="number">
-            <button type="submit">CALCULAR</button>
-            <a href="https://codigopostal.com.ar/" target="_blank">No sé mi código postal</a>
+
+            <div class="calculoPostal">
+                <form action="" >
+                    <input type="number">
+                    <button type="submit">CALCULAR</button>
+                    <a href="https://codigopostal.com.ar/" target="_blank">No sé mi código postal</a>
+                </form>
+            </div>
         </div>
 
         <div class="productoRegalo">
@@ -92,13 +97,13 @@
         </div>
 
         <div class="productoCompra">
-            <h3><strong>Total:</strong> $ACA VA EL TOTAL</h3>
+            <h3><strong>Total:</strong> $ ......,..</h3>
 
         </div>
 
         <div class="productoCompra">
             <button type="submit">Comprar</button>
-            <button type="button">Ver más Productos</button>
+            <button type="button"> <a href="http://localhost:4200/">Ver más Productos</a></button>
         </div>
     </main>
     <footer>
