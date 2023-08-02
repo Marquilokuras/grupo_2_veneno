@@ -8,11 +8,13 @@
 header{
     background-color: #202020;
     text-align: center;
+    border-bottom: solid 2px white;
 }
 
 main{
-    background-color: #ebedeb;
+    background-color: #202020;
     height: 80vh;
+    padding: 50px;
 }
 
 footer{
@@ -28,9 +30,18 @@ footer p{
     color: white;
 }
 
+h1{
+    color: white;
+    padding: 10px 0;
+}
+
 a{
     text-decoration: none;
     color: #9bcf29;
+}
+
+p{
+    color: white;
 }
 
 button{
@@ -38,8 +49,110 @@ button{
     padding: 2px 25px;
     background-color: #9bcf29;
     border-radius: 5px;
+    color: #202020;
+}
+
+main div {
+    padding-top: 15px; padding-bottom: 15px;
+}
+
+.logo{
+    width: 30%;
+}
+
+div.form-login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: #202020;
+    padding: 30px 15px;
+    border-radius: 10px;
+    border: solid 5px #9bcf29;
+}
+
+div.form-login form label{
     color: white;
+}
+
+label{
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+div.form-login form input{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 10px;
+}
+
+div.correo-user label{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.password{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.container-button{
+    display: flex;
+    justify-content: center;
+}
+
+div.enlace-registro{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+div.enlace-registro a{
+    padding-left: 5px;
+}
+
+/* animacion */
+
+
+main a:hover{
+    color: white;
+}
+
+footer a:hover{
+    color: white;
+}
+
+button:hover{
+    font-weight: bold;
+    color: white;
+}
+
+main form input:focus{
+    border: solid 4px #9bcf29;
+    outline: none;
+    /* background-color: #9bcf29; */
 }
 
 
 
+@media (min-width: 730px) {
+    .logo{
+        width: 8%;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.form-login{
+        width: 50%;
+    }
+}
