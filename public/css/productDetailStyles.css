@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: #ffffff; */
+}
+
+body {
+    background-color: #202020;
+}
+
+/* Header */
+
+nav {
+    padding-bottom: 5px;
+    border-bottom: solid 1px #ffeced;
+}
+
+nav a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fdfdfd;
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+nav a i {
+    color: rgb(145, 209, 7);
+    width: 40px;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+
+nav img {
+    width: 300px;
+    margin: auto;
+}
+
+/* Cuerpo */
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Productos */
+
+.main-imagenes .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-imagenes .imgs img {
+    width: 350px;
+    height: 300px;
+    padding: 5px;
+}
+
+
+/* Lateral de la Pagina */
+
+aside {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Estilos para el selector de colores */
+.color-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.color-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-red {
+    background-color: red;
+}
+
+.color-blue {
+    background-color: blue;
+}
+
+.color-green {
+    background-color: green;
+}
+
+.color-yellow {
+    background-color: yellow;
+}
+
+.color-purple {
+    background-color: purple;
+}
+
+*/
+
+/* Estilos para los botones desplegables */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para tablets (ancho mínimo 361px) */
+@media screen and (min-width: 768px) {}
+
+/* Estilos para desktops (ancho mínimo 769px) */
+@media screen and (min-width: 1024px) {}
