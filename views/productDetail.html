@@ -35,7 +35,7 @@
                 <img src="img/img1Cuadro.jpg" alt="Imagen 2">
                 <img src="img/img1Cuadro.jpg" alt="Imagen 4">
             </div>
-            <button id="nextBtn">Siguiente</button>
+            <!--             <button id="nextBtn">Siguiente</button> -->
             <div class="opciones">
                 <div class="dropdown">
                     <button>Descripcion</button>
@@ -66,18 +66,20 @@
             </div>
         </div>
 
-        <aside>
+        <div class="aside">
             <div class="detalle">
 
                 <form action="/productCart" method="post">
                     <div class="descripcion">
-                        <label for="nombreProducto">Nombre del Producto:</label>
+                        <!--    <label for="nombreProducto">Nombre del Producto:</label>
                         <input type="text" id="nombreProducto" name="nombreProducto" required>
                         <label for="precio">Precio:</label>
                         <input type="number" id="precio" name="precio" required>
-
-                        <div class="color-selector">
-                            <label>Seleccione un color:</label>
+ -->
+                        <p>Nombre del Producto:</p>
+                        <p>Precio: </p>
+                        <label>Seleccione un color:</label>
+                        <!-- <div class="color-selector">
                             <input type="radio" id="color-red" name="color" value="red" onclick="selectColor('red')"
                                 required>
                             <label for="color-red" class="color-circle color-red"></label>
@@ -97,10 +99,26 @@
                             <input type="radio" id="color-purple" name="color" value="purple"
                                 onclick="selectColor('purple')" required>
                             <label for="color-purple" class="color-circle color-purple"></label>
-                        </div>
+                        </div> -->
+
+                        <select id="colorSelect">
+                            <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo</option>
+                            <option value="#00FF00" class="color-option" style="background-color: #00FF00;">Verde</option>
+                            <option value="#0000FF" class="color-option" style="background-color: #0000FF;">Azul</option>
+                            <option value="#FFFF00" class="color-option" style="background-color: #FFFF00;">Amarillo</option>
+                            <option value="#FF00FF" class="color-option" style="background-color: #FF00FF;">Magenta</option>
+                            <option value="#00FFFF" class="color-option" style="background-color: #00FFFF;">Cian</option>
+                        </select>
 
                         <label for="talles">Talles:</label>
-                        <input type="text" id="talles" name="talles" required>
+                        <select id="talles" name="talles" required>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
 
                         <div class="guia">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -112,29 +130,24 @@
 
                         <input type="submit" value="Añadir al Carrito">
                     </div>
-
-                    <div class="envio">
-                        <div>
-                            <p>ENVIO GRATIS APARTIR DE $29.999</p>
-                        </div>
-
-                        <div>
-                            <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
-                        </div>
-
-                        <div>
-                            <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
-                        </div>
-                    </div>
             </div>
-        </aside>
+
+            <div class="envio">
+                <p>ENVIO GRATIS APARTIR DE $29.999</p>
+                <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
+                <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
+            </div>
+
+        </div>
 
     </main>
+
     <footer>
         <div class="div-copyrigth">
             <strong class="copyrigth">2023 Veneno | Todos los derechos reservados</strong>
         </div>
     </footer>
+
 </body>
 
 </html>
