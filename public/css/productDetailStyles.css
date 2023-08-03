@@ -45,69 +45,37 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 5px;
 }
 
 /* Productos */
 
-.main-imagenes .imgs {
+.main-imagenes {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgs {
+   /* display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-}
-
-.main-imagenes .imgs img {
-    width: 350px;
-    height: 300px;
+     max-width: 60%; */
+    margin: 0 auto;
     padding: 5px;
 }
 
-
-/* Lateral de la Pagina */
-
-aside {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 20px;
-    flex: 1;
+.imgs img {
+    width: 100%;
+    height: auto;
 }
 
-/* Estilos para el selector de colores */
-.color-selector {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
+.opciones {
+    max-width: 60%;
+    text-align: center;
+    margin: 20px 0;
 }
-
-.color-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.color-red {
-    background-color: red;
-}
-
-.color-blue {
-    background-color: blue;
-}
-
-.color-green {
-    background-color: green;
-}
-
-.color-yellow {
-    background-color: yellow;
-}
-
-.color-purple {
-    background-color: purple;
-}
-
-*/
 
 /* Estilos para los botones desplegables */
 .dropdown {
@@ -139,8 +107,50 @@ aside {
     display: block;
 }
 
+/* Lateral de la Pagina */
+.aside {
+    background-color: #ffffff;
+    color: #000000;
+    max-width: 40%;
+    text-align: center;
+    padding: 2px;
+}
+
+.aside .detalle form *{
+    margin: 2px;
+    padding: 2px;
+}
+
+/* Estilo para la Guia de Talle */
+.guia svg, .guia p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.envio{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+
+footer {
+    margin: 5px;
+}
+
 /* Estilos para tablets (ancho mínimo 361px) */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+      /* Opcional: ajusta el tamaño de las imágenes según tus necesidades */
+      .imgs img {
+        width: 100%; /* O ajusta el ancho deseado */
+        height: auto;
+      }
+}
 
 /* Estilos para desktops (ancho mínimo 769px) */
 @media screen and (min-width: 1024px) {}
