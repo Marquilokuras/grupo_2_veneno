@@ -69,44 +69,7 @@ body{
 }
 
 
-/*main .slider-anuncios .div-slider-anuncios{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 25px;
-}
-main .slider-anuncios .div-slider-anuncios button{
-    background-color: inherit;
-    border: none;
 
-}
-main .slider-anuncios .div-slider-anuncios button i{
-    width: 25px;
-    font-size: 30px;
-}
-main .slider{
-    list-style: none;
-    position: relative;
-}
-main .slider li{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    width: inherit;
-    height: inherit;
-    transition: opacity .5s;
-}
-.slider li:first-child{
-    opacity: 1;
-}
-#slide-1 img{
-    width: 70vw;
-}
-main .menu-slider{
-    list-style: none;
-    text-align: center;
-}*/
 
 main{
     margin-bottom: 50px;
@@ -182,8 +145,6 @@ main .div-remeras a, .div-camperas a, .div-jeans a, .div-accesorios a{
     text-decoration: none;
     color:rgb(121, 255, 128);
 }
-
-
 
 
 main .contenedor-de-articulos{
@@ -283,7 +244,7 @@ footer .copyrigth{
 
 
 
-/*Estilos más complejos*/
+/*Estilos extras*/
 .nav-secciones a:hover{
     color:rgb(145,209,7)
 }
