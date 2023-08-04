@@ -4,51 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
     <title>Home</title>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Productos</a>
-            <a href="">Armá tu outfit</a>
-            <a href="">Exclusividad Clientes VIP</a>
-            <a href="">Indumentaria Mundial</a>
-            <a href="">Redes</a>
-            <a href="">Preguntas Frecuentes</a>
-            <img src="img/veneno-logo.jpeg" alt="Logo-Veneno">
-            <input type="text">
-            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href=""><i class="fa-solid fa-cart-plus"></i></a>
-            <a href=""><i class="fa-solid fa-circle-user"></i></a>     
-        </nav>
+        <div class="nav">
+            <img src="img/veneno-logo-oficial.jpeg" alt="Logo-Veneno">
+            <div class="nav-secciones">
+                <a href="">Home</a>
+                <a href="">Productos</a>
+                <a href="">Armá tu outfit</a>
+                <a href="">Exclusividad Clientes VIP</a>
+                <a href="">Indumentaria Mundial</a>
+                <a href="">Redes</a>
+                <a href="">Preguntas Frecuentes</a>
+            </div>
+            <div class="nav-search-carrito-usuario">
+                <form action="">
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: rgb(145, 209, 7)"></i></button>
+                </form>
+                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                <a href=""><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
     </header>
     <main>
-        <section class="section-div-anuncios">
-            <div class="div-anuncios">
-                <button><i class="fa-solid fa-angle-left" style="color: rgb(145, 209, 7);"></i></button>
-                <img src="img/img1Cuadro.jpg" alt="">
-                <img src="img/img3Cuadro.jpg" alt="">
-                <img src="img/img4Cuadro.jpg" alt="">
-                <button><i class="fa-solid fa-angle-right" style="color: rgb(145, 209, 7);"></i></button>
+        <section class="section-hombre-mujer">
+            <div class="div-hombre-mujer">
+                <a href=""><img src="img/hombre.webp" alt=""></a>
+                <a href=""><img src="img/mujer.webp" alt=""></a>
             </div>
         </section>
-        <section class="section-caja-cuatro-prendas"></section>
-        <section class="section-con-varios-articulos-en-exhibicion"></section>
+        <section class="section-opcion-prendas">
+            <div class="conteiner">
+                <div class="div-opcion-prendas">
+                    <img src="img/remeraswebp.webp" alt="remeras">
+                    <div class="div-remeras">
+                        <a href="">REMERAS</a>
+                    </div>
+                </div>
+                <div class="div-opcion-prendas">
+                    <img src="img/camperas.webp" alt="camperas">
+                    <div class="div-camperas">
+                        <a href="">CAMPERAS</a>
+                    </div>
+                </div>
+                <div class="div-opcion-prendas">
+                    <img src="img/pantalon.webp" alt="jeans">
+                    <div class="div-jeans">
+                        <a href="">PANTALONES</a>
+                    </div>
+                </div>
+                <div class="div-opcion-prendas">
+                    <img src="img/accesorios.jpeg" alt="accesorios">
+                    <div class="div-accesorios">
+                        <a href="">ACCESORIOS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-articulos-en-exhibicion">
+            <div class="contenedor-de-articulos">
+                <article>
+                    <div class="descripcion">
+                        <img src="img/remeronmanifest-hombre.webp" alt="remeron manifest">
+                        <h3 class="desc"> Remeron Manifest</h3>
+                        <p class="precio">$18.000</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/remeronbrockenwhite-hombre.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Remeron Brocken White</h3>
+                        <p class="precio">$17.400</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/remeronessentialblack-mujer.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Remeron Essential Black</h3>
+                        <p class="precio">$16.000</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/remeronbalance-mujer.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Remeron Balance</h3>
+                        <p class="precio">$17.400</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/buzotopessential-mujer.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Buzo Top Essential</h3>
+                        <p class="precio">$42.000</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/camperavelvettrack-mujer.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Campera Velvet Track</h3>
+                        <p class="precio">$29.400</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/buzobenight-hombre-.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Buzo Be Night</h3>
+                        <p class="precio">$48.000</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/camperacollageblack-hombre.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Campera Collage Black</h3>
+                        <p class="precio">$54.600</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/pantalonnab-hombre.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Pantalon Snaps</h3>
+                        <p class="precio">$35.700</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/pantalontrackpantblack-mujer.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Pantalon Track Black</h3>
+                        <p class="precio">$32.500</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/carpenterblackpant-hombre.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Pantalon Carpenter Black</h3>
+                        <p class="precio">$31.500</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/pantalonpanchutenabblack-mujer.webp" alt="">
+                    <div class="descripcion">
+                        <h3 class="desc">Pantalon Parachute NAB Black</h3>
+                        <p class="precio">$35.700</p>
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        <a class="mas-informacion" href="">Más información</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="section-footer">
-            <div class="div-section-footer">
-                <section class="section-tarjetas">
-
-                </section>
-                <section class="section-links-extras">
-
-                </section>
-                <section class="section-seguinos">
-
-                </section>
+            <div class="div-footer">
+                <div class="tarjetas">
+                    <h4>Pagos</h4>
+                    <img src="img/visa.png" alt="">
+                    <img src="img/mastercard.png" alt="">
+                    <img src="img/paypal.png" alt="">
+                    <img src="img/banelco.png" alt="">
+                    <img src="img/tarjeta-naranja.png" alt="">
+                    <img src="img/mercadopago.png" alt="">
+                    <img src="img/pagofacil.png" alt="">
+                    <img src="img/rapipago.png" alt="">
+                    <img src="img/oca.png" alt="">
+                </div>
+                <div class="atajo">
+                    <h4>Menú</h4>
+                    <a href="">HOME</a>
+                    <a href="">PRODUCTOS</a>
+                    <a href="">ARMA TU OUTFIT</a>
+                    <a href="">EXCLUSIVIDAD CLIENTES VIP</a>
+                    <a href="">INDUMENTARIA MUNDIAL</a>
+                    <a href="">REDES</a>
+                    <a href="">PREGUNTAS FRECUENTES</a>
+                </div>
+                <div class="sede">
+                    <h4>Contactános</h4>
+                    <p>ventas@venenojujuy.com.ar</p>
+                    <p>Lavalle Nº154, San Salvador de Jujuy, Argentina</p>
+                </div>
+                <div class="seguinos">
+                    <h4>Seguinos en</h4>
+                    <a href=""><img src="img/facebook.png" alt=""></a>
+                    <a href=""><img src="img/instagram.png" alt=""></a>
+                    <a href=""><img src="img/twitter.png" alt=""></a>
+                </div>
             </div>
         </section>
         <div class="div-copyrigth">
