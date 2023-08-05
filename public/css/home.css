@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #202020;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav img{
+    width: 200px;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+.nav .nav-secciones{
+    display: flex;
+    flex-direction: row;
+    padding-left: 200px;
+    padding-top: 20px;
+}
+.nav .nav-secciones a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #fdfdfd;
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+    height: fit-content;
+}
+.nav .nav-search-carrito-usuario{
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+.nav .nav-search-carrito-usuario a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #fdfdfd;
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.nav .nav-search-carrito-usuario a i{
+    color: rgb(145, 209, 7);
+    width: 40px;
+    font-size: 23px;
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+.nav .nav-search-carrito-usuario form input{
+    font-size: 20px;
+    background-color: #ffffff;
+    border: none;
+}
+.nav .nav-search-carrito-usuario form button{
+    border: none;
+    background-color: inherit;
+}
+.nav .nav-search-carrito-usuario form button i{
+    width: 40px;
+    font-size: 23px;
+}
+
+
+
+
+main{
+    margin-bottom: 50px;
+}
+
+main .section-hombre-mujer{
+    margin-bottom: 100px;
+}
+main .div-hombre-mujer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+main .div-hombre-mujer a{
+    width: 35%;
+}
+main .div-hombre-mujer a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+main .section-opcion-prendas{
+    margin-bottom: 100px;
+}
+main .conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+main .div-opcion-prendas{
+    padding: 2px;
+    position: relative;
+}
+main .div-opcion-prendas img{
+    width:650px;
+    height: 650px;
+    object-fit: cover;
+    border: solid rgb(252, 239, 239) ;
+}
+main .div-remeras{
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    font-size: 2rem;
+    letter-spacing: 15px;
+}
+main .div-camperas{
+    position: absolute;
+    top: 44%;
+    left: 29%;
+    font-size: 2rem;
+    letter-spacing: 15px;
+}
+main .div-jeans{
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    font-size: 2rem;
+    letter-spacing: 15px;
+}
+main .div-accesorios{
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    font-size: 2rem;
+    letter-spacing: 15px;
+}
+main .div-remeras a, .div-camperas a, .div-jeans a, .div-accesorios a{
+    text-decoration: none;
+    color:rgb(121, 255, 128);
+}
+
+
+main .contenedor-de-articulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+main .contenedor-de-articulos article{
+    padding-bottom: 5px;
+    border: solid black 3px;
+    background-color: #e9e9e9;
+    margin: 0 14px 30px;
+}
+main .contenedor-de-articulos article img{
+    width: 300px;
+    height: 370px;
+    border: solid white 2px;    
+}
+main .descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .descripcion p{
+    font-size: 18px;
+}
+main .descripcion .carrito{
+    background-color: inherit;
+    color: #000000;
+    border: none;
+    font-size: 20px;
+    margin: 3px 0;
+}
+main .mas-informacion{
+    text-decoration: none;
+    color: rgb(134, 131, 131);
+}
+
+
+
+
+footer{
+    border-top: solid white 1px ;
+}
+footer .div-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 30px;
+}
+footer .div-footer h4{
+    color: rgb(128, 128, 128);
+    margin-bottom: 10px;
+}
+footer .tarjetas h4{
+    text-align: center;
+}
+footer .tarjetas img{
+    width: 40px;
+    height: 25px;
+}
+footer .atajo{
+    display: flex;
+    flex-direction: column;
+}
+footer .atajo a{
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color:white;
+    text-decoration: none;
+}
+footer .sede p{
+    color: white;
+    margin-bottom: 15px;
+}
+footer .seguinos h4{
+    text-align: center;
+}
+footer .seguinos a i{
+    font-size: 30px;
+}
+footer .seguinos a img{
+    width: 30px;
+    object-fit: cover;
+    margin: 10px 10px;
+}
+footer .div-copyrigth{
+    margin-top: 25px;
+}
+footer .copyrigth{
+    color: white;
+}
+
+
+
+
+/*Estilos extras*/
+.nav-secciones a:hover{
+    color:rgb(145,209,7)
+}
+.nav-search-carrito-usuario form button i:hover, .nav-search-carrito-usuario a i:hover{
+    filter: brightness(160%);
+    cursor:pointer;
+}
+.div-hombre-mujer a:hover{
+    filter: brightness(120%);
+}
+.div-opcion-prendas img:hover{
+    filter: brightness(130%);
+    transition: 0.3s; 
+}
+.seguinos img:hover{
+    filter: brightness(160%);
+    transition: 0.3s; 
+}
+.atajo a:hover{
+    color:grey;
+}
+.mas-informacion:hover{
+    color:black;
+}
+.carrito i:hover{
+    color: rgb(1, 184, 11);
+    cursor: pointer;
+}
+main .div-remeras a:hover, .div-camperas a:hover, .div-jeans a:hover, .div-accesorios a:hover{
+    filter: brightness(130%);
+}
