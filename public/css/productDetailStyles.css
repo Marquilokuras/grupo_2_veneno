@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: #ffffff; */
+}
+
+body {
+    background-color: #202020;
+}
+
+/* Header */
+
+nav {
+    padding-bottom: 5px;
+    border-bottom: solid 1px #ffeced;
+}
+
+nav a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fdfdfd;
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+nav a i {
+    color: rgb(145, 209, 7);
+    width: 40px;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+
+nav img {
+    width: 300px;
+    margin: auto;
+}
+
+/* Cuerpo */
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+}
+
+/* Productos */
+
+.main-imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgs {
+   /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+     max-width: 60%; */
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.imgs img {
+    width: 100%;
+    height: auto;
+}
+
+.opciones {
+    max-width: 60%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilos para los botones desplegables */
+ /*.dropdown {
+    position: relative;
+    display: inline-block; 
+}
+*/
+
+.dropdown{
+    margin: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    /* position: absolute; */
+    background-color: #f9f9f9;
+     min-width: 160px; 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Lateral de la Pagina */
+.aside {
+    background-color: #ffffff;
+    color: #000000;
+    max-width: 40%;
+    text-align: center;
+    padding: 2px;
+}
+
+.aside .detalle form *{
+    margin: 2px;
+    padding: 2px;
+}
+
+/* Estilo para la Guia de Talle */
+.guia svg, .guia p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.envio{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+
+footer {
+    margin: 5px;
+}
+
+/* Estilos para tablets (ancho mínimo 361px) */
+@media screen and (min-width: 768px) {
+    .imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+      /* Opcional: ajusta el tamaño de las imágenes según tus necesidades */
+      .imgs img {
+        width: 100%; /* O ajusta el ancho deseado */
+        height: auto;
+      }
+}
+
+/* Estilos para desktops (ancho mínimo 769px) */
+@media screen and (min-width: 1024px) {}
