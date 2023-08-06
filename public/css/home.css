@@ -12,7 +12,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
 }
-.nav img{
+.nav .nav-img img{
     width: 200px;
     align-self: flex-start;
     justify-self: flex-start;
@@ -39,14 +39,6 @@ body{
     padding-left: 40px;
     padding-top: 20px;
 }
-.nav .nav-search-carrito-usuario a{
-    text-decoration: none;
-    list-style-type: none;
-    color: #fdfdfd;
-    font-size: 1rem;
-    margin-left: 5px;
-    margin-right: 5px;
-}
 .nav .nav-search-carrito-usuario a i{
     color: rgb(145, 209, 7);
     width: 40px;
@@ -70,11 +62,56 @@ body{
 
 
 
+/* prueba del slider para las imagenes*/
+.slider-frame {
+    width: 90%;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+    border:solid black 3px;
+}
+   
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 12s infinite;
+}
+
+.slider-frame li {
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+/* prueba del slider para las imagenes*/
+
+
 
 main{
     margin-bottom: 50px;
 }
-
+main .section-div-anuncios{
+    margin-bottom: 100px;
+}
 main .section-hombre-mujer{
     margin-bottom: 100px;
 }
@@ -92,7 +129,7 @@ main .div-hombre-mujer a img{
     object-fit: cover;
 }
 
-
+/*Aqui estoy ...*/
 main .section-opcion-prendas{
     margin-bottom: 100px;
 }
