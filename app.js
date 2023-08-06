@@ -14,6 +14,22 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname,'./views/index.html'));
 });
 
-app.get('/productCart/', (req, res) => {
+app.get('/productCart', (req, res) => {
     res.sendFile(path.resolve(__dirname,'./views/productCart.html'));
 });
+
+app.post('/productCart', (req, res) => {
+    res.redirect('/')
+});
+
+app.get('/productDetail', (req, res) => {
+    res.sendFile(path.resolve(__dirname,'./views/productDetail.html'));
+});
+
+app.post('/productDetail', (req, res) => {
+    res.redirect('/productCart');
+});
+
+app.get('/login', ( req, res)=>{
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
+})
