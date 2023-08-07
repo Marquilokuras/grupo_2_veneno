@@ -32,4 +32,4 @@ Lo que deberiamos comenzar a hacer:
     * Llevar una comunicacion más detallada de lo que se va realizando durante el sprint.
     
 Lo que deberiamos dejar de hacer:   
-    * Calcular mejor los tiempos.
+    * No hacer énfasis en el tiempo estimado.
