@@ -12,30 +12,7 @@
 
 <body>
 
-   <!--  <header>
-        <div class="nav">
-            <img src="img/veneno-logo-oficial.jpeg" alt="Logo-Veneno">
-            <div class="nav-secciones">
-                <a href="http://localhost:4200/">Home</a>
-                <a href="http://localhost:4200/productDetail">Productos</a>
-                <a href="">Armá tu outfit</a>
-                <a href="">Exclusividad Clientes VIP</a>
-                <a href="">Indumentaria Mundial</a>
-                <a href="">Redes</a>
-                <a href="">Preguntas Frecuentes</a>
-            </div>
-            <div class="nav-search-carrito-usuario">
-                <form action="">
-                    <input type="text" placeholder="Buscar">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"
-                            style="color: rgb(145, 209, 7)"></i></button>
-                </form>
-                <a href="http://localhost:4200/productCart"><i class="fa-solid fa-cart-plus"></i></a>
-                <a href="http://localhost:4200/login"><i class="fa-solid fa-circle-user"></i></a>
-            </div>
-        </div>
-
-    </header> -->
+    <%- include('../../partials/header') %>
 
     <main>
         <div class="form-container">
@@ -91,49 +68,8 @@
             </form>
         </div>
     </main>
-
-     <footer>
-        <section class="section-footer">
-            <div class="div-footer">
-                <div class="tarjetas">
-                    <h4>Pagos</h4>
-                    <img src="img/visa.png" alt="">
-                    <img src="img/mastercard.png" alt="">
-                    <img src="img/paypal.png" alt="">
-                    <img src="img/banelco.png" alt="">
-                    <img src="img/tarjeta-naranja.png" alt="">
-                    <img src="img/mercadopago.png" alt="">
-                    <img src="img/pagofacil.png" alt="">
-                    <img src="img/rapipago.png" alt="">
-                    <img src="img/oca.png" alt="">
-                </div>
-                <div class="atajo">
-                    <h4>Menú</h4>
-                    <a href="">HOME</a>
-                    <a href="">PRODUCTOS</a>
-                    <a href="">ARMA TU OUTFIT</a>
-                    <a href="">EXCLUSIVIDAD CLIENTES VIP</a>
-                    <a href="">INDUMENTARIA MUNDIAL</a>
-                    <a href="">REDES</a>
-                    <a href="">PREGUNTAS FRECUENTES</a>
-                </div>
-                <div class="sede">
-                    <h4>Contactános</h4>
-                    <p>ventas@venenojujuy.com.ar</p>
-                    <p>Lavalle Nº154, San Salvador de Jujuy, Argentina</p>
-                </div>
-                <div class="seguinos">
-                    <h4>Seguinos en</h4>
-                    <a href=""><img src="img/facebook.png" alt=""></a>
-                    <a href=""><img src="img/instagram.png" alt=""></a>
-                    <a href=""><img src="img/twitter.png" alt=""></a>
-                </div>
-            </div>
-        </section>
-        <div class="div-copyrigth">
-            <strong class="copyrigth">2023 Veneno | Todos los derechos reservados</strong>
-        </div>
-    </footer> 
+    
+    <%- include('./partials/footer') -%>
 </body>
 
 </html>
