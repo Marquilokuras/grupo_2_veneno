@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, './public')));
+app.set('view engine','ejs');
 
 const PORT = 4200;
 
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/productCart', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/productCart.html'));
+    res.sendFile(path.resolve(__dirname,'./views/products/productCart.html'));
 });
 
 app.post('/productCart', (req, res) => {
@@ -23,7 +24,7 @@ app.post('/productCart', (req, res) => {
 });
 
 app.get('/productDetail', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/productDetail.html'));
+    res.sendFile(path.resolve(__dirname,'./views/products/productDetail.html'));
 });
 
 app.post('/productDetail', (req, res) => {
@@ -31,7 +32,7 @@ app.post('/productDetail', (req, res) => {
 });
 
 app.get('/login', ( req, res)=>{
-    res.sendFile(path.resolve(__dirname, './views/login.html'));
+    res.sendFile(path.resolve(__dirname, './views/users/login.html'));
 })
 
 app.post('/login', ( req, res)=>{
@@ -39,7 +40,7 @@ app.post('/login', ( req, res)=>{
 })
 
 app.get('/register', ( req, res)=>{
-    res.sendFile(path.resolve(__dirname, './views/register.html'));
+    res.sendFile(path.resolve(__dirname, './views/users/register.html'));
 })
 
 app.post('/register', ( req, res)=>{
