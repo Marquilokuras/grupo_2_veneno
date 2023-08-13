@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formulario de Productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/registerStyle.css">
+    <link rel="website icon" type="png" href="/img/logoVeneno.png">
+</head>
+
+<body>
+
+    <%- include('../../partials/header') %>
+
+    <main>
+        <div class="form-container">
+            <h2>Formulario de Creación y Edisión de Productos</h2>
+            <form action="/register" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Nombre del Producto:</label>
+                    <input type="text" id="name" name="name" required placeholder="Ingrese Nombre del Producto">
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" name="description" required placeholder="Ingrese Descripción del producto">
+                </div>
+                <div class="form-group">
+                    <label for="image">Imagen del Producto:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Categoria del Producto:</label>
+                    <input type="text" id="category" name="category" required placeholder="Ingrese Categoria">
+                </div>
+                <div class="form-group">
+                    <label for="colore">Colores del Producto:</label>
+                    <select id="colore">
+                        <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo
+                        </option>
+                        <option value="#00FF00" class="color-option" style="background-color: #00FF00;">Verde
+                        </option>
+                        <option value="#0000FF" class="color-option" style="background-color: #0000FF;">Azul
+                        </option>
+                        <option value="#FFFF00" class="color-option" style="background-color: #FFFF00;">Amarillo
+                        </option>
+                        <option value="#FF00FF" class="color-option" style="background-color: #FF00FF;">Magenta
+                        </option>
+                        <option value="#00FFFF" class="color-option" style="background-color: #00FFFF;">Cian
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">Precio del Producto:</label>
+                    <input type="number" id="price" name="price" required placeholder="Ingrese precio del Producto"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Crear Producto">
+                </div>
+                <div class="form-group">
+                    <input type="reset" value="Borrar">
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <%- include('./partials/footer') -%>
+</body>
+
+</html>
