@@ -1,13 +1,14 @@
 const path = require('path');
+const arrayPrendas = require('../dataBase/prendas')
 
 const mainController = {
 
     renderHome:(req,res) => {
-        res.sendFile(path.resolve(__dirname,'../views/index.html'))
+        res.render('index', { title: 'Prendas', data: arrayPrendas})
     },
     
     renderProductCart: (req,res) => {
-        res.sendFile(path.resolve(__dirname,'./views/products/productCart.html'))
+        res.sendFile(path.resolve(__dirname,'../views/products/productCart.html'))
     },
 
     renderFormulario: (req,res) => {

@@ -85,16 +85,18 @@
         </section>
         <section class="section-articulos-en-exhibicion">
             <div class="contenedor-de-articulos">
+                <% data.forEach((prenda) =>{ %>
                 <article>
                     <div class="descripcion">
-                        <img src="img/remeronmanifest-hombre.webp" alt="remeron manifest">
-                        <h3 class="desc"> Remeron Manifest</h3>
-                        <p class="precio">$18.000</p>
+                        <img src="img/<%=prenda.imagen %>" alt="remeron manifest">
+                        <h3 class="desc"> <%=prenda.nombre %></h3>
+                        <p class="precio">$<%=prenda.precio %></p>
                         <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
                         <a class="mas-informacion" href="/productDetail">Más información</a>
                     </div>
                 </article>
-                <article>
+                <%})%>
+                <!-- <article>
                     <img src="img/remeronbrockenwhite-hombre.webp" alt="">
                     <div class="descripcion">
                         <h3 class="desc">Remeron Brocken White</h3>
@@ -192,7 +194,7 @@
                         <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
                         <a class="mas-informacion" href="/productDetail">Más información</a>
                     </div>
-                </article>
+                </article> -->
             </div>
         </section>
     </main>
