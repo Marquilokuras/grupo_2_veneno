@@ -6,7 +6,9 @@ const prendas = [
         imagen: "/remeronmanifest-hombre.webp",
         disponibilidad: true,
         cantidad: 10,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "remera",
+        genero: "hombre"
     },
     {
         id: "2",
@@ -15,7 +17,9 @@ const prendas = [
         imagen: "/remeronessentialblack-mujer.webp",
         disponibilidad: true,
         cantidad: 20,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "remera",
+        genero: "mujer"
     },
     {
         id: "3",
@@ -24,7 +28,9 @@ const prendas = [
         imagen: "/remeronbalance-mujer.webp",
         disponibilidad: true,
         cantidad: 15,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "remera",
+        genero: "mujer"
     },
     {
         id: "4",
@@ -33,7 +39,9 @@ const prendas = [
         imagen: "/buzotopessential-mujer.webp",
         disponibilidad: true,
         cantidad: 8,
-        carritoVenta: true
+        carritoVenta: true,
+        categoria:"buzo",
+        genero: "mujer"
     },
     {
         id: "5",
@@ -42,7 +50,9 @@ const prendas = [
         imagen: "/camperavelvettrack-mujer.webp",
         disponibilidad: true,
         cantidad: 12,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "campera",
+        genero: "mujer"
     },
     {
         id: "6",
@@ -51,7 +61,9 @@ const prendas = [
         imagen: "/buzobenight-hombre-.webp",
         disponibilidad: true,
         cantidad: 7,
-        carritoVenta: true
+        carritoVenta: true,
+        categoria: "buzo",
+        genero: "hombre"
     },
     {
         id: "7",
@@ -60,7 +72,9 @@ const prendas = [
         imagen: "/camperacollageblack-hombre.webp",
         disponibilidad: true,
         cantidad: 9,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "campera",
+        genero: "hombre"
     },
     {
         id: "8",
@@ -69,7 +83,9 @@ const prendas = [
         imagen: "/pantalonnab-hombre.webp",
         disponibilidad: true,
         cantidad: 14,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "pantalon",
+        genero: "hombre"
     },
     {
         id: "9",
@@ -78,7 +94,9 @@ const prendas = [
         imagen: "/pantalontrackpantblack-mujer.webp",
         disponibilidad: true,
         cantidad: 18,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "pantalon",
+        genero: "mujer"
     },
     {
         id: "10",
@@ -87,7 +105,9 @@ const prendas = [
         imagen: "/carpenterblackpant-hombre.webp",
         disponibilidad: true,
         cantidad: 6,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "pantalon",
+        genero: "hombre"
     },
     {
         id: "11",
@@ -96,7 +116,9 @@ const prendas = [
         imagen: "/pantalonpanchutenabblack-mujer.webp",
         disponibilidad: true,
         cantidad: 11,
-        carritoVenta: false
+        carritoVenta: false,
+        categoria: "pantalon",
+        genero: "mujer"
     }
 
 ];
