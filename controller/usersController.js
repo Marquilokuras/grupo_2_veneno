@@ -1,11 +1,14 @@
 const path = require('path');
 
-const mainController = {
-    renderLogin : (req, res) =>{
-        res.sendFile(path.resolve(__dirname, '../views/login.html'));
-        //res.render('login',{});
+const usersController = {
+    renderLogin : (req, res) => {
+        res.render('login');
+    },
+
+    renderRegister: (req, res) => {
+        res.render('register');
     }
 };
 
 
-module.exports = mainController;
+module.exports = usersController;
