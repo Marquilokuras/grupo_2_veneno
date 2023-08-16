@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const productCartRouter = require('./routers/productCart');
+const productRouter = require('./routers/product');
 const homeRouter = require('./routers/home');
 const formAdminRouter = require('./routers/formsAdministrador');
 
@@ -15,7 +15,9 @@ app.listen(port, () => {
 
 app.use('/',homeRouter);
 
-app.use('/productCart',productCartRouter);
+app.use('/productCart',productRouter);
+
+app.use('/',productRouter);
 
 app.use('/formularioAdministrador',formAdminRouter);
 
