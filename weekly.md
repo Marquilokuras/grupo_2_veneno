@@ -41,3 +41,16 @@ Qué va a hacer hoy:
 
     # Realizar el routeo de carrito de productos, el home y la creación de el controller principal, tambien realizar el formulario el cual el administrador podra crear y editar los productos.
   
+Día 16/08/2023 - Marcos Quinteros
+
+Qué hizo ayer.
+
+    # Cree las rutas y los archivos partials para su implementacion
+
+Si se encontró con algún impedimento:
+
+    # Las direcciones de las rutas que coloque estaban incorrectas.
+
+Qué va a hacer hoy:
+
+    # Realizar la implementacion del partials, la correción de las rutas y la correción de errores.

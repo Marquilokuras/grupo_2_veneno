@@ -12,7 +12,7 @@ const mainController = {
     },
 
     renderFormAdministrador: (req,res) => {
-        res.sendFile(path.resolve(__dirname,'../views/users/formsAdministrador.html'))
+        res.render('formsAdministrador')
     },
 
 }

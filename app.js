@@ -21,10 +21,7 @@ app.use('/',productRouter);
 
 app.use('/formularioAdministrador',formAdminRouter);
 
-/* app.get('/productDetail', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/products/productDetail.html'));
-});
-
+/* 
 app.post('/productDetail', (req, res) => {
     res.redirect('/productCart');
 });
