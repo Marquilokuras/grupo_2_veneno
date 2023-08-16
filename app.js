@@ -19,6 +19,7 @@ app.use('/productCart',productCartRouter);
 
 app.use('/formularioAdministrador',formAdminRouter);
 
+
 /* app.get('/productDetail', (req, res) => {
     res.sendFile(path.resolve(__dirname,'./views/products/productDetail.html'));
 });
