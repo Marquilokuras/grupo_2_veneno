@@ -3,9 +3,10 @@ const router = express.Router();
 const productController = require('../controller/productsController');
 const mainController = require('../controller/mainController');
 
-console.log("router de producto")
-router.get('/productCart', productController.renderProductCart);
-/* console.log("router post") */
-/* router.post('/productCart', mainController.renderFormulario); */
+router.get('/', productController.renderProductCart);
+router.post('/', mainController.renderFormulario); 
+
+// Product Detail abajo 
+router.get('/productDetail', productController.renderProductDetail);
 
 module.exports = router;

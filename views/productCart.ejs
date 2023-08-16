@@ -2,27 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head.ejs') %>
     <title>Carrito de Productos</title>
     <link rel="stylesheet" href="/css/productCartStyles.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="website icon" type="png" href="/img/logoEmpresa.png">
+
 </head>
 
 <body>
     <header>
-
+        <%- include('./partials/header.ejs') %>
     </header>
     <main>
         <div class="main-header">
-            <div class="close">
+            <!-- <div class="close">
                 <a href="http://localhost:4200/"> <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                         viewBox="0 0 384 512">
                         <path
                             d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                     </svg></a>
-            </div>
+            </div> -->
 
             <div>
                 <% data.forEach((carrito)=>{ %>
@@ -37,7 +36,7 @@
 
                         <div class="datosPrenda">
                             <p>
-                                <%= carrito.precio</p>
+                                <%= carrito.precio %></p>
                                     <p>
                                         <%= carrito.cantidad %>
                                     </p>
@@ -108,51 +107,11 @@
 
         <div class="productoCompra">
             <button type="submit">Comprar</button>
-            <button type="button"> <a href="http://localhost:4200/">Ver más Productos</a></button>
+            <button type="button"> <a href="/">Ver más Productos</a></button>
         </div>
     </main>
-    <footer>
-        <section class="section-footer">
-            <div class="div-footer">
-                <div class="tarjetas">
-                    <h4>Pagos</h4>
-                    <img src="img/visa.png" alt="">
-                    <img src="img/mastercard.png" alt="">
-                    <img src="img/paypal.png" alt="">
-                    <img src="img/banelco.png" alt="">
-                    <img src="img/tarjeta-naranja.png" alt="">
-                    <img src="img/mercadopago.png" alt="">
-                    <img src="img/pagofacil.png" alt="">
-                    <img src="img/rapipago.png" alt="">
-                    <img src="img/oca.png" alt="">
-                </div>
-                <div class="atajo">
-                    <h4>Menú</h4>
-                    <a href="">HOME</a>
-                    <a href="">PRODUCTOS</a>
-                    <a href="">ARMA TU OUTFIT</a>
-                    <a href="">EXCLUSIVIDAD CLIENTES VIP</a>
-                    <a href="">INDUMENTARIA MUNDIAL</a>
-                    <a href="">REDES</a>
-                    <a href="">PREGUNTAS FRECUENTES</a>
-                </div>
-                <div class="sede">
-                    <h4>Contactános</h4>
-                    <p>ventas@venenojujuy.com.ar</p>
-                    <p>Lavalle Nº154, San Salvador de Jujuy, Argentina</p>
-                </div>
-                <div class="seguinos">
-                    <h4>Seguinos en</h4>
-                    <a href=""><img src="img/facebook.png" alt=""></a>
-                    <a href=""><img src="img/instagram.png" alt=""></a>
-                    <a href=""><img src="img/twitter.png" alt=""></a>
-                </div>
-            </div>
-        </section>
-        <div class="div-copyrigth">
-            <strong class="copyrigth">2023 Veneno | Todos los derechos reservados</strong>
-        </div>
-    </footer>
+    
+    <%- include('./partials/footer.ejs') %>
 
 </body>
 

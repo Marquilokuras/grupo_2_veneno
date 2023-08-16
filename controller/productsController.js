@@ -4,9 +4,12 @@ const arrayPrendas = require('../dataBase/prendas')
 const productsController = {
    
     renderProductCart: (req,res) => {
-        console.log("controller producto")
-        const prendasCarrito = arrayPrendas.filter((prenda) => plato.carritoVenta === true)
+        const prendasCarrito = arrayPrendas.filter((prenda) => prenda.carritoVenta === true)
         res.render('productCart', { data: prendasCarrito })
+    },
+
+    renderProductDetail: (req,res) => {
+        res.render('productDetail')
     }
 
 }
