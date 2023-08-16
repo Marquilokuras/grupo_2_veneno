@@ -28,11 +28,7 @@ app.use('/login', usersRouter);
 
 app.use('/register', usersRouter);
 
-
-/* app.get('/productDetail', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/products/productDetail.html'));
-});
-
+/* 
 app.post('/productDetail', (req, res) => {
     res.redirect('/productCart');
 });
