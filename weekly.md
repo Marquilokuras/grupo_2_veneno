@@ -41,3 +41,14 @@ Qué va a hacer hoy:
 
     # Realizar el routeo de carrito de productos, el home y la creación de el controller principal, tambien realizar el formulario el cual el administrador podra crear y editar los productos.
   
+
+Día 17/08/2023 - Elisa Soruco 
+
+Qué hizo ayer.
+    # Realizar el ruteo de la parte de detalles de productos. 
+
+Si se encontró algún impedimento: 
+    # Si hubieron impedimentos, no pude lograr que la vista de detalles de productos se visualice.  
+    
+Qué va hacer hoy:
+    #Consultar con compañeros del equipo para ver y comprender qué debo corregir. 
