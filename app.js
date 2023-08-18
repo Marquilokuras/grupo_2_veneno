@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
-const productCartRouter = require('./routers/productCart');
+const productRouter = require('./routers/product');
 const homeRouter = require('./routers/home');
 const formAdminRouter = require('./routers/formsAdministrador');
-const productDetailRouter = require('./routers/productDetail');
+
+const usersRouter = require('./routers/users');
+
 
 app.use(express.static('./public'));
 app.set('view engine','ejs');
@@ -16,17 +18,17 @@ app.listen(port, () => {
 
 app.use('/',homeRouter);
 
-app.use('/productCart',productCartRouter);
+app.use('/productCart',productRouter);
+
+app.use('/',productRouter);
 
 app.use('/formularioAdministrador',formAdminRouter);
 
-app.use('/productDetail', productDetailRouter);
+app.use('/login', usersRouter);
 
+app.use('/register', usersRouter);
 
-/* app.get('/productDetail', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/products/productDetail.html'));
-});
-
+/* 
 app.post('/productDetail', (req, res) => {
     res.redirect('/productCart');
 });
