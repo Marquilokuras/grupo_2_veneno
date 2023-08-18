@@ -26,25 +26,5 @@ app.use('/login', usersRouter);
 
 app.use('/', usersRouter);
 
-/* 
-app.post('/productDetail', (req, res) => {
-    res.redirect('/productCart');
-});
-
-app.get('/login', ( req, res)=>{
-    res.sendFile(path.resolve(__dirname, './views/users/login.html'));
-})
-
-app.post('/login', ( req, res)=>{
-    res.redirect('/');
-})
-
-app.get('/register', ( req, res)=>{
-    res.sendFile(path.resolve(__dirname, './views/users/register.html'));
-})
-
-app.post('/register', ( req, res)=>{
-    res.redirect('/login');
-}) */
 
 
