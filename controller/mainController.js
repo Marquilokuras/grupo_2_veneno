@@ -11,6 +11,10 @@ const mainController = {
         res.sendFile(path.resolve(__dirname,'../views/products/productCart.html'))
     },
 
+    renderProductDetail:(req,res) => {
+        res.sendFile(path.resolve(__dirname,'../views/products/productDetail.html'))
+    },
+
     renderFormulario: (req,res) => {
         res.sendFile(path.resolve(__dirname,'/'))
     },

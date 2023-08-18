@@ -3,6 +3,7 @@ const app = express();
 const productCartRouter = require('./routers/productCart');
 const homeRouter = require('./routers/home');
 const formAdminRouter = require('./routers/formsAdministrador');
+const productDetailRouter = require('./routers/productDetail');
 
 app.use(express.static('./public'));
 app.set('view engine','ejs');
@@ -18,6 +19,9 @@ app.use('/',homeRouter);
 app.use('/productCart',productCartRouter);
 
 app.use('/formularioAdministrador',formAdminRouter);
+
+app.use('/productDetail', productDetailRouter);
+
 
 /* app.get('/productDetail', (req, res) => {
     res.sendFile(path.resolve(__dirname,'./views/products/productDetail.html'));
