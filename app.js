@@ -3,7 +3,9 @@ const app = express();
 const productRouter = require('./routers/product');
 const homeRouter = require('./routers/home');
 const formAdminRouter = require('./routers/formsAdministrador');
+
 const usersRouter = require('./routers/users');
+
 
 app.use(express.static('./public'));
 app.set('view engine','ejs');
@@ -21,8 +23,6 @@ app.use('/productCart',productRouter);
 app.use('/',productRouter);
 
 app.use('/formularioAdministrador',formAdminRouter);
-
-app.use('/', usersRouter);
 
 app.use('/login', usersRouter);
 
