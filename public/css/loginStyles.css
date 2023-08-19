@@ -1,23 +1,19 @@
+@import "header.css";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header{
+main{ 
     background-color: #202020;
-    text-align: center;
-    border-bottom: solid 2px white;
-}
-
-main{
-    background-color: #202020;
-    height: 80vh;
+    
     padding: 50px;
 }
 
-footer{
+/* footer{
     background-color: #202020;
     text-align: center;
 }
@@ -28,14 +24,14 @@ footer a{
 
 footer p{
     color: white;
-}
+} */
 
 h1{
     color: white;
     padding: 10px 0;
 }
 
-a{
+main a{
     text-decoration: none;
     color: #9bcf29;
 }
@@ -44,7 +40,7 @@ p{
     color: white;
 }
 
-button{
+div.container-button button{
     font-size: 20px;
     padding: 2px 25px;
     background-color: #9bcf29;
@@ -56,9 +52,6 @@ main div {
     padding-top: 15px; padding-bottom: 15px;
 }
 
-.logo{
-    width: 30%;
-}
 
 div.form-login{
     display: flex;
@@ -141,10 +134,7 @@ main form input:focus{
 
 
 
-@media (min-width: 730px) {
-    .logo{
-        width: 8%;
-    }
+@media screen and (min-width: 768px){
 
     main{
         display: flex;

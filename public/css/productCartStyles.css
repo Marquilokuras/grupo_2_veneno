@@ -1,3 +1,5 @@
+@import "header.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,11 +20,11 @@ html {
 
 /* Cabecera de Sección Carrito */
 
-header {
+/* header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
+} */
 
 .close {
   margin-right: auto;

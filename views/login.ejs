@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include('./partials/head.ejs') %>
+
     <link rel="stylesheet" href="/css/loginStyles.css">
-    <link rel="website icon" type="png" href="/img/logoVeneno.png">
+    <link rel="stylesheet" href="/css/home.css">
     <title>Inicia Sesión</title>
 </head>
 <body>
     <header>
-        <a href="/">
+        <!-- <a href="/">
             <img src="/img/logoVeneno.png" alt="logo de la empresa"  class="logo">
-        </a>
+        </a> -->
+        <%- include('./partials/header.ejs') %>
     </header>
     <main>
         <div class="form-login">
@@ -37,13 +39,8 @@
             </form>
         </div>
     </main>
-    <footer>
-        <div class="enlaces-footer">
-        <a href="">Términos y condiciones de privacidad</a>
-        <a href="">Envíanos comentarios</a>
-        <a href="">Ayuda</a>
-        </div>
-        <p>&copy; Veneno-Derechos Reservados</p>
-    </footer>
+    
+    <%- include('./partials/footer.ejs') %>
+
 </body>
 </html>
