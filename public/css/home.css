@@ -1,3 +1,5 @@
+@import "header.css";
+
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
 body{
     background-color: #202020;
 }
-.nav{
+/* .nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -58,7 +60,7 @@ body{
 .nav .nav-search-carrito-usuario form button i{
     width: 40px;
     font-size: 23px;
-}
+} */
 
 
 

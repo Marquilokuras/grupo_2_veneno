@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    border-bottom: solid 1px  white;
+}
+/* LOGO */
+
+.logo{
+    width: 170px;
+}
+
+.nav{
+    background-color: #202020;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ocultar enlaces */
+.nav-secciones{
+    display: none;
+} 
+
+.nav  a{
+    text-decoration: none;
+    color: white;
+    padding-right: 8px; padding-left: 8px;
+}
+
+.nav ul{
+    list-style: none;
+}
+
+
+/* MENU HAMBURGUESA */
+div.burger-menu{
+    border: solid 2px #9bcf29;
+    border-radius: 3px;
+}
+
+div.burger-menu i{
+    color: #9bcf29;
+    padding: 3px;
+}
+
+/* BARRA DE BUSCAR */
+
+.nav-search{
+    margin: 10px;
+}
+
+.barra-search{
+    display: flex;
+    border-radius: 7px;
+}
+
+.barra-search{
+    background-color: white;
+}
+
+.barra-search input{
+    border: transparent;
+    padding: 3px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.barra-search button{
+    border: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+/* ****************************** */
+
+/* ICONO CARRITO Y USUARIO */
+.nav-carrito-usuario{
+    display: flex;
+}
+
+.nav-carrito-usuario a{
+    padding: 0 10px;
+    color: #9bcf29;
+}
+
+.nav-carrito-usuario a i{
+    font-size: 20px
+}
+
+
+
+
+
+
+/* Estilos para desktops (ancho mínimo 769px) */
+@media screen and (min-width: 1024px) {
+
+    .nav{
+        justify-content: space-between;
+    }
+
+    /* mostrar enlaces */
+    .nav-secciones {
+        display: flex;
+    }
+
+    /* ocultar icono de menu hamburger */
+    div.burger-menu{
+        display: none;
+    }
+
+    .nav-secciones ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-secciones ul a{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
