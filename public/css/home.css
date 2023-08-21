@@ -7,6 +7,9 @@
 body{
     background-color: #202020;
 }
+
+/*Original css Nav:*/
+/**/
 .nav{
     display: flex;
     flex-direction: row;
@@ -60,7 +63,137 @@ body{
     font-size: 23px;
 }
 
+/*Responsive Nav:
+Deben intercambiar posicion en el header.ejs (.nav-search-carrito-usuario con .nav-secciones).
+.nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
 
+.nav-img{
+    /*width: 30%;*//*
+    width: 100%;
+    text-align: center;
+}
+.nav-img img{
+    width: 200px;
+    height: 120px;
+}
+
+
+
+.nav-search-carrito-usuario{
+    /*width:70%;*//*
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0;
+    
+}
+.nav-search-carrito-usuario form input{
+    width:270px;
+    height: 20px;
+    background-color: #ffffff;
+    border: none;
+}
+.nav-search-carrito-usuario form button{
+    border: none;
+    background-color: inherit;
+}
+.nav-search-carrito-usuario form button i{
+    font-size: 1rem;
+}
+.nav-search-carrito-usuario a i{
+    color: rgb(145, 209, 7);
+}
+
+
+
+.nav-secciones{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.nav-secciones a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #fdfdfd;
+    font-size: .9rem;
+    padding-top:10px;
+}
+
+@media(min-width:361px){
+    .nav-search-carrito-usuario form{
+        flex-grow: 1;
+        margin-left: 5px;
+    }
+    .nav-search-carrito-usuario a i{
+        margin-right: 10px;
+    }
+}
+@media(min-width:769px){
+    /*Header/.nav*//*
+    .nav{
+        flex-wrap: nowrap;
+    }
+    .nav-img{
+        max-width: 400px;
+        margin-left: 19px;
+        text-align: left;
+    }
+    .nav-img img{
+        width: 200px;
+        height: auto;
+    }
+    .nav-search-carrito-usuario{
+        order: 1;
+        max-width: 383px;
+        padding-top: 10px;
+        margin-right: 22px;
+    }
+    .nav-search-carrito-usuario a i{
+        max-width: 40px;
+        font-size: 23px;
+        margin: 0 5px 0 5px;
+    }
+    .nav-search-carrito-usuario form{
+        flex-grow: 0;
+        margin-left: 20px;
+    }
+    .nav-search-carrito-usuario form input{
+        max-width: 243px;
+        height: 24px;
+        background-color: #ffffff;
+        border: none;
+        font-size: 20px;
+    }
+    .nav-search-carrito-usuario form button i{
+        width: 40px;
+        font-size: 22px;
+    }
+    .nav-secciones{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+        padding-top: 15px;
+    }
+    .nav-secciones a{
+        font-size: 1rem;
+        height: fit-content;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: fit-content;
+    }
+}
+/*Responsive Nav*/
+
+/*----------*/
 
 /* prueba del slider para las imagenes*/
 .slider-frame {

@@ -9,9 +9,12 @@ const productsController = {
     },
 
     renderProductDetail: (req,res) => {
-        res.render('productDetail')
-    }
+        res.render('productDetail');
+    },
 
+    renderProductDetailId: (req,res) => {
+        res.render('productDetail');
+    },
 }
 
 module.exports = productsController;

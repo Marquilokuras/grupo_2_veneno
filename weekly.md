@@ -54,3 +54,14 @@ Si se encontró con algún impedimento:
 Qué va a hacer hoy:
 
     # Realizar la implementacion del partials, la correción de las rutas y la correción de errores.
+
+Día 17/08/2023 - Elisa Soruco 
+
+Qué hizo ayer.
+    # Realizar el ruteo de la parte de detalles de productos. 
+
+Si se encontró algún impedimento: 
+    # Si hubieron impedimentos, no pude lograr que la vista de detalles de productos se visualice.  
+    
+Qué va hacer hoy:
+    #Consultar con compañeros del equipo para ver y comprender qué debo corregir. 
