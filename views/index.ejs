@@ -5,10 +5,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/home.css"> 
     <title>Inicio</title>
+
 </head>
 <body>
     <header>
+
         <%- include('./partials/header.ejs') %>
+
     </header>
     <main>
         <section class="section-div-anuncios">
@@ -27,8 +30,7 @@
             <div class="div-hombre-mujer">
                 <a href="/productDetail"><img src="img/hombre.webp" alt=""></a>
                 <a href="/productDetail"><img src="img/mujer.webp" alt=""></a>
-            </div> 
-
+            </div>
         </section>
         <section class="section-opcion-prendas">
             <div class="conteiner">
@@ -66,17 +68,19 @@
                         <img src="img/<%=prenda.imagen %>" alt="remeron manifest">
                         <h3 class="desc"> <%=prenda.nombre %></h3>
                         <p class="precio">$<%=prenda.precio %></p>
-                        <form action="/productCart" >
-                            <button type="submit" class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
-                        </form> 
+                        <form action="/productCart">
+                            <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        </form>
                         <a class="mas-informacion" href="/productDetail/<%=prenda.id%>">Más información</a>
-                                                    <!--<%=prenda.id%>-->
+                                                    <!--<%=prenda.id%>-->                    
                     </div>
                 </article>
                 <%})%>
             </div>
         </section>
     </main>
+    
     <%- include('./partials/footer.ejs') %>
+
 </body>
 </html>

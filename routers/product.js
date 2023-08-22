@@ -9,5 +9,4 @@ router.post('/', mainController.renderFormulario);
 // Product Detail abajo 
 router.get('/productDetail', productController.renderProductDetail);
 router.get('/productDetail/:id', productController.renderProductDetailId);
-
 module.exports = router;
