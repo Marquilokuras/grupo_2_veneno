@@ -1,5 +1,9 @@
 const path = require('path');
-const arrayPrendas = require('../dataBase/prendas')
+const fs = require('fs');
+//const arrayPrendas = require('../dataBase/prendas')
+
+const productsFilePath = path.join(__dirname, '..','data','products.json');
+const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
    
@@ -8,16 +12,25 @@ const productsController = {
         res.render('productCart', { data: prendasCarrito })
     },
 
+    renderProducts: (req,res) => {
+        res.render('product');
+    },
+
     renderProductDetail: (req,res) => {
-        res.render('productDetail')
+        const IdProducto = arrayPrendas.find((producto)=> producto.id === req.params.id);
+        res.render('detail', {data: IdProducto});
     },
 
-    renderProductDetailId: (req,res) => {
-        /*const IdProducto = arrayPrendas.find((producto)=> producto.id === req.params.id);
-        res.render('productDetail', {data: IdProducto});*/
-        res.render('productDetail');
+    renderProductCreate: (req,res) => {
+        res.render("create");
     },
 
+    renderProductStore: (req,res) => {
+        // const nuevoProducto = {}
+        // arrayPrendas.push(nuevoProducto);
+        // res.redirect("/");
+        res.send("Se cargó el producto");
+    }
 }
 
 module.exports = productsController;

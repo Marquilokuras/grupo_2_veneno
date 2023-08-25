@@ -1,22 +1,24 @@
 <div class="nav">
     <div class="nav-img">
-        <img src="img/veneno-logo-oficial.jpeg" alt="Logo-Veneno">
+        <a href="/">
+            <img src="/img/veneno-logo-oficial.jpeg" alt="Logo-Veneno">
+        </a>
     </div>
     <div class="nav-secciones">
         <a href="/">Inicio</a>
-        <a href="/productDetail">Productos</a>
-        <a href="">Armá tu outfit</a>
-        <a href="">Exclusividad Clientes VIP</a>
-        <a href="">Indumentaria Mundial</a>
-        <a href="">Redes</a>
-        <a href="">Preguntas Frecuentes</a>
+        <a href="/products">Productos</a>
+        <a href="#">Armá tu outfit</a>
+        <a href="#">Exclusividad Clientes VIP</a>
+        <a href="#">Indumentaria Mundial</a>
+        <a href="#">Redes</a>
+        <a href="#">Preguntas Frecuentes</a>
     </div>
     <div class="nav-search-carrito-usuario">
-        <form action="">
-            <input type="text" placeholder="Buscar">
+        <form action="/search" method="GET">
+            <input type="text" name="search" placeholder="Buscar">
             <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: rgb(145, 209, 7)"></i></button>
         </form>
-        <a href="/productCart"><i class="fa-solid fa-cart-plus"></i></a>
+        <a href="/products/productCart"><i class="fa-solid fa-cart-plus"></i></a>
         <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
     </div>
 </div>

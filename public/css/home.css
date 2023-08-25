@@ -12,7 +12,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
 }
-.nav .nav-img img{
+.nav .nav-img a img{
     width: 200px;
     align-self: flex-start;
     justify-self: flex-start;
@@ -183,7 +183,19 @@ main .div-remeras a, .div-camperas a, .div-jeans a, .div-accesorios a{
     color:rgb(121, 255, 128);
 }
 
-
+main .div-busqueda{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 30px 150px;
+}
+main .resultado-busqueda{
+    color:rgb(189, 185, 185);
+    font-size: 2rem;
+}
+main .resultado-busqueda-nula{
+    color:rgb(145,209,7)
+}
 main .contenedor-de-articulos{
     display: flex;
     justify-content: center;
@@ -198,7 +210,7 @@ main .contenedor-de-articulos article{
     background-color: #e9e9e9;
     margin: 0 14px 30px;
 }
-main .contenedor-de-articulos article img{
+main .contenedor-de-articulos article a img{
     width: 300px;
     height: 370px;
     border: solid white 2px;    
@@ -302,6 +314,9 @@ footer .copyrigth{
 }
 .atajo a:hover{
     color:grey;
+}
+main .contenedor-de-articulos article a img:hover{
+    filter: brightness(120%); 
 }
 .mas-informacion:hover{
     color:black;

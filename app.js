@@ -16,9 +16,9 @@ app.listen(port, () => {
 
 app.use('/',homeRouter);
 
-app.use('/productCart',productRouter);
+//app.use('/productCart',productRouter);
 
-app.use('/',productRouter);
+app.use('/products',productRouter);
 
 app.use('/formularioAdministrador',formAdminRouter);
 

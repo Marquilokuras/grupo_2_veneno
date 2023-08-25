@@ -1,0 +1,135 @@
+[
+    {
+        "id": "1",
+        "nombre": "Remeron Manifest",
+        "precio": 18000,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/remeronmanifest-hombre.webp",
+        "disponibilidad": true,
+        "cantidad": 10,
+        "carritoVenta": false,
+        "categoria": "remera",
+        "genero": "hombre"
+    },
+    {
+        "id": "2",
+        "nombre": "Remeron Brocken White",
+        "precio": 17400,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/remeronessentialblack-mujer.webp",
+        "disponibilidad": true,
+        "cantidad": 20,
+        "carritoVenta": false,
+        "categoria": "remera",
+        "genero": "mujer"
+    },
+    {
+        "id": "3",
+        "nombre": "Remeron Balance",
+        "precio": 17400,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/remeronbalance-mujer.webp",
+        "disponibilidad": true,
+        "cantidad": 15,
+        "carritoVenta": false,
+        "categoria": "remera",
+        "genero": "mujer"
+    },
+    {
+        "id": "4",
+        "nombre": "Buzo Top Essential",
+        "precio": 42000,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/buzotopessential-mujer.webp",
+        "disponibilidad": true,
+        "cantidad": 8,
+        "carritoVenta": true,
+        "categoria":"buzo",
+        "genero": "mujer"
+    },
+    {
+        "id": "5",
+        "nombre": "Campera Velvet Track",
+        "precio": 29400,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/camperavelvettrack-mujer.webp",
+        "disponibilidad": true,
+        "cantidad": 12,
+        "carritoVenta": false,
+        "categoria": "campera",
+        "genero": "mujer"
+    },
+    {
+        "id": "6",
+        "nombre": "Buzo Be Night",
+        "precio": 48000,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/buzobenight-hombre-.webp",
+        "disponibilidad": true,
+        "cantidad": 7,
+        "carritoVenta": true,
+        "categoria": "buzo",
+        "genero": "hombre"
+    },
+    {
+        "id": "7",
+        "nombre": "Campera Collage Black",
+        "precio": 54600,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/camperacollageblack-hombre.webp",
+        "disponibilidad": true,
+        "cantidad": 9,
+        "carritoVenta": false,
+        "categoria": "campera",
+        "genero": "hombre"
+    },
+    {
+        "id": "8",
+        "nombre": "Pantalon Snaps",
+        "precio": 35700,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/pantalonnab-hombre.webp",
+        "disponibilidad": true,
+        "cantidad": 14,
+        "carritoVenta": false,
+        "categoria": "pantalon",
+        "genero": "hombre"
+    },
+    {
+        "id": "9",
+        "nombre": "Pantalon Track Black",
+        "precio": 32500,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/pantalontrackpantblack-mujer.webp",
+        "disponibilidad": true,
+        "cantidad": 18,
+        "carritoVenta": false,
+        "categoria": "pantalon",
+        "genero": "mujer"
+    },
+    {
+        "id": "10",
+        "nombre": "Pantalon Carpenter Black",
+        "precio": 31500,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/carpenterblackpant-hombre.webp",
+        "disponibilidad": true,
+        "cantidad": 6,
+        "carritoVenta": false,
+        "categoria": "pantalon",
+        "genero": "hombre"
+    },
+    {
+        "id": "11",
+        "nombre": "Pantalon Parachute NAB Black",
+        "precio": 35700,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/pantalonpanchutenabblack-mujer.webp",
+        "disponibilidad": true,
+        "cantidad": 11,
+        "carritoVenta": false,
+        "categoria": "pantalon",
+        "genero": "mujer"
+    }
+
+]
