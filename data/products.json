@@ -5,23 +5,29 @@
         "precio": 18000,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/remeronmanifest-hombre.webp",
+        "reverse": "/espaldaid1.webp",
         "disponibilidad": true,
         "cantidad": 10,
         "carritoVenta": false,
         "categoria": "remera",
-        "genero": "hombre"
+        "genero": "hombre",
+        "oferta": true,
+        "descuento": 20
     },
     {
         "id": "2",
-        "nombre": "Remeron Brocken White",
+        "nombre": "Remeron Essential Black",
         "precio": 17400,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/remeronessentialblack-mujer.webp",
+        "reverse": "/espaldaid2.webp",
         "disponibilidad": true,
         "cantidad": 20,
         "carritoVenta": false,
         "categoria": "remera",
-        "genero": "mujer"
+        "genero": "mujer",
+        "oferta": false,
+        "descuento": 20
     },
     {
         "id": "3",
@@ -29,11 +35,14 @@
         "precio": 17400,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/remeronbalance-mujer.webp",
+        "reverse": "/espaldaid3.webp",
         "disponibilidad": true,
         "cantidad": 15,
         "carritoVenta": false,
         "categoria": "remera",
-        "genero": "mujer"
+        "genero": "mujer",
+        "oferta": true,
+        "descuento": 20
     },
     {
         "id": "4",
@@ -41,11 +50,14 @@
         "precio": 42000,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/buzotopessential-mujer.webp",
+        "reverse": "/espaldaid4.webp",
         "disponibilidad": true,
         "cantidad": 8,
         "carritoVenta": true,
         "categoria":"buzo",
-        "genero": "mujer"
+        "genero": "mujer",
+        "oferta": false,
+        "descuento": 20
     },
     {
         "id": "5",
@@ -53,11 +65,14 @@
         "precio": 29400,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/camperavelvettrack-mujer.webp",
+        "reverse": "/espaldaid5.webp",
         "disponibilidad": true,
         "cantidad": 12,
         "carritoVenta": false,
         "categoria": "campera",
-        "genero": "mujer"
+        "genero": "mujer",
+        "oferta": true,
+        "descuento": 20
     },
     {
         "id": "6",
@@ -65,23 +80,29 @@
         "precio": 48000,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/buzobenight-hombre-.webp",
+        "reverse": "/espaldaid6.webp",
         "disponibilidad": true,
         "cantidad": 7,
         "carritoVenta": true,
         "categoria": "buzo",
-        "genero": "hombre"
+        "genero": "hombre",
+        "oferta": true,
+        "descuento": 20
     },
     {
         "id": "7",
-        "nombre": "Campera Collage Black",
+        "nombre": "Campera College Black",
         "precio": 54600,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/camperacollageblack-hombre.webp",
+        "reverse": "/espaldaid7.webp",
         "disponibilidad": true,
         "cantidad": 9,
         "carritoVenta": false,
         "categoria": "campera",
-        "genero": "hombre"
+        "genero": "hombre",
+        "oferta": false,
+        "descuento": 20
     },
     {
         "id": "8",
@@ -89,11 +110,14 @@
         "precio": 35700,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/pantalonnab-hombre.webp",
+        "reverse": "/espaldaid8.webp",
         "disponibilidad": true,
         "cantidad": 14,
         "carritoVenta": false,
         "categoria": "pantalon",
-        "genero": "hombre"
+        "genero": "hombre",
+        "oferta": true,
+        "descuento": 20
     },
     {
         "id": "9",
@@ -101,11 +125,14 @@
         "precio": 32500,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/pantalontrackpantblack-mujer.webp",
+        "reverse": "/espaldaid9.webp",
         "disponibilidad": true,
         "cantidad": 18,
         "carritoVenta": false,
         "categoria": "pantalon",
-        "genero": "mujer"
+        "genero": "mujer",
+        "oferta": true,
+        "descuento": 20
     },
     {
         "id": "10",
@@ -113,11 +140,14 @@
         "precio": 31500,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/carpenterblackpant-hombre.webp",
+        "reverse": "/espaldaid10.webp",
         "disponibilidad": true,
         "cantidad": 6,
         "carritoVenta": false,
         "categoria": "pantalon",
-        "genero": "hombre"
+        "genero": "hombre",
+        "oferta": false,
+        "descuento": 20
     },
     {
         "id": "11",
@@ -125,11 +155,88 @@
         "precio": 35700,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/pantalonpanchutenabblack-mujer.webp",
+        "reverse": "/espaldaid11.webp",
         "disponibilidad": true,
         "cantidad": 11,
         "carritoVenta": false,
         "categoria": "pantalon",
-        "genero": "mujer"
+        "genero": "mujer",
+        "oferta": true,
+        "descuento": 20
+    },
+    {
+        "id": "12",
+        "nombre": "Buzo Ninja Hood",
+        "precio": 52500,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/buzoninjahood.webp",
+        "reverse": "/espaldaid12.webp",
+        "disponibilidad": true,
+        "cantidad": 11,
+        "carritoVenta": false,
+        "categoria": "buzo",
+        "genero": "hombre",
+        "oferta": false,
+        "descuento": 20
+    },
+    {
+        "id": "13",
+        "nombre": "Buzo College",
+        "precio": 50000,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/buzocollege.webp",
+        "reverse": "/espaldaid13.webp",
+        "disponibilidad": true,
+        "cantidad": 11,
+        "carritoVenta": false,
+        "categoria": "buzo",
+        "genero": "mujer",
+        "oferta": false,
+        "descuento": 20
+    },
+    {
+        "id": "14",
+        "nombre": "Remeron Not a Brand Wash",
+        "precio": 21000,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/remeronnotabrandwash.webp",
+        "reverse": "/espaldaid14.webp",
+        "disponibilidad": true,
+        "cantidad": 11,
+        "carritoVenta": false,
+        "categoria": "remera",
+        "genero": "hombre",
+        "oferta": true,
+        "descuento": 20
+    },
+    {
+        "id": "15",
+        "nombre": "Campera Track Grey",
+        "precio": 48000,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/camperatrackgrey-mujer.webp",
+        "reverse": "/espaldaid15.webp",
+        "disponibilidad": true,
+        "cantidad": 11,
+        "carritoVenta": false,
+        "categoria": "campera",
+        "genero": "mujer",
+        "oferta": false,
+        "descuento": 20
+    },
+    {
+        "id": "16",
+        "nombre": "Campera Kongo Black",
+        "precio": 48000,
+        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imagen": "/camperakongoblack.webp",
+        "reverse": "/espaldaid16.webp",
+        "disponibilidad": true,
+        "cantidad": 11,
+        "carritoVenta": false,
+        "categoria": "campera",
+        "genero": "hombre",
+        "oferta": false,
+        "descuento": 20
     }
-
 ]

@@ -4,7 +4,7 @@
     <%- include('./partials/head.ejs') %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/home.css"> 
-    <title>Busqueda de producto</title>
+    <title>Resultados de búsqueda</title>
 </head>
 <body>
     <header>
@@ -25,8 +25,11 @@
                             </a>
                             <h3 class="desc"> <%=prenda.nombre %></h3>
                             <p class="precio">$<%=prenda.precio %></p>
+                            <%if(prenda.oferta===true){%>
+                            <p class="descuento"><%=prenda.descuento%>% de descuento</p>
+                            <%}%>
                             <form action="/products/productCart" method="GET">
-                                 <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                                <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
                             </form>
                             <a class="mas-informacion" href="/products/<%=prenda.id%>">Más información</a>                
                         </div>
@@ -39,38 +42,7 @@
                 <%}%>
             </div>
         </section>
-        <!--<section class="section-opcion-prendas">
-            <div class="conteiner">
-                <div class="div-opcion-prendas">
-                    <img src="img/remeraswebp.webp" alt="remeras">
-                    <div class="div-remeras">
-                        <a href="/productDetail">REMERAS</a>
-                    </div>
-                </div>
-                <div class="div-opcion-prendas">
-                    <img src="img/camperas.webp" alt="camperas">
-                    <div class="div-camperas">
-                        <a href="/productDetail">CAMPERAS</a>
-                    </div>
-                </div>
-                <div class="div-opcion-prendas">
-                    <img src="img/pantalon.webp" alt="jeans">
-                    <div class="div-jeans">
-                        <a href="/productDetail">PANTALONES</a>
-                    </div>
-                </div>
-                <div class="div-opcion-prendas">
-                    <img src="img/accesorios.jpeg" alt="accesorios">
-                    <div class="div-accesorios">
-                        <a href="/productDetail">ACCESORIOS</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    -->
     </main>
-    <footer>
-        <%- include('./partials/footer.ejs') %>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>

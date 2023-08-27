@@ -8,7 +8,8 @@ const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController = {
 
     renderHome:(req,res) => {
-        res.render('index', { title: 'Prendas', data: arrayPrendas})
+        const productosEnOferta = arrayPrendas.filter((producto)=>producto.oferta === true);
+        res.render('index', { title: 'Prendas', data: productosEnOferta})
     },
     
     renderSearch: (req,res) => {
@@ -22,10 +23,11 @@ const mainController = {
         res.sendFile(path.resolve(__dirname,'/'))
     },
 
+    /*
     renderFormAdministrador: (req,res) => {
         res.render('formsAdministrador')
     },
-
+    */
 }
 
 module.exports = mainController;

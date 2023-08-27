@@ -13,24 +13,43 @@ const productsController = {
     },
 
     renderProducts: (req,res) => {
-        res.render('product');
+        res.render('product', {data:arrayPrendas});
     },
-
+    
+    renderProductCreate: (req,res) => {
+        res.render("create");
+    },
+    
     renderProductDetail: (req,res) => {
         const IdProducto = arrayPrendas.find((producto)=> producto.id === req.params.id);
         res.render('detail', {data: IdProducto});
     },
 
-    renderProductCreate: (req,res) => {
-        res.render("create");
+    renderProductStore: (req,res) => {
+        /*
+        const nuevoProducto = {
+            id: arrayPrendas.length+1,
+        }
+        arrayPrendas.push(nuevoProducto);
+        */
+       //res.send("Se cargó el producto");
+       res.redirect("/products");
     },
 
-    renderProductStore: (req,res) => {
-        // const nuevoProducto = {}
-        // arrayPrendas.push(nuevoProducto);
-        // res.redirect("/");
-        res.send("Se cargó el producto");
+    renderProductEdit: (req,res) => {
+        res.render("edit");
+    },
+
+    renderProductUpdate: (req,res) => {
+        const id = req.params.id; 
+        //res.send("Se editó el producto");
+        res.redirect("/products/" + id);
+    },
+/*
+    renderProductDelete: (req,res) => {
+        res.send("Se eliminó el producto");
     }
+*/
 }
 
 module.exports = productsController;

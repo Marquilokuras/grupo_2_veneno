@@ -4,26 +4,32 @@
     box-sizing: border-box;
 }
 
+
 body{
     background-color: #202020;
 }
+
+
+/* ----Header---- */
 .nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
+    flex-wrap: wrap;
 }
-.nav .nav-img a img{
+.nav-img a img{
     width: 200px;
     align-self: flex-start;
     justify-self: flex-start;
 }
-.nav .nav-secciones{
+.nav-secciones{
     display: flex;
     flex-direction: row;
     padding-left: 200px;
     padding-top: 20px;
 }
-.nav .nav-secciones a{
+.nav-secciones a{
     text-decoration: none;
     list-style-type: none;
     color: #fdfdfd;
@@ -33,33 +39,34 @@ body{
     padding-top: 5px;
     height: fit-content;
 }
-.nav .nav-search-carrito-usuario{
+.nav-search-carrito-usuario{
     display: flex;
     flex-direction: row;
     padding-left: 40px;
     padding-top: 20px;
 }
-.nav .nav-search-carrito-usuario a i{
+.nav-search-carrito-usuario a i{
     color: rgb(145, 209, 7);
     width: 40px;
     font-size: 23px;
     text-align: center;
     margin: 0 5px 0 5px;
 }
-.nav .nav-search-carrito-usuario form input{
+.nav-search-carrito-usuario form input{
     font-size: 20px;
     background-color: #ffffff;
     border: none;
 }
-.nav .nav-search-carrito-usuario form button{
+.nav-search-carrito-usuario form button{
     border: none;
     background-color: inherit;
 }
-.nav .nav-search-carrito-usuario form button i{
+.nav-search-carrito-usuario form button i{
     width: 40px;
     font-size: 23px;
 }
 
+/* ----Main---- */
 
 
 /* prueba del slider para las imagenes*/
@@ -223,6 +230,10 @@ main .descripcion{
 main .descripcion p{
     font-size: 18px;
 }
+main .descuento{
+    font-size: 15px;
+    color:rgb(207, 18, 18);
+}
 main .descripcion .carrito{
     background-color: inherit;
     color: #000000;
@@ -328,3 +339,9 @@ main .contenedor-de-articulos article a img:hover{
 main .div-remeras a:hover, .div-camperas a:hover, .div-jeans a:hover, .div-accesorios a:hover{
     filter: brightness(130%);
 }
+
+
+/*
+Media queries para dispositivos!
+
+*/
