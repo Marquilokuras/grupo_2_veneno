@@ -4,44 +4,11 @@
         "nombre": "nombre",
         "apellido": "apellido",
         "email": "email",
-        "Contraseña": "contraseña",
-        "categoria": "categoria",
-        "imagen": "imagen"
-    },
-    {
-        "id": "2",
-        "nombre": "nombre",
-        "apellido": "apellido",
-        "email": "email",
-        "Contraseña": "contraseña",
-        "categoria": "categoria",
-        "imagen": "imagen"
-    },
-    {
-        "id": "3",
-        "nombre": "nombre",
-        "apellido": "apellido",
-        "email": "email",
-        "Contraseña": "contraseña",
-        "categoria": "categoria",
-        "imagen": "imagen"
-    },
-    {
-        "id": "4",
-        "nombre": "nombre",
-        "apellido": "apellido",
-        "email": "email",
-        "Contraseña": "contraseña",
-        "categoria": "categoria",
-        "imagen": "imagen"
-    },
-    {
-        "id": "5",
-        "nombre": "nombre",
-        "apellido": "apellido",
-        "email": "email",
-        "Contraseña": "contraseña",
-        "categoria": "categoria",
-        "imagen": "imagen"
+        "contraseña": "contraseña",
+        "genero": "genero",
+        "imagen": "imagen",
+        "fechaNacimiento": "fechaNacimiento",
+        "edad": "edad",
+        "domicilio": "domicilio"
     }
 ]

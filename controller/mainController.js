@@ -7,12 +7,12 @@ const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
 
-    renderHome:(req,res) => {
+    home:(req,res) => {
         const productosEnOferta = arrayPrendas.filter((producto)=>producto.oferta === true);
         res.render('index', { title: 'Prendas', data: productosEnOferta})
     },
     
-    renderSearch: (req,res) => {
+    search: (req,res) => {
         const palabra = req.query.search;
 		const productosSearch = arrayPrendas.filter((producto)=>producto.nombre.toLowerCase().includes(palabra.toLowerCase()));
 

@@ -203,7 +203,14 @@ main .resultado-busqueda{
 main .resultado-busqueda-nula{
     color:rgb(145,209,7)
 }
+main .articulos-en-ofertas{
+    margin-bottom: -60px;
+    text-align: center;
+    color:rgb(189, 185, 185);
+    font-size: 2rem;
+}
 main .contenedor-de-articulos{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;

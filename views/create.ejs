@@ -15,22 +15,22 @@
     <main>
         <div class="form-container">
             <h2>Formulario de Creación de Productos</h2>
-            <form action="/products/" method="POST" enctype="multipart/form-data">
+            <form action="/products" method="POST"> <!--enctype="multipart/form-data"-->
                 <div class="form-group">
                     <label for="name">Nombre del Producto:</label>
-                    <input type="text" id="name" name="name" required placeholder="Ingrese Nombre del Producto">
+                    <input type="text" id="name" name="nombre" required placeholder="Ingrese Nombre del Producto">
                 </div>
                 <div class="form-group">
                     <label for="description">Descripción:</label>
-                    <textarea id="description" name="description" required placeholder="Ingrese Descripción del producto"></textarea>
+                    <textarea id="description" name="descripcion" required placeholder="Ingrese Descripción del producto"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="image">Imagen del Producto:</label>
-                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <input type="file" id="image" name="imagen" accept="image/*" required>
                 </div>
                 <div class="form-group">
                     <label for="category">Categoria del Producto:</label>
-                    <input type="text" id="category" name="category" required placeholder="Ingrese Categoria">
+                    <input type="text" id="category" name="categoria" required placeholder="Ingrese Categoria">
                 </div>
                 <div class="form-group">
                     <label for="colore">Colores del Producto:</label>
@@ -51,10 +51,10 @@
                 </div>
                 <div class="form-group">
                     <label for="price">Precio del Producto:</label>
-                    <input type="number" id="price" name="price" required placeholder="Ingrese precio del Producto"></textarea>
+                    <input type="number" id="price" name="precio" required placeholder="Ingrese precio del Producto"></textarea>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Crear Producto">
+                    <button type="submit">Crear Producto</button>
                 </div>
                 <div class="form-group">
                     <input type="reset" value="Borrar">

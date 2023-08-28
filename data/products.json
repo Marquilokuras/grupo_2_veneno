@@ -54,7 +54,7 @@
         "disponibilidad": true,
         "cantidad": 8,
         "carritoVenta": true,
-        "categoria":"buzo",
+        "categoria": "buzo",
         "genero": "mujer",
         "oferta": false,
         "descuento": 20
