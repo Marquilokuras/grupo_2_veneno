@@ -22,7 +22,8 @@ const productsController = {
     },
     
     detail: (req,res) => {
-        const IdProducto = arrayPrendas.find((producto)=> producto.id === req.params.id);
+        const { id } = req.params;
+        const IdProducto = arrayPrendas.find((producto)=> producto.id === id);
         res.render('detail', {data: IdProducto});
     },
 
@@ -32,7 +33,7 @@ const productsController = {
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            imagen: req.body.imagen,
+            imagen: req.file.filename,
             reverse: req.body.reverse,
             disponibilidad: req.body.disponibilidad,
             cantidad: req.body.cantidad,
@@ -45,25 +46,37 @@ const productsController = {
         arrayPrendas.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         
+        const nuevoArrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
        //res.send("Se cargó el producto");
-       res.redirect("/products");
+       res.render("product", {data:nuevoArrayPrendas});
     },
 
     edit: (req,res) => {
-        const productId = arrayPrendas.find((prod)=>prod.id == req.params.id);
+        const { id } = req.params;
+        const productId = arrayPrendas.find((prod)=>prod.id == id);
         res.render("edit", {datos:productId});
     },
 
     update: (req,res) => {
-        const productId = arrayPrendas.find((prod)=>prod.id == req.params.id);
+        const { id } = req.params;
+        const productId = arrayPrendas.find((prod)=>prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
+
+        const ifElse = (elem) => {
+			if (!elem){
+				return productId.imagen;
+			}
+			else {
+				return req.file.filename;
+			}
+		}
 
         arrayPrendas[indexProduct] = {
             id: productId.id,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            imagen: req.body.imagen,
+            imagen: ifElse(req.file),
             reverse: req.body.reverse,
             disponibilidad: req.body.disponibilidad,
             cantidad: req.body.cantidad,
@@ -77,11 +90,18 @@ const productsController = {
         //res.send("Se editó el producto");
         res.redirect("/products");
     },
-/*
+
     delete: (req,res) => {
-        res.send("Se eliminó el producto");
+        //const productsReplace = arrayPrendas.filter((prod)=> prod.id != req.params.id);
+        //fs.writeFileSync(productsFilePath, JSON.stringify(productsReplace));
+        //res.send("Se eliminó el producto");
+        const { id } = req.params;
+		const productFind = arrayPrendas.find((prod) => prod.id === id);
+		const indexProduct = arrayPrendas.indexOf(productFind);
+		arrayPrendas.splice(indexProduct, 1);
+		fs.writeFileSync(productsFilePath,JSON.stringify(arrayPrendas));
+        res.redirect("/products");
     }
-*/
 }
 
 module.exports = productsController;

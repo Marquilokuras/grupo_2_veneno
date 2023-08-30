@@ -15,22 +15,22 @@
     <main>
         <div class="form-container">
             <h2>Formulario de Creación de Productos</h2>
-            <form action="/products" method="POST"> <!--enctype="multipart/form-data"-->
+            <form action="/products" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="name">Nombre del Producto:</label>
-                    <input type="text" id="name" name="nombre" required placeholder="Ingrese Nombre del Producto">
+                    <label for="nombre">Nombre del Producto:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese Nombre del Producto">
                 </div>
                 <div class="form-group">
-                    <label for="description">Descripción:</label>
-                    <textarea id="description" name="descripcion" required placeholder="Ingrese Descripción del producto"></textarea>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" required placeholder="Ingrese Descripción del producto"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="image">Imagen del Producto:</label>
-                    <input type="file" id="image" name="imagen" accept="image/*" required>
+                    <label for="imagen">Imagen del Producto:</label>
+                    <input type="file" id= "imagen" name="imagen" required accept="image/*">
                 </div>
                 <div class="form-group">
-                    <label for="category">Categoria del Producto:</label>
-                    <input type="text" id="category" name="categoria" required placeholder="Ingrese Categoria">
+                    <label for="categoria">Categoria del Producto:</label>
+                    <input type="text" id="categoria" name="categoria" required placeholder="Ingrese Categoria">
                 </div>
                 <div class="form-group">
                     <label for="colore">Colores del Producto:</label>

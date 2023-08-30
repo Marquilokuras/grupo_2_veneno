@@ -118,6 +118,11 @@
 
                         <input type="submit" value="Añadir al Carrito">
                     </div>
+                </form>
+                <button><a style = "text-decoration: none; color: black" href="/products/edit/<%=data.id%>">Editar Producto</a></button>
+                <form action="/products/<%=data.id%>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar Producto</button>
+                </form>
             </div>
 
             <div class="envio">
