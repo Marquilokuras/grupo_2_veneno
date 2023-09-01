@@ -41,6 +41,10 @@ main{
   font-size: 24px;
 }
 
+.producto-edit{
+    color:rgb(189, 185, 185);
+}
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -67,7 +71,7 @@ main{
     margin-top: 5px;
 }
 
-.form-group input[type="submit"] {
+.form-group input[type="submit"], .form-group button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4CAF50;

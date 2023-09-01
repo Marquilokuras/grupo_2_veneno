@@ -176,14 +176,17 @@ footer .copyrigth {
     .imgs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
 
-    /* Opcional: ajusta el tamaño de las imágenes según tus necesidades */
-    .imgs img {
-        width: 100%;
-        /* O ajusta el ancho deseado */
-        height: auto;
-    }
+      }
+    
+      /* Opcional: ajusta el tamaño de las imágenes según tus necesidades */
+      .imgs img {
+       /* width: 100%;  O ajusta el ancho deseado
+        height: auto;*/
+        width: 400px;
+        height: 600px;
+      }
+
 }
 
 /* Estilos para desktops (ancho mínimo 769px) */

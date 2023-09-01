@@ -14,23 +14,24 @@
 
     <main>
         <div class="form-container">
-            <h2>Formulario de Creación y Edición de Productos</h2>
-            <form action="/register" method="post" enctype="multipart/form-data">
+            <h2>Formulario de Edición de Productos</h2>
+            <h2 class="producto-edit"> <%=datos.nombre%></h2>
+            <form action="/products/<%=datos.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="name">Nombre del Producto:</label>
-                    <input type="text" id="name" name="name" required placeholder="Ingrese Nombre del Producto">
+                    <label for="nombre">Nombre del Producto:</label>
+                    <input type="text" id="nombre" name="nombre" required value="<%=datos.nombre%>">
                 </div>
                 <div class="form-group">
-                    <label for="description">Descripción:</label>
-                    <textarea id="description" name="description" required placeholder="Ingrese Descripción del producto"></textarea>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" required><%=datos.descripcion%></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="image">Imagen del Producto:</label>
-                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <label for="imagen">Imagen del Producto:</label>
+                    <input type="file" id="imagen" name="imagen" required accept="image/*"> 
                 </div>
                 <div class="form-group">
-                    <label for="category">Categoria del Producto:</label>
-                    <input type="text" id="category" name="category" required placeholder="Ingrese Categoria">
+                    <label for="categoria">Categoria del Producto:</label>
+                    <input type="text" id="categoria" name="categoria" required value="<%=datos.categoria%>">
                 </div>
                 <div class="form-group">
                     <label for="colore">Colores del Producto:</label>
@@ -50,15 +51,18 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="price">Precio del Producto:</label>
-                    <input type="number" id="price" name="price" required placeholder="Ingrese precio del Producto"></textarea>
+                    <label for="precio">Precio del Producto:</label>
+                    <input type="number" id="precio" name="precio" required value="<%=datos.precio%>">
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Crear Producto">
+                    <button type="submit">Editar Producto</button>
                 </div>
                 <div class="form-group">
                     <input type="reset" value="Borrar">
                 </div>
+            </form>
+            <form action="/products/<%=datos.id%>?_method=DELETE" method="POST">
+                <button type="submit">Eliminar Producto</button>
             </form>
         </div>
     </main>
