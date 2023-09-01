@@ -34,7 +34,7 @@ Lo que hicimos bien:
     
 Lo que hicimos mal:
 
-    * Acumulación de taremas que llevaron a no poder estar abocados a la realización de las tareas correspondientes.
+    * Acumulación de tareas que llevaron a no poder estar abocados a la realización de las tareas correspondientes.
     
     * No respetar el mismo lenguaje.
     
@@ -62,17 +62,15 @@ Lo que hicimos bien:
     
 Lo que hicimos mal:
 
-    * Acumulación de taremas que llevaron a no poder estar abocados a la realización de las tareas correspondientes.
+    * Acumulación de tareas previos que concluyeron en la demora del trabajo en concreto.
     
-    * No respetar el mismo lenguaje.
-    
-    * No terminar las medias queries para todos los dispositivos.
+    * Haber realizado las tareas en los días cercanos a la fecha de entrega.  
 
 Lo que deberiamos comenzar a hacer:
     
-    * Fijar un horario semanal para poder llevar paso a paso las tareas correspondientes a cada sprint.
+    * Realizar la mayor cantidad de tareas con anticipación.
     
-    * Llevar una comunicacion más detallada de lo que se va realizando durante el sprint.
+    * Realizar las paginas extras a las solicitadas por el curso.
     
 Lo que deberiamos dejar de hacer:   
     
