@@ -64,4 +64,15 @@ Si se encontró algún impedimento:
     # Si hubieron impedimentos, no pude lograr que la vista de detalles de productos se visualice.  
     
 Qué va hacer hoy:
-    #Consultar con compañeros del equipo para ver y comprender qué debo corregir. 
+    # Consultar con compañeros del equipo para ver y comprender qué debo corregir. 
+
+Día 01/09/2023 - Marcos Quinteros
+
+Qué hizo ayer.
+    # Ponerse al tanto con las tareas proximas a realizar, llevando un control de los tiempos.
+
+Si se encontró algún impedimento: 
+    # Me encontre con conflictos en las ramas que llevaron a solucionarolas para poder avanzar con la realización del proyecto.
+    
+Qué va hacer hoy:
+    # Solucionar el conflicto entre las ramas, realizar retrospectiva.
