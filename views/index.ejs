@@ -3,7 +3,7 @@
 <head>
     <%- include('./partials/head.ejs') %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/home.css"> 
+    <link rel="stylesheet" href="/css/home.css">
     <title>Inicio</title>
 
 </head>
@@ -28,8 +28,8 @@
         </section>
         <section class="section-hombre-mujer">
             <div class="div-hombre-mujer">
-                <a href=""><img src="img/hombre.webp" alt=""></a>
-                <a href=""><img src="img/mujer.webp" alt=""></a>
+                <a href="/products"><img src="img/hombre.webp" alt=""></a>
+                <a href="/products"><img src="img/mujer.webp" alt=""></a>
             </div>
         </section>
         <section class="section-opcion-prendas">
@@ -37,47 +37,53 @@
                 <div class="div-opcion-prendas">
                     <img src="img/remeraswebp.webp" alt="remeras">
                     <div class="div-remeras">
-                        <a href="/productDetail">REMERAS</a>
+                        <a href="/products">REMERAS</a>
                     </div>
                 </div>
                 <div class="div-opcion-prendas">
                     <img src="img/camperas.webp" alt="camperas">
                     <div class="div-camperas">
-                        <a href="/productDetail">CAMPERAS</a>
+                        <a href="/products">CAMPERAS</a>
                     </div>
                 </div>
                 <div class="div-opcion-prendas">
                     <img src="img/pantalon.webp" alt="jeans">
                     <div class="div-jeans">
-                        <a href="/productDetail">PANTALONES</a>
+                        <a href="/products">PANTALONES</a>
                     </div>
                 </div>
                 <div class="div-opcion-prendas">
                     <img src="img/accesorios.jpeg" alt="accesorios">
                     <div class="div-accesorios">
-                        <a href="/productDetail">ACCESORIOS</a>
+                        <a href="/products">ACCESORIOS</a>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section-articulos-en-exhibicion">
+            <div>
+                <h2 class="articulos-en-ofertas">Artículos en Ofertas</h2>
+            </div>
             <div class="contenedor-de-articulos">
                 <% data.forEach((prenda) =>{ %>
                 <article>
                     <div class="descripcion">
-                        <img src="img/<%=prenda.imagen %>" alt="remeron manifest">
+                        <a href="/products/<%=prenda.id%>">
+                            <img src="img/<%=prenda.imagen %>" alt="<%=prenda.nombre%>">
+                        </a>
                         <h3 class="desc"> <%=prenda.nombre %></h3>
                         <p class="precio">$<%=prenda.precio %></p>
-                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
-                        <a class="mas-informacion" href="/productDetail">Más información</a>
+                        <p class="descuento"><%=prenda.descuento%>% de descuento</p>
+                        <form action="products/productCart" method="GET">
+                            <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                        </form>
+                        <a class="mas-informacion" href="/products/<%=prenda.id%>">Más información</a>                  
                     </div>
                 </article>
                 <%})%>
             </div>
         </section>
     </main>
-    
     <%- include('./partials/footer.ejs') %>
-
 </body>
 </html>

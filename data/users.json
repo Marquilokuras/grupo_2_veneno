@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "nombre": "nombre",
+        "apellido": "apellido",
+        "email": "email",
+        "contraseña": "contraseña",
+        "genero": "genero",
+        "imagen": "imagen",
+        "fechaNacimiento": "fechaNacimiento",
+        "edad": "edad",
+        "domicilio": "domicilio"
+    }
+]

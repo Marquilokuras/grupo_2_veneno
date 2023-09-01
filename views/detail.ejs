@@ -5,8 +5,9 @@
 
     <%- include('./partials/head.ejs') %>
     <title>Detalle del Producto</title>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/productDetailStyles.css">
+    
 
 </head>
 
@@ -19,35 +20,30 @@
     <main>
         <div class="main-imagenes">
             <div class="imgs">
-                <img src="img/img1Cuadro.jpg" alt="Imagen 1">
-                <img src="img/img1Cuadro.jpg" alt="Imagen 3">
-                <img src="img/img1Cuadro.jpg" alt="Imagen 2">
-                <img src="img/img1Cuadro.jpg" alt="Imagen 4">
+                <img src="/img/<%=data.imagen%>" alt="<%=data.nombre%>">
+                <img src="/img/<%=data.reverse%>" alt="<%=data.nombre%>">
             </div>
             <!--             <button id="nextBtn">Siguiente</button> -->
             <div class="opciones">
                 <div class="dropdown">
                     <button>Descripcion</button>
                     <div class="dropdown-content">
-                        <img src="img/guiaTalles.jpg" alt="Imagen 3">
+                        <img src="/img/guiaTalles.jpg" alt="Imagen 3">
+                        <!--<p><%=data.descripcion%></p>-->
                     </div>
                 </div>
 
                 <div class="dropdown">
                     <button>Cuidados</button>
                     <div class="dropdown-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est non autem velit ipsa vitae
-                        harum, corrupti voluptatem perspiciatis et repellat molestiae distinctio ut consequatur
-                        consectetur optio voluptates praesentium? Quasi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </div>
                 </div>
 
                 <div class="dropdown">
                     <button>Detalles</button>
                     <div class="dropdown-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aspernatur reprehenderit
-                        alias pariatur placeat distinctio dicta nesciunt porro deserunt unde? Ratione dignissimos totam
-                        facere id eaque esse! Architecto, quod aliquid.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </div>
                 </div>
             </div>
@@ -55,16 +51,15 @@
 
         <div class="aside">
             <div class="detalle">
-
-                <form action="/productDetail" method="post">
+                <form action="/products/productCart" method="GET">
                     <div class="descripcion">
                         <!--    <label for="nombreProducto">Nombre del Producto:</label>
                         <input type="text" id="nombreProducto" name="nombreProducto" required>
                         <label for="precio">Precio:</label>
                         <input type="number" id="precio" name="precio" required>
  -->
-                        <p>Nombre del Producto:</p>
-                        <p>Precio: </p>
+                        <p>Nombre del Producto: <%=data.nombre%></p>
+                        <p>Precio: $<%=data.precio%></p>
                         <label>Seleccione un color:</label>
                         <!-- <div class="color-selector">
                             <input type="radio" id="color-red" name="color" value="red" onclick="selectColor('red')"
@@ -123,6 +118,11 @@
 
                         <input type="submit" value="Añadir al Carrito">
                     </div>
+                </form>
+                <button><a style = "text-decoration: none; color: black" href="/products/edit/<%=data.id%>">Editar Producto</a></button>
+                <form action="/products/<%=data.id%>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar Producto</button>
+                </form>
             </div>
 
             <div class="envio">

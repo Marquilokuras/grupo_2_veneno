@@ -154,8 +154,10 @@ footer {
     
       /* Opcional: ajusta el tamaño de las imágenes según tus necesidades */
       .imgs img {
-        width: 100%; /* O ajusta el ancho deseado */
-        height: auto;
+       /* width: 100%;  O ajusta el ancho deseado
+        height: auto;*/
+        width: 400px;
+        height: 600px;
       }
 }
 
