@@ -4,9 +4,9 @@
 <head>
 
     <%- include('./partials/head.ejs') %>
-    <title>Detalle del Producto</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/productDetailStyles.css">
+        <title>Detalle del Producto</title>
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/productDetailStyles.css">
 
 </head>
 
@@ -19,34 +19,35 @@
     </header>
 
     <main>
-        <div class="main-imagenes">
-            <div class="imgs">
-                <img src="/img/<%=data.imagen%>" alt="<%=data.nombre%>">
-                <img src="/img/<%=data.reverse%>" alt="<%=data.nombre%>">
-            </div>
-            <!--             <button id="nextBtn">Siguiente</button> -->
-            <div class="opciones">
-                <div class="dropdown">
-                    <button>Descripcion</button>
-                    <div class="dropdown-content">
-                        <img src="/img/guiaTalles.jpg" alt="Imagen 3">
-                        <!--<p><%=data.descripcion%></p>-->
-                    </div>
+        <% data.forEach((data)=>{ %>
+            <div class="main-imagenes">
+                <div class="imgs">
+                    <img src="/img/<%=data.image%>" alt="<%=data.nombre%>">
+                    <img src="/img/<%=data.reverse%>" alt="<%=data.nombre%>">
                 </div>
-
-                <div class="dropdown">
-                    <button>Cuidados</button>
-                    <div class="dropdown-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <!--             <button id="nextBtn">Siguiente</button> -->
+                <div class="opciones">
+                    <div class="dropdown">
+                        <button>Descripcion</button>
+                        <div class="dropdown-content">
+                            <img src="/img/guiaTalles.jpg" alt="Imagen 3">
+                            <!--<p><%=data.descripcion%></p>-->
+                        </div>
                     </div>
-                </div>
 
-                <div class="dropdown">
-                    <button>Detalles</button>
-                    <div class="dropdown-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <div class="dropdown">
+                        <button>Cuidados</button>
+                        <div class="dropdown-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
                     </div>
-<!--         <section id="imgs">
+
+                    <div class="dropdown">
+                        <button>Detalles</button>
+                        <div class="dropdown-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <!--         <section id="imgs">
             <img src="img/img1Cuadro.jpg" alt="Imagen 1">
             <img src="img/img1Cuadro.jpg" alt="Imagen 3">
             <img src="img/img1Cuadro.jpg" alt="Imagen 2">
@@ -140,29 +141,32 @@
 
                 <div>
                     <input type="submit" value="Añadir al Carrito"> -->
-                </div>
-        </section>
+                    </div>
+                    </section>
 
-        <div id="envio">
-            <p>ENVIO GRATIS APARTIR DE $29.999</p>
-            <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
-            <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
-        </div>
+                    <div id="envio">
+                        <p>ENVIO GRATIS APARTIR DE $29.999</p>
+                        <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
+                        <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
+                    </div>
 
 
-        <div class="aside">
-            <div class="detalle">
-                <form action="/products/productCart" method="GET">
-                    <div class="descripcion">
-                        <!--    <label for="nombreProducto">Nombre del Producto:</label>
+                    <div class="aside">
+                        <div class="detalle">
+                            <form action="/products/productCart" method="GET">
+                                <div class="descripcion">
+                                    <!--    <label for="nombreProducto">Nombre del Producto:</label>
                         <input type="text" id="nombreProducto" name="nombreProducto" required>
                         <label for="precio">Precio:</label>
                         <input type="number" id="precio" name="precio" required>
  -->
-                        <p>Nombre del Producto: <%=data.nombre%></p>
-                        <p>Precio: $<%=data.precio%></p>
-                        <label>Seleccione un color:</label>
-                        <!-- <div class="color-selector">
+                                    <p>Nombre del Producto: <%=data.nombre%>
+                                    </p>
+                                    <p>Precio: $<%=data.precio%>
+                                    </p>
+                                    <label>Seleccione un color:</label>
+                                    <%})%>
+                                        <!-- <div class="color-selector">
                             <input type="radio" id="color-red" name="color" value="red" onclick="selectColor('red')"
                                 required>
                             <label for="color-red" class="color-circle color-red"></label>
@@ -184,55 +188,62 @@
                             <label for="color-purple" class="color-circle color-purple"></label>
                         </div> -->
 
-                        <select id="colorSelect">
-                            <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo
-                            </option>
-                            <option value="#00FF00" class="color-option" style="background-color: #00FF00;">Verde
-                            </option>
-                            <option value="#0000FF" class="color-option" style="background-color: #0000FF;">Azul
-                            </option>
-                            <option value="#FFFF00" class="color-option" style="background-color: #FFFF00;">Amarillo
-                            </option>
-                            <option value="#FF00FF" class="color-option" style="background-color: #FF00FF;">Magenta
-                            </option>
-                            <option value="#00FFFF" class="color-option" style="background-color: #00FFFF;">Cian
-                            </option>
-                        </select>
+                                        <select id="colorSelect">
+                                            <option value="#FF0000" class="color-option"
+                                                style="background-color: #FF0000;">Rojo
+                                            </option>
+                                            <option value="#00FF00" class="color-option"
+                                                style="background-color: #00FF00;">Verde
+                                            </option>
+                                            <option value="#0000FF" class="color-option"
+                                                style="background-color: #0000FF;">Azul
+                                            </option>
+                                            <option value="#FFFF00" class="color-option"
+                                                style="background-color: #FFFF00;">Amarillo
+                                            </option>
+                                            <option value="#FF00FF" class="color-option"
+                                                style="background-color: #FF00FF;">Magenta
+                                            </option>
+                                            <option value="#00FFFF" class="color-option"
+                                                style="background-color: #00FFFF;">Cian
+                                            </option>
+                                        </select>
 
-                        <label for="talles">Talles:</label>
-                        <select id="talles" name="talles" required>
-                            <option value="XS">XS</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                            <option value="XXL">XXL</option>
-                        </select>
+                                        <label for="talles">Talles:</label>
+                                        <select id="talles" name="talles" required>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                            <option value="XXL">XXL</option>
+                                        </select>
 
-                        <div class="guia">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                <path
-                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                            </svg>
-                            <p>Guía de Talles</p>
+                                        <div class="guia">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                                            </svg>
+                                            <p>Guía de Talles</p>
+                                        </div>
+
+                                        <input type="submit" value="Añadir al Carrito">
+                                </div>
+                            </form>
+                            <button><a style="text-decoration: none; color: black"
+                                    href="/products/edit/<%=data.id%>">Editar Producto</a></button>
+                            <form action="/products/<%=data.id%>?_method=DELETE" method="POST">
+                                <button type="submit">Eliminar Producto</button>
+                            </form>
                         </div>
 
-                        <input type="submit" value="Añadir al Carrito">
+                        <div class="envio">
+                            <p>ENVIO GRATIS APARTIR DE $29.999</p>
+                            <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
+                            <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
+                        </div>
+
                     </div>
-                </form>
-                <button><a style = "text-decoration: none; color: black" href="/products/edit/<%=data.id%>">Editar Producto</a></button>
-                <form action="/products/<%=data.id%>?_method=DELETE" method="POST">
-                    <button type="submit">Eliminar Producto</button>
-                </form>
-            </div>
-
-            <div class="envio">
-                <p>ENVIO GRATIS APARTIR DE $29.999</p>
-                <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
-                <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
-            </div>
-
-        </div>
 
     </main>
 
