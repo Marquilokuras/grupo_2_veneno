@@ -11,6 +11,7 @@
 body {
     font-family: "Ubuntu";
     max-width: 1335px;
+    background-color: #202020;
 }
 nav{
     width: 40%;
@@ -33,6 +34,7 @@ header{
     /* background-color: #eee; */
     margin-bottom: 50px;
     color: #222;
+    font-size: 20px;
 }
 
 main {
@@ -144,8 +146,9 @@ main {
 
 .btn-increment-decrement i {
     font-size: 11px;
-    color: #222;
+    color: #cfd69b;
     cursor: pointer;
+    background-color: #9cd42c;
 }
 
 fa-chevron-up:hover {
@@ -186,15 +189,15 @@ fa-chevron-down:hover {
 .tittle-info-additional h4,
 .tittle-reviews h4 {
     font-weight: 300;
-    color: #222;
-    font-size: 20px;
+    color: white;
+    font-size: 15px;
 }
 
 .text-description,
 .text-additional,
 .text-reviews {
     font-size: 13px;
-    color: #252525;
+    color: white;
     line-height: 22px;
     margin-top: 25px;
 }
@@ -209,7 +212,7 @@ fa-chevron-down:hover {
 
 .conteiner-social span {
     font-weight: 300;
-    color: #252525;
+    color: white;
 }
 
 .conteiner-buttons-social {
@@ -220,7 +223,7 @@ fa-chevron-down:hover {
 
 .conteiner-buttons-social a:link,
 .conteiner-buttons-social a:visited {
-    color: #666;
+    color: #8c9c64;
     font-size: 15px;
 }
 
@@ -260,12 +263,14 @@ fa-chevron-down:hover {
 }
 
 .text-product{
-    color: #252525;
+    color: white;
     font-weight: 300;
     line-height: 1.4;
 }
 
-
+h2{
+    color: #9cd42c;
+}
 
 .text-product h3{
     color: inherit;
@@ -278,12 +283,21 @@ fa-chevron-down:hover {
 }
 
 .text-product p{
-    color: #666;
+    color: #8c9c64;
     font-size: 13px;
 }
 
 .text-product p:hover{
     color: #1bbeb4;
+}
+
+div .price{
+    color: white;
+    font-size: 14px;
+}
+
+span{
+    color: aliceblue;
 }
 
 

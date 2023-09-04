@@ -8,7 +8,8 @@ const prendas = [
         cantidad: 10,
         carritoVenta: false,
         categoria: "remera",
-        genero: "hombre"
+        genero: "hombre",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "2",
@@ -19,7 +20,8 @@ const prendas = [
         cantidad: 20,
         carritoVenta: false,
         categoria: "remera",
-        genero: "mujer"
+        genero: "mujer",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aunque una vez que tenés este modelo veneno en tus manos, los demás pasarán desapercibidos. El tejido de mezcla de algodón suave te envuelve en comodidad y los detalles acanalados lo hacen aún más especial. El emblemático diseño Cultura adorna la espalda con un diseño en sombra para un look impactante. Nuestros productos de algodón apoyan el cultivo de algodón sostenible."
     },
     {
         id: "3",
@@ -30,7 +32,8 @@ const prendas = [
         cantidad: 15,
         carritoVenta: false,
         categoria: "remera",
-        genero: "mujer"
+        genero: "mujer",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aunque una vez que tenés este modelo veneno en tus manos, los demás pasarán desapercibidos. El tejido de mezcla de algodón suave te envuelve en comodidad y los detalles acanalados lo hacen aún más especial. El emblemático diseño Cultura adorna la espalda con un diseño en sombra para un look impactante. Nuestros productos de algodón apoyan el cultivo de algodón sostenible."
     },
     {
         id: "4",
@@ -41,7 +44,8 @@ const prendas = [
         cantidad: 8,
         carritoVenta: true,
         categoria:"buzo",
-        genero: "mujer"
+        genero: "mujer",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "5",
@@ -52,7 +56,8 @@ const prendas = [
         cantidad: 12,
         carritoVenta: false,
         categoria: "campera",
-        genero: "mujer"
+        genero: "mujer",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "6",
@@ -63,7 +68,8 @@ const prendas = [
         cantidad: 7,
         carritoVenta: true,
         categoria: "buzo",
-        genero: "hombre"
+        genero: "hombre",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "7",
@@ -74,7 +80,8 @@ const prendas = [
         cantidad: 9,
         carritoVenta: false,
         categoria: "campera",
-        genero: "hombre"
+        genero: "hombre",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "8",
@@ -85,7 +92,8 @@ const prendas = [
         cantidad: 14,
         carritoVenta: false,
         categoria: "pantalon",
-        genero: "hombre"
+        genero: "hombre",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "9",
@@ -96,7 +104,8 @@ const prendas = [
         cantidad: 18,
         carritoVenta: false,
         categoria: "pantalon",
-        genero: "mujer"
+        genero: "mujer",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "10",
@@ -107,7 +116,8 @@ const prendas = [
         cantidad: 6,
         carritoVenta: false,
         categoria: "pantalon",
-        genero: "hombre"
+        genero: "hombre",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     },
     {
         id: "11",
@@ -118,7 +128,8 @@ const prendas = [
         cantidad: 11,
         carritoVenta: false,
         categoria: "pantalon",
-        genero: "mujer"
+        genero: "mujer",
+        descripcion: "No existe tal cosa como tener demasiados buzos, aun....."
     }
 
 ];
