@@ -25,33 +25,36 @@
                     <textarea id="descripcion" name="descripcion" required placeholder="Ingrese Descripción del producto"></textarea>
                 </div>
                 <div class="form-group">
+                    <label for="price">Precio del Producto:</label>
+                    <input type="number" id="price" name="precio" required placeholder="Ingrese precio del Producto">
+                </div>
+                <div class="form-group">
                     <label for="imagen">Imagen del Producto:</label>
                     <input type="file" id= "imagen" name="imagen" required accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="reverse">Imagen Dorso del Producto:</label>
+                    <input type="file" id="reverse" name="reverse" required accept="image/*"> 
+                </div>
+                <div class="form-group">
+                    <label for="cantidad">Stock del Producto:</label>
+                    <input type="number" id="cantidad" name="cantidad" required placeholder="Ingrese Stock del Producto">
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoria del Producto:</label>
                     <input type="text" id="categoria" name="categoria" required placeholder="Ingrese Categoria">
                 </div>
                 <div class="form-group">
-                    <label for="colore">Colores del Producto:</label>
-                    <select id="colore">
-                        <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo
-                        </option>
-                        <option value="#00FF00" class="color-option" style="background-color: #00FF00;">Verde
-                        </option>
-                        <option value="#0000FF" class="color-option" style="background-color: #0000FF;">Azul
-                        </option>
-                        <option value="#FFFF00" class="color-option" style="background-color: #FFFF00;">Amarillo
-                        </option>
-                        <option value="#FF00FF" class="color-option" style="background-color: #FF00FF;">Magenta
-                        </option>
-                        <option value="#00FFFF" class="color-option" style="background-color: #00FFFF;">Cian
-                        </option>
-                    </select>
+                    <label for="genero">Género:</label>
+                    <input type="text" id="genero" name="genero" required placeholder="Ingrese Género">
                 </div>
                 <div class="form-group">
-                    <label for="price">Precio del Producto:</label>
-                    <input type="number" id="price" name="precio" required placeholder="Ingrese precio del Producto"></textarea>
+                    <label for="oferta">Ofertado:</label>
+                    <input type="text" id="oferta" name="oferta" required placeholder="Ingrese Oferta: true o false">
+                </div>
+                <div class="form-group">
+                    <label for="descuento">Descuento:</label>
+                    <input type="number" id="descuento" name="descuento" required placeholder="Ingrese descuento: 0 a 100">
                 </div>
                 <div class="form-group">
                     <button type="submit">Crear Producto</button>

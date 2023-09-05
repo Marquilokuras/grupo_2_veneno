@@ -23,26 +23,52 @@ const productsController = {
     
     detail: (req,res) => {
         const { id } = req.params;
-        const IdProducto = arrayPrendas.find((producto)=> producto.id === id);
+        const IdProducto = arrayPrendas.find((producto)=> producto.id == id);
         res.render('detail', {data: IdProducto});
     },
 
     store: (req,res) => {
+        const ifElse = (elem) => {
+			if ( elem === "true"){
+				return true;
+			}
+			else if ( elem === "false") {
+				return false;
+			}
+		};
+
+        const imagen = (elem) => {
+            for(let i=0;i<elem.length;i++){
+                if(elem[i].fieldname === "imagen"){
+                    return elem[i].filename;
+                }
+            }
+        }
+
+        const reverse = (elem) => {
+            for(let i=0;i<elem.length;i++){
+                if(elem[i].fieldname === "reverse"){
+                    return elem[i].filename;
+                }
+            }
+        }
+
         const nuevoProducto = {
             id: arrayPrendas.length+1,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            imagen: req.file.filename,
-            reverse: req.body.reverse,
-            disponibilidad: req.body.disponibilidad,
+            imagen: imagen(req.files),
+            reverse: reverse(req.files),
+            disponibilidad: true,
             cantidad: req.body.cantidad,
-            carritoVenta: req.body.carritoVenta,
+            carritoVenta: false,
             categoria: req.body.categoria,
             genero: req.body.genero,
-            oferta: req.body.oferta,
+            oferta: ifElse(req.body.oferta),
             descuento: req.body.descuento
         }
+
         arrayPrendas.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         
@@ -62,12 +88,28 @@ const productsController = {
         const productId = arrayPrendas.find((prod)=>prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
 
-        const ifElse = (elem) => {
-			if (!elem){
-				return productId.imagen;
-			}
+        const imagen = (elem) => {
+            if (!elem) {
+                return productId.imagen;
+            }
+            else {
+                for(let i=0;i<elem.length;i++){
+                    if(elem[i].fieldname === "imagen"){
+                        return elem[i].filename;
+                    }
+                };
+            }
+		};
+        const reverse = (elem) => {
+            if (!elem) {
+                return productId.reverse;
+            }
 			else {
-				return req.file.filename;
+                for(let i=0;i<elem.length;i++){
+                    if(elem[i].fieldname === "reverse"){
+                        return elem[i].filename;
+                    }
+                };
 			}
 		}
 
@@ -76,8 +118,8 @@ const productsController = {
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            imagen: ifElse(req.file),
-            reverse: req.body.reverse,
+            imagen: imagen(req.files),
+            reverse: reverse(req.files),
             disponibilidad: req.body.disponibilidad,
             cantidad: req.body.cantidad,
             carritoVenta: req.body.carritoVenta,
