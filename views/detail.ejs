@@ -4,8 +4,8 @@
 <head>
 
     <%- include('./partials/head.ejs') %>
-        <title>Detalle del Producto</title>
-        <link rel="stylesheet" href="/css/home.css">
+        <!-- <title>Detalles del Producto</title> -->
+        <!-- <link rel="stylesheet" href="css/home.css"> -->
         <link rel="stylesheet" href="/css/productDetailStyles.css">
 
 </head>
@@ -17,235 +17,183 @@
         <%- include('./partials/header.ejs') %>
 
     </header>
-
+    <form action="/productDetail" method="post">
+  
+    <div class="conteiner-tittle">Detalles del producto</div>
     <main>
-        <% data.forEach((data)=>{ %>
-            <div class="main-imagenes">
-                <div class="imgs">
-                    <img src="/img/<%=data.image%>" alt="<%=data.nombre%>">
-                    <img src="/img/<%=data.reverse%>" alt="<%=data.nombre%>">
+        
+            <nav id="imgs"><img src="img/img1Cuadro.jpg" alt="Imagen 1"></nav>
+            
+            <div class="conteiner-info-product">
+                <div class="conteiner-price">
+                    <span>$5000.00</span>
+                    <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <!--             <button id="nextBtn">Siguiente</button> -->
-                <div class="opciones">
-                    <div class="dropdown">
-                        <button>Descripcion</button>
-                        <div class="dropdown-content">
-                            <img src="/img/guiaTalles.jpg" alt="Imagen 3">
-                            <!--<p><%=data.descripcion%></p>-->
+
+                <div class="conteiner-detail-product">
+                    <div class="form-group">
+                        <label for="colour"> Seleccione un color</label>
+                        <select name="colour" id="colour">
+                            <option disabled selected value="">
+                                Elegí una opción
+                            </option>
+                            <option value="rojo"> Rojo </option>
+                            <option value="blanco"> Blanco </option>
+                            <option value="beige"> Beige </option>
+                            <option value="marron">Marrón</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="size"> Talles </label>
+                        <select name="size" id="size">
+                            <option disabled selected value="">
+                                Elegí una opción
+                            </option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                </div>
+                    <div class="conteiner-add-cart">
+                        <div class="conteiner-quantity">
+                            <input type="number" placeholder="1" value="1" min="1" class="input-quatity" />
+                            <div class="btn-incremet-decrement">
+                                <i class="fa-solid fa-chevron-up" id="increment"></i>
+                                <i class="fa-solid fa-chevron-down" id="decrement"></i>
+                            </div>
+                        </div>
+                        <button class="btn-add-to-cart">
+                            <i class="fa-solid fa-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+
+                    <div class="conteiner-description">
+                        <div class="tittle-description">
+                            <h4>Descripción</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-description hidden">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet illo, quibusdam sunt
+                                cum
+                                tempore laborum voluptatibus veritatis? Laborum quae dicta similique, obcaecati
+                                voluptatem
+                                repudiandae ipsa, voluptate, quisquam quibusdam maiores impedit. Lorem ipsum, dolor sit
+                                amet
+                                consectetur adipisicing elit. Nobis, dolores ullam maxime illo fugit earum nemo alias
+                                porro
+                                inventore deleniti. Sapiente ipsam officia doloremque distinctio corrupti quia quidem
+                                quo
+                                nulla?</p>
+                        </div>
+                    </div>
+                    <div class="conteiner-info-additional">
+                        <div class="tittle-info-additional">
+                            <h4>Informacion Adicional</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-additional hidden">
+                            <p>--------------</p>
                         </div>
                     </div>
 
-                    <div class="dropdown">
-                        <button>Cuidados</button>
-                        <div class="dropdown-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <div class="conteiner-reviews">
+                        <div class="tittle-reviews">
+                            <h4>Reseñas</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-reviews hidden">
+                            <p>--------------</p>
                         </div>
                     </div>
 
-                    <div class="dropdown">
-                        <button>Detalles</button>
-                        <div class="dropdown-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <div class="conteiner-social">
+                        <span>Compartir</span>
+                        <div class="conteiner-buttons-social">
+                            <a href="a"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="a"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="a"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="a"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="a"><i class="fa-brands fa-pinterest"></i></a>
                         </div>
-                        <!--         <section id="imgs">
-            <img src="img/img1Cuadro.jpg" alt="Imagen 1">
-            <img src="img/img1Cuadro.jpg" alt="Imagen 3">
-            <img src="img/img1Cuadro.jpg" alt="Imagen 2">
-            <img src="img/img1Cuadro.jpg" alt="Imagen 4">
+                    </div>
+
+            </div>
+        </main>
+        <section class="related-product">
+            <h2>Productos relacionados</h2>
+            <div class="card-list-products">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img\buzotopessential-mujer.webp" alt="producto-1"> 
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <P class="category">CATEGORIA DEL PRODUCTO</P>
+                        </div>
+                    </div>
+                    <div class="price">$PRECIO DEL PRODUCTO</div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img\camperatrackgrey-hombre.webp" alt="producto-2"> 
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <P class="category">CATEGORIA DEL PRODUCTO</P>
+                        </div>
+                    </div>
+                    <div class="price">$PRECIO DEL PRODUCTO</div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img\buzotopessential-mujer.webp" alt="producto-3"> 
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <P class="category">CATEGORIA DEL PRODUCTO</P>
+                        </div>
+                    </div>
+                    <div class="price">$PRECIO DEL PRODUCTO</div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img\buzobenight-hombre-.webp" alt="producto-4"> 
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <P class="category">CATEGORIA DEL PRODUCTO</P>
+                        </div>
+                    </div>
+                    <div class="price">$PRECIO DEL PRODUCTO</div>
+                </div>
+            </div>
         </section>
+        </form>
+        
+        
 
-        <br>
-        <section id="detail">
-
-            <article>
-                <h2>Descripcion</h2>
-                <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est non autem velit ipsa vitae
-                    harum, corrupti voluptatem perspiciatis et repellat molestiae distinctio ut consequatur
-                    consectetur optio voluptates praesentium? Quasi!
-                </h3>
-            </article>
-
-            <article>
-                <h2>Cuidados</h2>
-                <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est non autem velit ipsa vitae
-                    harum, corrupti voluptatem perspiciatis et repellat molestiae distinctio ut consequatur
-                    consectetur optio voluptates praesentium? Quasi!
-                </h3>
-            </article>
-
-        </section>
-
-        <section id="options-client">
-
-            <form action="/productDetail" method="post">
-                <div class="descripcion">
-                    <p>NOMBRE DEL PRODUCTO</p>
-                    <p>$9.999,99 </p>
-                    <label>Seleccione un color</label>
-
-                    <input type="radio" id="color-red" name="color" value="red" onclick="selectColor('red')" required>
-                    <label for="color-red" class="color-circle color-red"></label>
-
-                    <input type="radio" id="color-blue" name="color" value="blue" onclick="selectColor('blue')"
-                        required>
-                    <label for="color-blue" class="color-circle color-blue"></label>
-
-                    <input type="radio" id="color-green" name="color" value="green" onclick="selectColor('green')"
-                        required>
-                    <label for="color-green" class="color-circle color-green"></label>
-
-                    <input type="radio" id="color-yellow" name="color" value="yellow" onclick="selectColor('yellow')"
-                        required>
-                    <label for="color-yellow" class="color-circle color-yellow"></label>
-
-                    <input type="radio" id="color-purple" name="color" value="purple" onclick="selectColor('purple')"
-                        required>
-                    <label for="color-purple" class="color-circle color-purple"></label>
-                </div>
-
-                <select id="colorSelect">
-                    <option value="#FF0000" class="color-option">Rojo
-                    </option>
-                    <option value="#00FF00" class="color-option">Verde
-                    </option>
-                    <option value="#0000FF" class="color-option">Azul
-                    </option>
-                    <option value="#FFFF00" class="color-option">Amarillo
-                    </option>
-                    <option value="#FF00FF" class="color-option">Magenta
-                    </option>
-                    <option value="#00FFFF" class="color-option">Cian
-                    </option>
-                </select>
-
-                <label for="talles">Talles</label>
-                <select id="talles" name="talles" required>
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                </select>
-
-                <div class="guia">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path
-                            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                    </svg>
-                    <p>Guía de Talles</p>
-                    <img src="img/guiaTalles.jpg" alt="Imagen 3">
-                </div>
-
-                <div>
-                    <input type="submit" value="Añadir al Carrito"> -->
-                    </div>
-                    </section>
-
-                    <div id="envio">
-                        <p>ENVIO GRATIS APARTIR DE $29.999</p>
-                        <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
-                        <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
-                    </div>
-
-
-                    <div class="aside">
-                        <div class="detalle">
-                            <form action="/products/productCart" method="GET">
-                                <div class="descripcion">
-                                    <!--    <label for="nombreProducto">Nombre del Producto:</label>
-                        <input type="text" id="nombreProducto" name="nombreProducto" required>
-                        <label for="precio">Precio:</label>
-                        <input type="number" id="precio" name="precio" required>
- -->
-                                    <p>Nombre del Producto: <%=data.nombre%>
-                                    </p>
-                                    <p>Precio: $<%=data.precio%>
-                                    </p>
-                                    <label>Seleccione un color:</label>
-                                    <%})%>
-                                        <!-- <div class="color-selector">
-                            <input type="radio" id="color-red" name="color" value="red" onclick="selectColor('red')"
-                                required>
-                            <label for="color-red" class="color-circle color-red"></label>
-
-                            <input type="radio" id="color-blue" name="color" value="blue" onclick="selectColor('blue')"
-                                required>
-                            <label for="color-blue" class="color-circle color-blue"></label>
-
-                            <input type="radio" id="color-green" name="color" value="green"
-                                onclick="selectColor('green')" required>
-                            <label for="color-green" class="color-circle color-green"></label>
-
-                            <input type="radio" id="color-yellow" name="color" value="yellow"
-                                onclick="selectColor('yellow')" required>
-                            <label for="color-yellow" class="color-circle color-yellow"></label>
-
-                            <input type="radio" id="color-purple" name="color" value="purple"
-                                onclick="selectColor('purple')" required>
-                            <label for="color-purple" class="color-circle color-purple"></label>
-                        </div> -->
-
-                                        <select id="colorSelect">
-                                            <option value="#FF0000" class="color-option"
-                                                style="background-color: #FF0000;">Rojo
-                                            </option>
-                                            <option value="#00FF00" class="color-option"
-                                                style="background-color: #00FF00;">Verde
-                                            </option>
-                                            <option value="#0000FF" class="color-option"
-                                                style="background-color: #0000FF;">Azul
-                                            </option>
-                                            <option value="#FFFF00" class="color-option"
-                                                style="background-color: #FFFF00;">Amarillo
-                                            </option>
-                                            <option value="#FF00FF" class="color-option"
-                                                style="background-color: #FF00FF;">Magenta
-                                            </option>
-                                            <option value="#00FFFF" class="color-option"
-                                                style="background-color: #00FFFF;">Cian
-                                            </option>
-                                        </select>
-
-                                        <label for="talles">Talles:</label>
-                                        <select id="talles" name="talles" required>
-                                            <option value="XS">XS</option>
-                                            <option value="S">S</option>
-                                            <option value="M">M</option>
-                                            <option value="L">L</option>
-                                            <option value="XL">XL</option>
-                                            <option value="XXL">XXL</option>
-                                        </select>
-
-                                        <div class="guia">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                                <path
-                                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                                            </svg>
-                                            <p>Guía de Talles</p>
-                                        </div>
-
-                                        <input type="submit" value="Añadir al Carrito">
-                                </div>
-                            </form>
-                            <button><a style="text-decoration: none; color: black"
-                                    href="/products/edit/<%=data.id%>">Editar Producto</a></button>
-                            <form action="/products/<%=data.id%>?_method=DELETE" method="POST">
-                                <button type="submit">Eliminar Producto</button>
-                            </form>
+                        <div id="envio">
+                            <p>
+                            <h3>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</h3>
+                            </p>
+                            <p>
+                            <h3>ENVIO GRATIS APARTIR DE $49.999</h3>
+                            </p>
+                            <p>
+                            <h3>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</h3>
+                            </p>
                         </div>
-
-                        <div class="envio">
-                            <p>ENVIO GRATIS APARTIR DE $29.999</p>
-                            <p>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</p>
-                            <p>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</p>
-                        </div>
-
-                    </div>
-
-    </main>
+                </article>
+            </section> 
 
     <footer>
         <%- include('./partials/footer.ejs') %>
