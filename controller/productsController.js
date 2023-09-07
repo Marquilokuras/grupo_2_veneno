@@ -88,11 +88,17 @@ const productsController = {
         const productId = arrayPrendas.find((prod)=>prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
 
+        const ifElse = (elem) => {
+			if ( elem === "true"){
+				return true;
+			}
+			else if ( elem === "false") {
+				return false;
+			}
+		};
+
         const imagen = (elem) => {
-            if (!elem) {
-                return productId.imagen;
-            }
-            else {
+            if (elem) {
                 for(let i=0;i<elem.length;i++){
                     if(elem[i].fieldname === "imagen"){
                         return elem[i].filename;
@@ -100,11 +106,9 @@ const productsController = {
                 };
             }
 		};
+        
         const reverse = (elem) => {
             if (!elem) {
-                return productId.reverse;
-            }
-			else {
                 for(let i=0;i<elem.length;i++){
                     if(elem[i].fieldname === "reverse"){
                         return elem[i].filename;
@@ -112,24 +116,24 @@ const productsController = {
                 };
 			}
 		}
-
+        
         arrayPrendas[indexProduct] = {
             id: productId.id,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            imagen: imagen(req.files),
-            reverse: reverse(req.files),
-            disponibilidad: req.body.disponibilidad,
+            imagen: imagen(req.files) || productId.imagen,
+            reverse: reverse(req.files) || productId.reverse,
+            disponibilidad: true,
             cantidad: req.body.cantidad,
-            carritoVenta: req.body.carritoVenta,
+            carritoVenta: false,
             categoria: req.body.categoria,
             genero: req.body.genero,
-            oferta: req.body.oferta,
+            oferta: ifElse(req.body.oferta),
             descuento: req.body.descuento
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
-        //res.send("Se editó el producto");
+        //res.send(imagenOriginal);
         res.redirect("/products");
     },
 
