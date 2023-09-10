@@ -18,7 +18,7 @@ header{
     background-color: #202020;
     padding: 30px 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -109,6 +109,7 @@ div.burger-menu i{
     /* mostrar enlaces */
     .nav-secciones {
         display: flex;
+        justify-content: space-between;
     }
 
     /* ocultar icono de menu hamburger */
@@ -118,7 +119,9 @@ div.burger-menu i{
 
     .nav-secciones ul{
         display: flex;
-        justify-content: space-around;
+        
+        
+        text-align: center;
     }
 
     .nav-secciones ul a{

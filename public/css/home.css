@@ -10,14 +10,11 @@
 body{
     background-color: #202020;
 }
-<<<<<<< HEAD
-/* .nav{
-=======
 
 
 /* ----Header---- */
+/*
 .nav{
->>>>>>> bbcd432748900c22fd002bbb4ec39c1307185232
     display: flex;
     flex-direction: row;
     justify-content: space-around;
