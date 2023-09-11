@@ -26,36 +26,33 @@
                     <textarea id="descripcion" name="descripcion" required><%=datos.descripcion%></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="precio">Precio del Producto:</label>
-                    <input type="number" id="precio" name="precio" required value="<%=datos.precio%>">
-                </div>
-                <div class="form-group">
                     <label for="imagen">Imagen del Producto:</label>
-                    <input type="file" id="imagen" name="imagen" accept="image/*"> 
-                </div>
-                <div class="form-group">
-                    <label for="reverse">Imagen Dorso del Producto:</label>
-                    <input type="file" id="reverse" name="reverse" accept="image/*"> 
-                </div>
-                <div class="form-group">
-                    <label for="cantidad">Stock del Producto:</label>
-                    <input type="number" id="cantidad" name="cantidad" required value="<%=datos.cantidad%>">
+                    <input type="file" id="imagen" name="imagen" required accept="image/*"> 
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoria del Producto:</label>
                     <input type="text" id="categoria" name="categoria" required value="<%=datos.categoria%>">
                 </div>
                 <div class="form-group">
-                    <label for="genero">Género:</label>
-                    <input type="text" id="genero" name="genero" required value="<%=datos.genero%>">
+                    <label for="colore">Colores del Producto:</label>
+                    <select id="colore">
+                        <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo
+                        </option>
+                        <option value="#00FF00" class="color-option" style="background-color: #00FF00;">Verde
+                        </option>
+                        <option value="#0000FF" class="color-option" style="background-color: #0000FF;">Azul
+                        </option>
+                        <option value="#FFFF00" class="color-option" style="background-color: #FFFF00;">Amarillo
+                        </option>
+                        <option value="#FF00FF" class="color-option" style="background-color: #FF00FF;">Magenta
+                        </option>
+                        <option value="#00FFFF" class="color-option" style="background-color: #00FFFF;">Cian
+                        </option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="oferta">Ofertado:</label>
-                    <input type="text" id="oferta" name="oferta" required value="<%=datos.oferta%>">
-                </div>
-                <div class="form-group">
-                    <label for="descuento">Descuento:</label>
-                    <input type="number" id="descuento" name="descuento" required value="<%=datos.descuento%>">
+                    <label for="precio">Precio del Producto:</label>
+                    <input type="number" id="precio" name="precio" required value="<%=datos.precio%>">
                 </div>
                 <div class="form-group">
                     <button type="submit">Editar Producto</button>

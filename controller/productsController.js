@@ -1,151 +1,130 @@
 const path = require('path');
 const fs = require('fs');
 const { json } = require('express');
-//const arrayPrendas = require('../dataBase/prendas')
-
-const productsFilePath = path.join(__dirname, '..','data','products.json');
+const products = require('../data/products.json')
+const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
 const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
-   
-    renderProductCart: (req,res) => {
+
+    renderProductCart: (req, res) => {
         const prendasCarrito = arrayPrendas.filter((prenda) => prenda.carritoVenta === true)
         res.render('productCart', { data: prendasCarrito })
     },
 
-    products: (req,res) => {
-        res.render('product', {data:arrayPrendas});
+    // Delete - Delete one product from DB
+    destroy: (req, res) => {
+        const { id } = req.params;
+        const productFind = products.find((prod) => prod.id === id);
+        const indexProduct = products.indexOf(products.find((prod) => prod.id === id));
+        console.log(req.body)
+        products[indexProduct] = {
+            id: productFind.id,
+            nombre: req.body.nombre,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+            reverse: req.body.reverse,
+            disponibilidad: req.body.disponibilidad,
+            cantidad: req.body.cantidad,
+            carritoVenta: "false",
+            categoria: req.body.categoria,
+            genero: req.body.genero,
+            oferta: req.body.oferta,
+            descuento: req.body.descuento,
+            imagen: productFind.imagen
+        }
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        res.redirect('productCart');
     },
-    
-    create: (req,res) => {
+
+    products: (req, res) => {
+        res.render('product', { data: arrayPrendas });
+    },
+
+    create: (req, res) => {
         res.render("create");
     },
-    
-    detail: (req,res) => {
+
+    detail: (req, res) => {
         const { id } = req.params;
-        const IdProducto = arrayPrendas.find((producto)=> producto.id == id);
-        res.render('detail', {data: IdProducto});
+        const IdProducto = arrayPrendas.find((producto) => producto.id === id);
+        res.render('detail', { data: IdProducto });
     },
 
-    store: (req,res) => {
-        const ifElse = (elem) => {
-			if ( elem === "true"){
-				return true;
-			}
-			else if ( elem === "false") {
-				return false;
-			}
-		};
-
-        const imagen = (elem) => {
-            for(let i=0;i<elem.length;i++){
-                if(elem[i].fieldname === "imagen"){
-                    return elem[i].filename;
-                }
-            }
-        }
-
-        const reverse = (elem) => {
-            for(let i=0;i<elem.length;i++){
-                if(elem[i].fieldname === "reverse"){
-                    return elem[i].filename;
-                }
-            }
-        }
-
+    store: (req, res) => {
         const nuevoProducto = {
-            id: arrayPrendas.length+1,
+            id: arrayPrendas.length + 1,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            imagen: imagen(req.files),
-            reverse: reverse(req.files),
-            disponibilidad: true,
+            imagen: req.file.filename,
+            reverse: req.body.reverse,
+            disponibilidad: req.body.disponibilidad,
             cantidad: req.body.cantidad,
-            carritoVenta: false,
+            carritoVenta: req.body.carritoVenta,
             categoria: req.body.categoria,
             genero: req.body.genero,
-            oferta: ifElse(req.body.oferta),
+            oferta: req.body.oferta,
             descuento: req.body.descuento
         }
-
         arrayPrendas.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
-        
+
         const nuevoArrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-       //res.send("Se cargó el producto");
-       res.render("product", {data:nuevoArrayPrendas});
+        //res.send("Se cargó el producto");
+        res.render("product", { data: nuevoArrayPrendas });
     },
 
-    edit: (req,res) => {
+    edit: (req, res) => {
         const { id } = req.params;
-        const productId = arrayPrendas.find((prod)=>prod.id == id);
-        res.render("edit", {datos:productId});
+        const productId = arrayPrendas.find((prod) => prod.id == id);
+        res.render("edit", { datos: productId });
     },
 
-    update: (req,res) => {
+    update: (req, res) => {
         const { id } = req.params;
-        const productId = arrayPrendas.find((prod)=>prod.id == id);
+        const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
 
         const ifElse = (elem) => {
-			if ( elem === "true"){
-				return true;
-			}
-			else if ( elem === "false") {
-				return false;
-			}
-		};
-
-        const imagen = (elem) => {
-            if (elem) {
-                for(let i=0;i<elem.length;i++){
-                    if(elem[i].fieldname === "imagen"){
-                        return elem[i].filename;
-                    }
-                };
-            }
-		};
-        
-        const reverse = (elem) => {
             if (!elem) {
-                for(let i=0;i<elem.length;i++){
-                    if(elem[i].fieldname === "reverse"){
-                        return elem[i].filename;
-                    }
-                };
-			}
-		}
-        
+                return productId.imagen;
+            }
+            else {
+                return req.file.filename;
+            }
+        }
+
         arrayPrendas[indexProduct] = {
             id: productId.id,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            imagen: imagen(req.files) || productId.imagen,
-            reverse: reverse(req.files) || productId.reverse,
-            disponibilidad: true,
+            imagen: ifElse(req.file),
+            reverse: req.body.reverse,
+            disponibilidad: req.body.disponibilidad,
             cantidad: req.body.cantidad,
-            carritoVenta: false,
+            carritoVenta: req.body.carritoVenta,
             categoria: req.body.categoria,
             genero: req.body.genero,
-            oferta: ifElse(req.body.oferta),
+            oferta: req.body.oferta,
             descuento: req.body.descuento
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
-        //res.send(imagenOriginal);
+        //res.send("Se editó el producto");
         res.redirect("/products");
     },
 
-    delete: (req,res) => {
+    delete: (req, res) => {
         //const productsReplace = arrayPrendas.filter((prod)=> prod.id != req.params.id);
         //fs.writeFileSync(productsFilePath, JSON.stringify(productsReplace));
         //res.send("Se eliminó el producto");
         const { id } = req.params;
-		const productFind = arrayPrendas.find((prod) => prod.id === id);
-		const indexProduct = arrayPrendas.indexOf(productFind);
-		arrayPrendas.splice(indexProduct, 1);
-		fs.writeFileSync(productsFilePath,JSON.stringify(arrayPrendas));
+        const productFind = arrayPrendas.find((prod) => prod.id === id);
+        const indexProduct = arrayPrendas.indexOf(productFind);
+        arrayPrendas.splice(indexProduct, 1);
+        fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         res.redirect("/products");
     }
 }

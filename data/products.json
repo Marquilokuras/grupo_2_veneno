@@ -2,12 +2,12 @@
     {
         "id": "1",
         "nombre": "Remeron Manifest",
+        "precio": 18000,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
         "imagen": "/remeronmanifest-hombre.webp",
         "reverse": "/espaldaid1.webp",
-        "precio": "18000",
         "disponibilidad": true,
-        "cantidad": "10",
+        "cantidad": 10,
         "carritoVenta": false,
         "categoria": "remera",
         "genero": "hombre",
@@ -46,18 +46,8 @@
     },
     {
         "id": "4",
-        "nombre": "Buzo Top Essential",
-        "precio": 42000,
-        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "imagen": "/buzotopessential-mujer.webp",
-        "reverse": "/espaldaid4.webp",
-        "disponibilidad": true,
-        "cantidad": 8,
-        "carritoVenta": true,
-        "categoria": "buzo",
-        "genero": "mujer",
-        "oferta": false,
-        "descuento": 20
+        "carritoVenta": "false",
+        "imagen": "/buzotopessential-mujer.webp"
     },
     {
         "id": "5",
@@ -76,18 +66,8 @@
     },
     {
         "id": "6",
-        "nombre": "Buzo Be Night",
-        "precio": 48000,
-        "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "imagen": "/buzobenight-hombre-.webp",
-        "reverse": "/espaldaid6.webp",
-        "disponibilidad": true,
-        "cantidad": 7,
-        "carritoVenta": true,
-        "categoria": "buzo",
-        "genero": "hombre",
-        "oferta": true,
-        "descuento": 20
+        "carritoVenta": "false",
+        "imagen": "/buzobenight-hombre-.webp"
     },
     {
         "id": "7",
@@ -227,16 +207,16 @@
     {
         "id": "16",
         "nombre": "Campera Kongo Black",
+        "precio": 48000,
         "descripcion": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "precio": "48000",
         "imagen": "/camperakongoblack.webp",
         "reverse": "/espaldaid16.webp",
         "disponibilidad": true,
-        "cantidad": "11",
+        "cantidad": 11,
         "carritoVenta": false,
         "categoria": "campera",
         "genero": "hombre",
         "oferta": false,
-        "descuento": "20"
+        "descuento": 20
     }
 ]

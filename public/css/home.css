@@ -1,3 +1,5 @@
+@import "header.css";
+
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +13,7 @@ body{
 
 
 /* ----Header---- */
+/*
 .nav{
     display: flex;
     flex-direction: row;
@@ -64,7 +67,7 @@ body{
 .nav-search-carrito-usuario form button i{
     width: 40px;
     font-size: 23px;
-}
+} */
 
 /* ----Main---- */
 
