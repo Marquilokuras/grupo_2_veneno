@@ -19,14 +19,15 @@
     </header>
     <form action="/productDetail" method="post">
   
-    <div class="conteiner-tittle">Detalles del producto</div>
+    <div class="conteiner-tittle"><%=data.nombre%></div>
     <main>
         
-            <nav id="imgs"><img src="img/img1Cuadro.jpg" alt="Imagen 1"></nav>
+            <nav id="imgs"><img src="/img/<%=data.imagen%>" alt="<%=data.nombre%>"></nav>
             
             <div class="conteiner-info-product">
                 <div class="conteiner-price">
-                    <span>$5000.00</span>
+                <!--<span><%=data.nombre%></span>-->
+                    <span>Precio: $<%=data.precio%></span>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
 
@@ -78,17 +79,7 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="text-description hidden">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet illo, quibusdam sunt
-                                cum
-                                tempore laborum voluptatibus veritatis? Laborum quae dicta similique, obcaecati
-                                voluptatem
-                                repudiandae ipsa, voluptate, quisquam quibusdam maiores impedit. Lorem ipsum, dolor sit
-                                amet
-                                consectetur adipisicing elit. Nobis, dolores ullam maxime illo fugit earum nemo alias
-                                porro
-                                inventore deleniti. Sapiente ipsam officia doloremque distinctio corrupti quia quidem
-                                quo
-                                nulla?</p>
+                            <p><%=data.descripcion%></p>
                         </div>
                     </div>
                     <div class="conteiner-info-additional">
@@ -128,52 +119,18 @@
             <h2>Productos relacionados</h2>
             <div class="card-list-products">
                 <div class="card">
+                    <%products.forEach((prenda)=>{%>
                     <div class="card-img">
-                        <img src="img\buzotopessential-mujer.webp" alt="producto-1"> 
+                        <img src="/img/<%=prenda.imagen %>" alt="img/<%=prenda.nombre %>"> 
                     </div>
                     <div class="info-card">
                         <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
+                            <h3><%=prenda.nombre%></h3>
+                            <P class="category"><%=prenda.descripcion%></P>
                         </div>
                     </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="img\camperatrackgrey-hombre.webp" alt="producto-2"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
-                        </div>
-                    </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="img\buzotopessential-mujer.webp" alt="producto-3"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
-                        </div>
-                    </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="img\buzobenight-hombre-.webp" alt="producto-4"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
-                        </div>
-                    </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
+                    <div class="price">$<%=prenda.precio%></div>
+                    <%})%>
                 </div>
             </div>
         </section>
