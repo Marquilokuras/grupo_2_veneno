@@ -32,10 +32,9 @@ Lo que hicimos bien:
     
     * Buena comunicación entre los miembros del equipo para poder llegar a presentar las tareas.
     
-
 Lo que hicimos mal:
 
-    * Acumulación de taremas que llevaron a no poder estar abocados a la realización de las tareas correspondientes.
+    * Acumulación de tareas que llevaron a no poder estar abocados a la realización de las tareas correspondientes.
     
     * No respetar el mismo lenguaje.
     
@@ -46,6 +45,32 @@ Lo que deberiamos comenzar a hacer:
     * Fijar un horario semanal para poder llevar paso a paso las tareas correspondientes a cada sprint.
     
     * Llevar una comunicacion más detallada de lo que se va realizando durante el sprint.
+    
+Lo que deberiamos dejar de hacer:   
+    
+    * No hacer énfasis en el tiempo estimado.
+
+Sprint 3:
+
+Lo que hicimos bien: 
+
+    * Distribuirnos las tareas.
+    
+    * Buena comunicación entre los miembros del equipo para poder llegar a presentar las tareas.
+
+    * Haber avanzados con las tareas pendientes del Sprint 2.
+    
+Lo que hicimos mal:
+
+    * Acumulación de tareas previos que concluyeron en la demora del trabajo en concreto.
+    
+    * Haber realizado las tareas en los días cercanos a la fecha de entrega.  
+
+Lo que deberiamos comenzar a hacer:
+    
+    * Realizar la mayor cantidad de tareas con anticipación.
+    
+    * Realizar las paginas extras a las solicitadas por el curso.
     
 Lo que deberiamos dejar de hacer:   
     

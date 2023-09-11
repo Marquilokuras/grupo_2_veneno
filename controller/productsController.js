@@ -51,7 +51,6 @@ const productsController = {
         const IdProducto = arrayPrendas.find((producto) => producto.id === id);
         const productosRelacionados = arrayPrendas.filter((prod)=> prod.categoria === IdProducto.categoria && prod.id !== id);
         res.render('detail', { data: IdProducto , products: productosRelacionados});
-
     },
 
     store: (req, res) => {
