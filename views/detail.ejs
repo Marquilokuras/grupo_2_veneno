@@ -19,14 +19,16 @@
     </header>
     <form action="/productDetail" method="post">
   
-    <div class="conteiner-tittle">Detalles del producto</div>
+    <div class="conteiner-tittle"><%=data.nombre%></div>
     <main>
         
-            <nav id="imgs"><img src="img/img1Cuadro.jpg" alt="Imagen 1"></nav>
+            <nav id="imgs"><img src="/img/<%=data.imagen%>" alt="<%=data.nombre%>"></nav>
             
             <div class="conteiner-info-product">
                 <div class="conteiner-price">
-                    <span>$5000.00</span>
+                <!--<span><%=data.nombre%></span>-->
+                    <span>Precio: $<%=data.precio%></span>
+
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
 
@@ -71,6 +73,87 @@
                             Añadir al carrito
                         </button>
                     </div>
+
+                    <div class="conteiner-description">
+                        <div class="tittle-description">
+                            <h4>Descripción</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-description hidden">
+                            <p><%=data.descripcion%></p>
+                        </div>
+                    </div>
+                    <div class="conteiner-info-additional">
+                        <div class="tittle-info-additional">
+                            <h4>Informacion Adicional</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-additional hidden">
+                            <p>--------------</p>
+                        </div>
+                    </div>
+
+                    <div class="conteiner-reviews">
+                        <div class="tittle-reviews">
+                            <h4>Reseñas</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-reviews hidden">
+                            <p>--------------</p>
+                        </div>
+                    </div>
+
+                    <div class="conteiner-social">
+                        <span>Compartir</span>
+                        <div class="conteiner-buttons-social">
+                            <a href="a"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="a"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="a"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="a"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="a"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+
+            </div>
+        </main>
+        <section class="related-product">
+            <h2>Productos relacionados</h2>
+            <div class="card-list-products">
+                <div class="card">
+                    <%products.forEach((prenda)=>{%>
+                    <div class="card-img">
+                        <img src="/img/<%=prenda.imagen %>" alt="img/<%=prenda.nombre %>"> 
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3><%=prenda.nombre%></h3>
+                            <P class="category"><%=prenda.descripcion%></P>
+                        </div>
+                    </div>
+                    <div class="price">$<%=prenda.precio%></div>
+                    <%})%>
+                </div>
+            </div>
+        </section>
+        </form>
+        
+        
+
+                        <div id="envio">
+                            <p>
+                            <h3>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</h3>
+                            </p>
+                            <p>
+                            <h3>ENVIO GRATIS APARTIR DE $49.999</h3>
+                            </p>
+                            <p>
+                            <h3>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</h3>
+                            </p>
+                        </div>
+                </article>
+            </section> 
+
+<!--
 
                     <div class="conteiner-description">
                         <div class="tittle-description">
@@ -195,6 +278,7 @@
                 </article>
             </section> 
 
+-->
     <footer>
         <%- include('./partials/footer.ejs') %>
 

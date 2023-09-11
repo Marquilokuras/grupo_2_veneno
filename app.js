@@ -37,5 +37,3 @@ app.use('/', usersRouter);
 app.use('/',productRouter);
 
 app.use('/formularioAdministrador',formAdminRouter); */
-
-

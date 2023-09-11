@@ -64,7 +64,7 @@ Si se encontró algún impedimento:
     # Si hubieron impedimentos, no pude lograr que la vista de detalles de productos se visualice.  
     
 Qué va hacer hoy:
-    # Consultar con compañeros del equipo para ver y comprender qué debo corregir. 
+    #Consultar con compañeros del equipo para ver y comprender qué debo corregir.
 
 Día 01/09/2023 - Marcos Quinteros
 
