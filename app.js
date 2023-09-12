@@ -27,13 +27,3 @@ app.use('/products',productRouter);
 app.use('/login', usersRouter);
 
 app.use('/', usersRouter);
-
-//app.use('/productCart',productRouter);
-
-//app.use('/formularioAdministrador',formAdminRouter);
-
-/* app.use('/productCart',productRouter);
-
-app.use('/',productRouter);
-
-app.use('/formularioAdministrador',formAdminRouter); */
