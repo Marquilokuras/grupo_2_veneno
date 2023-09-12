@@ -75,3 +75,31 @@ Lo que deberiamos comenzar a hacer:
 Lo que deberiamos dejar de hacer:   
     
     * No hacer énfasis en el tiempo estimado.
+
+Sprint 4:
+
+Lo que hicimos bien: 
+
+    * Distribuirnos las tareas.
+    
+    * Buena comunicación entre los miembros del equipo para poder llegar a presentar las tareas en tiempo y forma.
+
+    * Analizar las tareas faltantes.
+    
+Lo que hicimos mal:
+
+    * No llegar a cubrir algunos diseños en los diferentes dispositivos. 
+
+    * No actualizar la rama propia antes de commitear.
+
+Lo que deberiamos comenzar a hacer:
+    
+    * Realizar la mayor cantidad de tareas con mayor importancia cuanto antes.
+    
+    * Mejorar nomenclatura en la escritura de los commits.
+
+    * Utilizar más el tablero de tareas.
+    
+Lo que deberiamos dejar de hacer:   
+
+    * Utilizar dos idomas en la escritura (ingles - español).
