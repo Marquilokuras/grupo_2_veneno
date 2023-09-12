@@ -19,11 +19,10 @@
     <main>
         <div class="form-container">
             <h2>Formulario de Registro</h2>
-            <form action="/register" method="post" enctype="multipart/form-data">
+            <form action="/users/register" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese Nombre Completo"
-                        value="<%= (locals.old && old.username ) ? old.username : '' %>">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese Nombre Completo">
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido:</label>
@@ -48,7 +47,7 @@
                 </div>
                 <div class="form-group">
                     <label for="foto">Foto de perfil:</label>
-                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                    <input type="file" id="foto" name="foto" accept=".jpg, .png, .jpeg" required>
                 </div>
                 <div class="form-group">
                     <label for="fecha_nacimiento">Fecha de nacimiento:</label>
