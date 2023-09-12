@@ -9,7 +9,6 @@ const arrRegister = [
 const validateRegister = (req, res, next) => {
 
     const errors = validationResult(req);
-
     try {
         if (errors.isEmpty() === true) {
             next()
