@@ -263,14 +263,18 @@ footer{
     border-top: solid white 1px ;
 }
 footer .div-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    
     margin: 10px 30px;
 }
 footer .div-footer h4{
     color: rgb(128, 128, 128);
     margin-bottom: 10px;
+    text-align: center;
+}
+footer .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 footer .tarjetas h4{
     text-align: center;
@@ -282,6 +286,7 @@ footer .tarjetas img{
 footer .atajo{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 footer .atajo a{
     font-size: 0.9rem;
@@ -292,9 +297,10 @@ footer .atajo a{
 footer .sede p{
     color: white;
     margin-bottom: 15px;
+    text-align: center;
 }
 footer .seguinos h4{
-    text-align: center;
+    text-align: center; 
 }
 footer .seguinos a i{
     font-size: 30px;
@@ -303,6 +309,11 @@ footer .seguinos a img{
     width: 30px;
     object-fit: cover;
     margin: 10px 10px;
+}
+footer .redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 footer .div-copyrigth{
     margin-top: 25px;
