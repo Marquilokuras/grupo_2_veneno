@@ -14,8 +14,7 @@ const usersController = {
     },
 
     createUser: (req,res) =>{
-        const productosEnOferta = arrayPrendas.filter((producto)=>producto.oferta === true);
-        res.render('index', { title: 'Prendas', data: productosEnOferta})
+        res.redirect('/login')
     }
 };
 
