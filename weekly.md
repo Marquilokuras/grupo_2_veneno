@@ -76,3 +76,14 @@ Si se encontró algún impedimento:
     
 Qué va hacer hoy:
     # Solucionar el conflicto entre las ramas, realizar retrospectiva.
+
+Día 14/09/2023 - Joaquin Yarbi
+
+Qué hizo ayer.
+    # Observar las tareas del sprint 5, el footer del Home y diseñar algunas imagenes para el banner de la página.
+
+Si se encontró algún impedimento: 
+    # Algunos conflictos cuando realizo el pull y mi computadora se congeló. No puedo pushear a mi rama por un error en el merging.
+    
+Qué va hacer hoy:
+    # Agregar imagenes para el banner, cambiar imagenes del banner
