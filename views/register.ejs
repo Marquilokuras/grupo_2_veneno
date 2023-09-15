@@ -21,50 +21,130 @@
             <h2>Formulario de Registro</h2>
             <form action="/users/register" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese Nombre Completo">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo" value="<%= (locals.old && old.name) ? old.name : '' %>">
+                    <%if (locals.errors && errors.name){%>
+                        <div>
+                            <i>
+                                <%=errors.name.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required placeholder="Ingrese Apellido Completo">
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido" value="<%= (locals.old && old.lastname) ? old.lastname : '' %>">
+                    <%if (locals.errors && errors.lastname){%>
+                        <div>
+                            <i>
+                                <%=errors.lastname.msg%>
+                            </i>
+                        </div>
+                    <%}%>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Nombre de usuario:</label>
+                    <input type="text" id="userName" name="userName" placeholder="Ingrese un nombre de usuario" value="<%= (locals.old && old.userName) ? old.userName : '' %>">
+                    <%if (locals.errors && errors.userName){%>
+                        <div>
+                            <i>
+                                <%=errors.userName.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Ej: mail@gmail.com">
+                    <input type="email" id="email" name="email" placeholder="Ingrese su email; Ej: mail@gmail.com" value="<%= (locals.old && old.email) ? old.email : '' %>">
+                    <%if (locals.errors){%>
+                        <div>
+                            <i>
+                                <%=errors.msg%>
+                            </i>
+                        </div>
+                    <%}%>
+                    <%if (locals.errors && errors.email){%>
+                        <div>
+                            <i>
+                                <%=errors.email.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required placeholder="Ingrese su contraseña">
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+                    <%if (locals.errors && errors.password){%>
+                        <div>
+                            <i>
+                                <%=errors.password.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
                     <label for="passwordVerify">Contraseña de Verificacion:</label>
-                    <input type="password" id="passwordVerify" name="passwordVerify" required placeholder="Ingrese su contraseña nuevamente">
+                    <input type="password" id="passwordVerify" name="passwordVerify" placeholder="Ingrese su contraseña nuevamente">
+                    <%if (locals.errors && errors.passwordVerify){%>
+                        <div>
+                            <i>
+                                <%=errors.passwordVerify.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="genero">Género:</label>
-                    <select id="genero" name="genero" required>
+                    <label for="gender">Género:</label>
+                    <select id="gender" name="gender" value="<%= (locals.old && old.gender) ? old.gender : ''%>">
                         <option value="" disabled selected>Selecciona un género</option>
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                         <option value="otro">Otro</option>
                     </select>
+                    <%if (locals.errors && errors.gender){%>
+                        <div>
+                            <i>
+                                <%=errors.gender.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="foto">Foto de perfil:</label>
-                    <input type="file" id="foto" name="foto" accept=".jpg, .png, .jpeg">
+                    <label for="image">Foto de perfil:</label>
+                    <input type="file" id="image" name="image" accept=".jpg, .png, .jpeg">
                 </div>
                 <div class="form-group">
-                    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    <label for="birthday">Fecha de nacimiento:</label>
+                    <input type="date" id="birthday" name="birthday" value="<%= (locals.old && old.birthday) ? old.birthday : '' %>">
+                    <%if (locals.errors && errors.birthday){%>
+                        <div>
+                            <i>
+                                <%=errors.birthday.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" required placeholder="Ingrese Edad">
+                    <label for="age">Edad:</label>
+                    <input type="number" id="age" name="age" placeholder="Ingrese su edad" value="<%= (locals.old && old.age) ? old.age : '' %>">
+                    <%if (locals.errors && errors.age){%>
+                        <div>
+                            <i>
+                                <%=errors.age.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="direccion">Dirección de domicilio:</label>
-                    <textarea id="direccion" name="direccion" required
-                        placeholder="Ingrese Calle y Numero de Domicilio"></textarea>
+                    <label for="direction">Dirección de domicilio:</label>
+                    <input type="text" id="direction" name="direction" placeholder="Ingrese su domicilio" value="<%= (locals.old && old.direction) ? old.direction : '' %>">
+                        <%if (locals.errors && errors.direction){%>
+                            <div>
+                                <i>
+                                    <%=errors.direction.msg%>
+                                </i>
+                            </div>
+                        <%}%>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Registrarse">

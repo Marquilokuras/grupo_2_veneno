@@ -1,13 +1,13 @@
 [
-  {
-    "id": "1",
-    "nombre": "Marcos",
-    "apellido": "Quinteros",
-    "email": "marcos.quinteros2003@gmail.com",
-    "password": "$2a$10$8TMRMTvOfniCHPuFQA6ibeGLSYAFz9aGxt4gJ7HKTOi1VM7bPgb5e",
-    "genero": "masculino",
-    "fecha_nacimiento": "2003-12-27",
-    "edad": "19",
-    "direccion": "Almirante 800"
-  }
+    {
+        "id": "1",
+        "name": "Marcos",
+        "lastname": "Quinteros",
+        "email": "marcos.quinteros2003@gmail.com",
+        "password": "$2a$10$8TMRMTvOfniCHPuFQA6ibeGLSYAFz9aGxt4gJ7HKTOi1VM7bPgb5e",
+        "gender": "masculino",
+        "birthday": "2003-12-27",
+        "age": "19",
+        "direction": "Almirante 800"
+    }
 ]

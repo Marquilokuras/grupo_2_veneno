@@ -24,6 +24,4 @@ app.use('/',homeRouter);
 
 app.use('/products',productRouter);
 
-app.use('/login', usersRouter);
-
 app.use('/users', usersRouter);
