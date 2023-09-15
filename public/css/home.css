@@ -73,32 +73,31 @@ body{
 
 
 /* prueba del slider para las imagenes*/
+main .section-div-anuncios{
+    margin-bottom: 100px;
+    display: none;
+}
 .slider-frame {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 50px auto 0;
     overflow: hidden;
     border:solid black 3px;
 }
-   
-
 .slider-frame ul {
     display: flex;
     padding: 0;
     width: 400%;
     animation: slide 12s infinite;
 }
-
 .slider-frame li {
     list-style: none;
     width: 100%;
 }
-
 .slider-frame img {
     width: 100%;
     height: 100%;
 }
-
 @keyframes slide {
     0% {margin-left: 0%;}
     20% {margin-left: 0%;}
@@ -114,24 +113,22 @@ body{
 }
 /* prueba del slider para las imagenes*/
 
-
-
 main{
     margin-bottom: 50px;
 }
-main .section-div-anuncios{
-    margin-bottom: 100px;
-}
 main .section-hombre-mujer{
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 main .div-hombre-mujer{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 main .div-hombre-mujer a{
-    width: 35%;
+    width: 50%;
 }
 main .div-hombre-mujer a img{
     width: 100%;
@@ -139,59 +136,65 @@ main .div-hombre-mujer a img{
     object-fit: cover;
 }
 
-/*Aqui estoy ...*/
+
+
+
 main .section-opcion-prendas{
-    margin-bottom: 100px;
+    margin-bottom:100px;
 }
 main .conteiner{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    position: relative;
 }
 main .div-opcion-prendas{
-    padding: 2px;
-    position: relative;
+    width: 48%;
+    height: auto;
+    margin: 1px 2px;
 }
 main .div-opcion-prendas img{
-    width:650px;
-    height: 650px;
-    object-fit: cover;
-    border: solid rgb(252, 239, 239) ;
+    width: 100%;
+    height: auto;
+    border: solid rgb(252, 239, 239);
+    position: relative;
 }
 main .div-remeras{
     position: absolute;
-    top: 45%;
-    left: 33%;
-    font-size: 2rem;
-    letter-spacing: 15px;
+    top:52%;
+    left: 13%;
+    letter-spacing: 2px;
 }
 main .div-camperas{
     position: absolute;
-    top: 44%;
-    left: 29%;
-    font-size: 2rem;
-    letter-spacing: 15px;
+    top:52%;
+    left: 61%;
+    letter-spacing: 2px;
 }
 main .div-jeans{
     position: absolute;
-    top: 45%;
-    left: 25%;
-    font-size: 2rem;
-    letter-spacing: 15px;
+    top:73%;
+    left: 10%;
+    letter-spacing: 2px;
 }
 main .div-accesorios{
     position: absolute;
-    top: 45%;
-    left: 25%;
-    font-size: 2rem;
-    letter-spacing: 15px;
+    top: 73%;
+    left: 60%;
+    letter-spacing: 2px;
 }
-main .div-remeras a, .div-camperas a, .div-jeans a, .div-accesorios a{
+main .div-opcion-prendas a{
     text-decoration: none;
     color:rgb(121, 255, 128);
 }
+
+
+
+
+
+
+
 
 main .div-busqueda{
     display: flex;
@@ -212,6 +215,14 @@ main .articulos-en-ofertas{
     color:rgb(189, 185, 185);
     font-size: 2rem;
 }
+
+
+
+
+
+
+/*Aquí estoy....*/
+
 main .contenedor-de-articulos{
     margin-top: 100px;
     display: flex;
@@ -354,4 +365,77 @@ main .div-remeras a:hover, .div-camperas a:hover, .div-jeans a:hover, .div-acces
 /*
 Media queries para dispositivos!
 
-*/
+/* Estilos para tablets (ancho mínimo 361px) */
+@media screen and (min-width: 768px) {
+    main .section-div-anuncios{
+        display: block;
+    }
+    main .section-hombre-mujer{
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+    main .div-opcion-prendas{
+        width: 33%;
+        margin: 2px 4px;
+    }
+}
+
+
+@media screen and (min-width: 920px){
+    main .div-hombre-mujer a{
+        min-width: 25%;
+        max-width: 35%;
+    }
+}
+
+
+/* Estilos para desktops (ancho mínimo 769px) */
+@media screen and (min-width: 1024px) {
+    main .div-opcion-prendas{
+        position: relative;
+    }
+    main .div-remeras{
+        position: absolute;
+        top: 44%;
+        left: 31%;
+        font-size: 2rem;
+        letter-spacing: 15px;
+    }
+    main .div-camperas{
+        position: absolute;
+        top: 44%;
+        left: 28%;
+        font-size: 2rem;
+        letter-spacing: 15px;
+    }
+    main .div-jeans{
+        position: absolute;
+        top: 45%;
+        left: 25%;
+        font-size: 2rem;
+        letter-spacing: 15px;
+    }
+    main .div-accesorios{
+        position: absolute;
+        top: 45%;
+        left: 25%;
+        font-size: 2rem;
+        letter-spacing: 15px;
+    }
+    /*
+    main .div-opcion-prendas{
+        padding: 2px;
+        position: relative;
+    }
+    main .div-opcion-prendas img{
+        width:650px;
+        height: 650px;
+        object-fit: cover;
+        border: solid rgb(252, 239, 239) ;
+    }
+    main .div-remeras a, .div-camperas a, .div-jeans a, .div-accesorios a{
+        text-decoration: none;
+        color:rgb(121, 255, 128);
+    }
+    */
+}
