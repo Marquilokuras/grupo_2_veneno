@@ -76,6 +76,17 @@ Si se encontró algún impedimento:
     
 Qué va hacer hoy:
     # Solucionar el conflicto entre las ramas, realizar retrospectiva.
+    
+Día 12/09/2023 - Marcos Quinteros
+
+Qué hizo ayer.
+    # Observar las tareas del sprint 5 dividirnos con el equipo de trabajo las tareas.
+
+Si se encontró algún impedimento: 
+    # Falta de conocimiento en algunas declaraciones de rutas.
+    
+Qué va hacer hoy:
+    # Comenzar con la creacion de la funcionalidad de la creacion del formulario de usuario.
 
 Día 14/09/2023 - Joaquin Yarbi
 

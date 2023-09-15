@@ -4,9 +4,9 @@
 <head>
 
     <%- include('./partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/registerStyle.css">
-    <title>Formulario de Registro</title>
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/registerStyle.css">
+        <title>Formulario de Registro</title>
 
 </head>
 
@@ -14,12 +14,12 @@
     <header>
         <%- include('./partials/header') %>
     </header>
-    
+
 
     <main>
         <div class="form-container">
             <h2>Formulario de Registro</h2>
-            <form action="/register" method="post" enctype="multipart/form-data">
+            <form action="/users/register" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Ingrese Nombre Completo">
@@ -37,17 +37,21 @@
                     <input type="password" id="password" name="password" required placeholder="Ingrese su contraseña">
                 </div>
                 <div class="form-group">
+                    <label for="passwordVerify">Contraseña de Verificacion:</label>
+                    <input type="password" id="passwordVerify" name="passwordVerify" required placeholder="Ingrese su contraseña nuevamente">
+                </div>
+                <div class="form-group">
                     <label for="genero">Género:</label>
                     <select id="genero" name="genero" required>
-                      <option value="" disabled selected>Selecciona un género</option>
-                      <option value="masculino">Masculino</option>
-                      <option value="femenino">Femenino</option>
-                      <option value="otro">Otro</option>
+                        <option value="" disabled selected>Selecciona un género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
                     </select>
-                  </div>
+                </div>
                 <div class="form-group">
                     <label for="foto">Foto de perfil:</label>
-                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                    <input type="file" id="foto" name="foto" accept=".jpg, .png, .jpeg">
                 </div>
                 <div class="form-group">
                     <label for="fecha_nacimiento">Fecha de nacimiento:</label>
@@ -59,7 +63,8 @@
                 </div>
                 <div class="form-group">
                     <label for="direccion">Dirección de domicilio:</label>
-                    <textarea id="direccion" name="direccion" required placeholder="Ingrese Calle y Numero de Domicilio"></textarea>
+                    <textarea id="direccion" name="direccion" required
+                        placeholder="Ingrese Calle y Numero de Domicilio"></textarea>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Registrarse">
@@ -70,7 +75,7 @@
             </form>
         </div>
     </main>
-    
+
     <%- include('./partials/footer') -%>
 </body>
 
