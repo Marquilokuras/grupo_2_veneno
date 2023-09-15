@@ -12,6 +12,8 @@ routerUsers.get('/', usersController.renderLogin);
 
 routerUsers.get('/register', usersController.renderRegister);
 
-routerUsers.post('/register', upload.single("foto"), arrRegister, validateRegister, usersController.createUser);   // /register(POST) Accion de creacion, donde se envia el formulario del Usuario
+routerUsers.post('/register', upload.single("image"), arrRegister, validateRegister, usersController.createUser);   // /register(POST) Accion de creacion, donde se envia el formulario del Usuario
+
+routerUsers.get('/login', usersController.renderLogin);
 
 module.exports = routerUsers;
