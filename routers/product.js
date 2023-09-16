@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const productController = require('../controller/productsController');
-const mainController = require('../controller/mainController');
 const path = require("path");
 const multer = require("multer");
 
@@ -19,7 +18,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 router.get('/productCart', productController.renderProductCart);
-router.post('/productCart', mainController.renderFormulario); 
+router.post('/productCart/:id', productController.processProductCart); 
 router.delete('/productCart/delete/:id',upload.single("imagen"), productController.destroy); 
 
 router.get('/', productController.products);                                          //1_ /products (GET) Listado de productos
