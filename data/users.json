@@ -9,5 +9,18 @@
         "birthday": "2003-12-27",
         "age": "19",
         "direction": "Almirante 800"
+    },
+    {
+        "id": "2",
+        "name": "Franco",
+        "lastname": "Alancay",
+        "userName": "Franco",
+        "email": "fran@gmail.com",
+        "password": "$2a$10$RlzFtPdPScaIRiZGlyK.qe4ix5lD5GYq0bl5ASlFmVkinSiqCVOBq",
+        "gender": "masculino",
+        "image": "avatar-1694824611767.jpg",
+        "birthday": "2003-02-23",
+        "age": "20",
+        "direction": "eva peron"
     }
 ]
