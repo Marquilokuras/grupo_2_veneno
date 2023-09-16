@@ -17,16 +17,18 @@
         <%- include('./partials/header.ejs') %>
 
     </header>
-    <form action="/productDetail" method="post">
-  
-    <div class="conteiner-tittle"><%=data.nombre%></div>
-    <main>
-        
+    <form action="/products/productCart" method="post">
+
+        <div class="conteiner-tittle">
+            <%=data.nombre%>
+        </div>
+        <main>
+
             <nav id="imgs"><img src="/img/<%=data.imagen%>" alt="<%=data.nombre%>"></nav>
-            
+
             <div class="conteiner-info-product">
                 <div class="conteiner-price">
-                <!--<span><%=data.nombre%></span>-->
+                    <!--<span><%=data.nombre%></span>-->
                     <span>Precio: $<%=data.precio%></span>
 
                     <i class="fa-solid fa-angle-right"></i>
@@ -60,59 +62,61 @@
                         </select>
                     </div>
                 </div>
-                    <div class="conteiner-add-cart">
-                        <div class="conteiner-quantity">
-                            <input type="number" placeholder="1" value="1" min="1" class="input-quatity" />
-                            <div class="btn-incremet-decrement">
-                                <i class="fa-solid fa-chevron-up" id="increment"></i>
-                                <i class="fa-solid fa-chevron-down" id="decrement"></i>
-                            </div>
+                <div class="conteiner-add-cart">
+                    <div class="conteiner-quantity">
+                        <input type="number" placeholder="1" value="1" min="1" class="input-quatity" />
+                        <div class="btn-incremet-decrement">
+                            <i class="fa-solid fa-chevron-up" id="increment"></i>
+                            <i class="fa-solid fa-chevron-down" id="decrement"></i>
                         </div>
-                        <button class="btn-add-to-cart">
-                            <i class="fa-solid fa-plus"></i>
-                            Añadir al carrito
-                        </button>
                     </div>
+                    <button class="btn-add-to-cart">
+                        <i class="fa-solid fa-plus"></i>
+                        Añadir al carrito
+                    </button>
+                </div>
 
-                    <div class="conteiner-description">
-                        <div class="tittle-description">
-                            <h4>Descripción</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-description hidden">
-                            <p><%=data.descripcion%></p>
-                        </div>
+                <div class="conteiner-description">
+                    <div class="tittle-description">
+                        <h4>Descripción</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </div>
-                    <div class="conteiner-info-additional">
-                        <div class="tittle-info-additional">
-                            <h4>Informacion Adicional</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-additional hidden">
-                            <p>--------------</p>
-                        </div>
+                    <div class="text-description hidden">
+                        <p>
+                            <%=data.descripcion%>
+                        </p>
                     </div>
+                </div>
+                <div class="conteiner-info-additional">
+                    <div class="tittle-info-additional">
+                        <h4>Informacion Adicional</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="text-additional hidden">
+                        <p>--------------</p>
+                    </div>
+                </div>
 
-                    <div class="conteiner-reviews">
-                        <div class="tittle-reviews">
-                            <h4>Reseñas</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-reviews hidden">
-                            <p>--------------</p>
-                        </div>
+                <div class="conteiner-reviews">
+                    <div class="tittle-reviews">
+                        <h4>Reseñas</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </div>
+                    <div class="text-reviews hidden">
+                        <p>--------------</p>
+                    </div>
+                </div>
 
-                    <div class="conteiner-social">
-                        <span>Compartir</span>
-                        <div class="conteiner-buttons-social">
-                            <a href="a"><i class="fa-solid fa-envelope"></i></a>
-                            <a href="a"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="a"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="a"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="a"><i class="fa-brands fa-pinterest"></i></a>
-                        </div>
+                <div class="conteiner-social">
+                    <span>Compartir</span>
+                    <div class="conteiner-buttons-social">
+                        <a href="a"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="a"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="a"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="a"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="a"><i class="fa-brands fa-pinterest"></i></a>
                     </div>
+                </div>
 
             </div>
         </main>
@@ -121,24 +125,26 @@
             <div class="card-list-products">
                 <div class="card">
                     <%products.forEach((prenda)=>{%>
-                    <div class="card-img">
-                        <img src="/img/<%=prenda.imagen %>" alt="img/<%=prenda.nombre %>"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3><%=prenda.nombre%></h3>
-                            <P class="category"><%=prenda.descripcion%></P>
+                        <div class="card-img">
+                            <img src="/img/<%=prenda.imagen %>" alt="img/<%=prenda.nombre %>">
                         </div>
-                    </div>
-                    <div class="price">$<%=prenda.precio%></div>
-                    <%})%>
+                        <div class="info-card">
+                            <div class="text-product">
+                                <h3>
+                                    <%=prenda.nombre%>
+                                </h3>
+                                <P class="category">
+                                    <%=prenda.descripcion%>
+                                </P>
+                            </div>
+                        </div>
+                        <div class="price">$<%=prenda.precio%>
+                        </div>
+                        <%})%>
                 </div>
             </div>
         </section>
-        </form>
-        
-        
-
+        <!-- </form>
                         <div id="envio">
                             <p>
                             <h3>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</h3>
@@ -151,138 +157,12 @@
                             </p>
                         </div>
                 </article>
-            </section> 
+            </section> -->
 
-<!--
+        <footer>
+            <%- include('./partials/footer.ejs') %>
 
-                    <div class="conteiner-description">
-                        <div class="tittle-description">
-                            <h4>Descripción</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-description hidden">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet illo, quibusdam sunt
-                                cum
-                                tempore laborum voluptatibus veritatis? Laborum quae dicta similique, obcaecati
-                                voluptatem
-                                repudiandae ipsa, voluptate, quisquam quibusdam maiores impedit. Lorem ipsum, dolor sit
-                                amet
-                                consectetur adipisicing elit. Nobis, dolores ullam maxime illo fugit earum nemo alias
-                                porro
-                                inventore deleniti. Sapiente ipsam officia doloremque distinctio corrupti quia quidem
-                                quo
-                                nulla?</p>
-                        </div>
-                    </div>
-                    <div class="conteiner-info-additional">
-                        <div class="tittle-info-additional">
-                            <h4>Informacion Adicional</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-additional hidden">
-                            <p>--------------</p>
-                        </div>
-                    </div>
-
-                    <div class="conteiner-reviews">
-                        <div class="tittle-reviews">
-                            <h4>Reseñas</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-reviews hidden">
-                            <p>--------------</p>
-                        </div>
-                    </div>
-
-                    <div class="conteiner-social">
-                        <span>Compartir</span>
-                        <div class="conteiner-buttons-social">
-                            <a href="a"><i class="fa-solid fa-envelope"></i></a>
-                            <a href="a"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="a"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="a"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="a"><i class="fa-brands fa-pinterest"></i></a>
-                        </div>
-                    </div>
-
-            </div>
-        </main>
-        <section class="related-product">
-            <h2>Productos relacionados</h2>
-            <div class="card-list-products">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="img\buzotopessential-mujer.webp" alt="producto-1"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
-                        </div>
-                    </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="img\camperatrackgrey-hombre.webp" alt="producto-2"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
-                        </div>
-                    </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="img\buzotopessential-mujer.webp" alt="producto-3"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
-                        </div>
-                    </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="img\buzobenight-hombre-.webp" alt="producto-4"> 
-                    </div>
-                    <div class="info-card">
-                        <div class="text-product">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <P class="category">CATEGORIA DEL PRODUCTO</P>
-                        </div>
-                    </div>
-                    <div class="price">$PRECIO DEL PRODUCTO</div>
-                </div>
-            </div>
-        </section>
-        </form>
-        
-        
-
-                        <div id="envio">
-                            <p>
-                            <h3>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</h3>
-                            </p>
-                            <p>
-                            <h3>ENVIO GRATIS APARTIR DE $49.999</h3>
-                            </p>
-                            <p>
-                            <h3>DEVOLUCIÓN GRATIS, ¿NO ES TU TALLE? PODES DEVOLVERLO EN UN PLAZO DE 20 DÍAS</h3>
-                            </p>
-                        </div>
-                </article>
-            </section> 
-
--->
-    <footer>
-        <%- include('./partials/footer.ejs') %>
-
-    </footer>
+        </footer>
 
 </body>
 
