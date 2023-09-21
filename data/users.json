@@ -6,21 +6,22 @@
         "email": "marcos.quinteros2003@gmail.com",
         "password": "$2a$10$8TMRMTvOfniCHPuFQA6ibeGLSYAFz9aGxt4gJ7HKTOi1VM7bPgb5e",
         "gender": "masculino",
+        "image": "/img/users/usuario.png",
         "birthday": "2003-12-27",
         "age": "19",
         "direction": "Almirante 800"
     },
     {
         "id": "2",
-        "name": "Franco",
-        "lastname": "Alancay",
-        "userName": "Franco",
-        "email": "fran@gmail.com",
-        "password": "$2a$10$RlzFtPdPScaIRiZGlyK.qe4ix5lD5GYq0bl5ASlFmVkinSiqCVOBq",
+        "name": "admin",
+        "lastname": "admin",
+        "userName": "admin",
+        "email": "admin@gmail.com",
+        "password": "$2a$10$m6L9Poyg/nVX6paCjMkRn.zyuS9YftKPLmilO8u3pj4jwHmdLjJim",
         "gender": "masculino",
-        "image": "avatar-1694824611767.jpg",
-        "birthday": "2003-02-23",
-        "age": "20",
-        "direction": "eva peron"
+        "image": "avatar-1695305255280.jpg",
+        "birthday": "3233-02-23",
+        "age": "2323",
+        "direction": "sadsa"
     }
 ]
