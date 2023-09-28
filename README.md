@@ -44,3 +44,6 @@ https://www.luxo.com.ar/?gclid=Cj0KCQjw756lBhDMARIsAEI0AgklQ-iFL70iTeRd5kn_tCdUP
 
 **Enlace al Tablero de Trabajo**
 https://trello.com/invite/b/h6mfb9Vw/ATTI8d56fcae08cb2335090ea82c30828ee73928275A/digital-house-grupo-02
+
+**Sitio Estatico**
+https://veneno.onrender.com/
