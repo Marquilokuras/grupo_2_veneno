@@ -23,5 +23,18 @@
         "birthday": "3233-02-23",
         "age": "2323",
         "direction": "sadsa"
+    },
+    {
+        "id": "3",
+        "name": "sergio",
+        "lastname": "balero",
+        "userName": "sergioB",
+        "email": "sergio@gmail.com",
+        "password": "$2a$10$vj.zjVhyZYWRjAbm.ydwm.zg8kKpQ.mRmoKvqZsLpSUnqgoZEtcB6",
+        "gender": "masculino",
+        "image": "avatar-1696090405333.jpg",
+        "birthday": "2002-03-23",
+        "age": "21",
+        "direction": "catamarca 231"
     }
 ]

@@ -110,6 +110,13 @@ div.enlace-registro a{
     padding-left: 5px;
 }
 
+/*Alerta de error*/
+.text-danger{
+    color: red;
+    
+}
+
+
 /* animacion */
 
 
@@ -127,7 +134,7 @@ button:hover{
 }
 
 main form input:focus{
-    border: solid 4px #9bcf29;
+    border: solid 3px #9bcf29;
     outline: none;
     /* background-color: #9bcf29; */
 }

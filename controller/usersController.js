@@ -16,6 +16,16 @@ const usersController = {
 
     createUser: async (req,res) => {
       res.redirect("/users/login");
+    },
+
+    enterHome : (req, res) => {
+        res.redirect('/');
+    },
+
+    logout : (req, res ) => {
+        req.session.destroy();
+
+        res.redirect('/');
     }
 };
 

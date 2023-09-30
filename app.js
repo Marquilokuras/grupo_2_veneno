@@ -2,10 +2,13 @@
 const express = require('express');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session');
 const app = express();
 const homeRouter = require('./routers/home');
 const productRouter = require('./routers/product');
 const usersRouter = require('./routers/users');
+
+const loggedMiddleware = require('./middlewares/loggedMiddleware');
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
@@ -13,6 +16,15 @@ app.use(logger('dev'));
 app.use(methodOverride('_method'));
 app.use(express.static('./public'));
 app.set('view engine','ejs');
+
+
+//Session 
+app.use(session({
+    secret : 'topSecret',
+    resave: true,
+    saveUninitialized: true,
+}))
+app.use(loggedMiddleware);
 
 const port = 4200;
 
