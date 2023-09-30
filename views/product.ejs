@@ -24,7 +24,7 @@
                         <%if(prenda.oferta===true){%>
                         <p class="descuento"><%=prenda.descuento%>% de descuento</p>
                         <%}%>
-                        <form action="products/productCart" method="GET">
+                        <form action="products/productCart/<%=prenda.id%>" method="post">
                             <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
                         </form>
                         <a class="mas-informacion" href="/products/<%=prenda.id%>">Más información</a>                  

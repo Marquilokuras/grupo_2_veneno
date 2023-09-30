@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { json } = require('express');
-const products = require('../data/products.json')
+const products = require('../data/products.json');
 const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
 const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -12,30 +12,54 @@ const productsController = {
         res.render('productCart', { data: prendasCarrito })
     },
 
+    processProductCart: (req,res) => {
+        const { id } = req.params;
+        const productId = arrayPrendas.find((prod) => prod.id === id);
+        const indexProduct = arrayPrendas.indexOf(productId);
+
+        arrayPrendas[indexProduct] = {
+            id: productId.id,
+            nombre: productId.nombre,
+            descripcion: productId.descripcion,
+            precio: productId.precio,
+            imagen: productId.imagen,
+            reverse: productId.reverse,
+            disponibilidad: productId.disponibilidad,
+            cantidad: productId.cantidad,
+            carritoVenta: true,
+            categoria: productId.categoria,
+            genero: productId.genero,
+            oferta: productId.oferta,
+            descuento: productId.descuento
+        }
+        fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
+        res.redirect(`/products/productCart`);
+    },
+
     // Delete - Delete one product from DB
     destroy: (req, res) => {
         const { id } = req.params;
-        const productFind = products.find((prod) => prod.id === id);
-        const indexProduct = products.indexOf(products.find((prod) => prod.id === id));
-        console.log(req.body)
-        products[indexProduct] = {
-            id: productFind.id,
-            nombre: req.body.nombre,
-            precio: req.body.precio,
-            descripcion: req.body.descripcion,
-            reverse: req.body.reverse,
-            disponibilidad: req.body.disponibilidad,
-            cantidad: req.body.cantidad,
-            carritoVenta: "false",
-            categoria: req.body.categoria,
-            genero: req.body.genero,
-            oferta: req.body.oferta,
-            descuento: req.body.descuento,
-            imagen: productFind.imagen
+        const productId = arrayPrendas.find((prod) => prod.id === id);
+        const indexProduct = arrayPrendas.indexOf(productId);
+
+        arrayPrendas[indexProduct] = {
+            id: productId.id,
+            nombre: productId.nombre,
+            descripcion: productId.descripcion,
+            precio: productId.precio,
+            imagen: productId.imagen,
+            reverse: productId.reverse,
+            disponibilidad: productId.disponibilidad,
+            cantidad: productId.cantidad,
+            carritoVenta: false,
+            categoria: productId.categoria,
+            genero: productId.genero,
+            oferta: productId.oferta,
+            descuento: productId.descuento
         }
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        res.redirect('productCart');
+        fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
+        res.redirect(`/products/productCart`);
     },
 
     products: (req, res) => {

@@ -17,13 +17,12 @@
         <%- include('./partials/header.ejs') %>
 
     </header>
-    <form action="/products/productCart" method="post">
-
-        <div class="conteiner-tittle">
-            <%=data.nombre%>
-        </div>
-        <main>
-
+    
+    <form action="/products/productCart/<%=data.id%>" method="post">
+  
+    <div class="conteiner-tittle"><%=data.nombre%></div>
+    <main>
+        
             <nav id="imgs"><img src="/img/<%=data.imagen%>" alt="<%=data.nombre%>"></nav>
 
             <div class="conteiner-info-product">
