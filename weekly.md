@@ -98,3 +98,15 @@ Si se encontró algún impedimento:
     
 Qué va hacer hoy:
     # Agregar imagenes para el banner, cambiar imagenes del banner
+
+Día 21/09/2023 - Marcos Quinteros
+
+Qué hizo ayer.
+    # Observar las tareas del sprint 5 que faltaban por realizar.
+
+Si se encontró algún impedimento: 
+    # No tuve impedimentos.
+    
+Qué va hacer hoy:
+    # Corregir el guardado de las imagenes en el registro de usuarios.
+

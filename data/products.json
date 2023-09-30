@@ -2,8 +2,8 @@
     {
         "id": "1",
         "nombre": "Remeron Manifest",
-        "descripcion": "descripcion de Remeron Manifest",
         "precio": 18000,
+        "descripcion": "Descripción de Remeron Manifest",
         "imagen": "/remeronmanifest-hombre.webp",
         "reverse": "/espaldaid1.webp",
         "disponibilidad": true,
@@ -17,8 +17,8 @@
     {
         "id": "2",
         "nombre": "Remeron Essential Black",
-        "descripcion": "descripcion de Remeron Essential Black",
         "precio": 17400,
+        "descripcion": "Descripción de Remeron Essential Black",
         "imagen": "/remeronessentialblack-mujer.webp",
         "reverse": "/espaldaid2.webp",
         "disponibilidad": true,
@@ -32,8 +32,8 @@
     {
         "id": "3",
         "nombre": "Remeron Balance",
-        "descripcion": "descripcion de Remeron Balance",
         "precio": 17400,
+        "descripcion": "Descripción de Remeron Balance",
         "imagen": "/remeronbalance-mujer.webp",
         "reverse": "/espaldaid3.webp",
         "disponibilidad": true,
@@ -47,8 +47,8 @@
     {
         "id": "4",
         "nombre": "Buzo Top Essential",
-        "descripcion": "descripcion de Buzo Top Essential",
         "precio": 42000,
+        "descripcion": "Descripción de Buzo Top Essential",
         "imagen": "/buzotopessential-mujer.webp",
         "reverse": "/espaldaid4.webp",
         "disponibilidad": true,
@@ -62,8 +62,8 @@
     {
         "id": "5",
         "nombre": "Campera Velvet Track",
-        "descripcion": "descripcion de Campera Velvet Track",
         "precio": 29400,
+        "descripcion": "Descripción de Campera Velvet Track",
         "imagen": "/camperavelvettrack-mujer.webp",
         "reverse": "/espaldaid5.webp",
         "disponibilidad": true,
@@ -77,8 +77,8 @@
     {
         "id": "6",
         "nombre": "Buzo Be Night",
-        "descripcion": "descripcion de Buzo Be Night",
         "precio": 48000,
+        "descripcion": "Descripción de Buzo Be Night",
         "imagen": "/buzobenight-hombre-.webp",
         "reverse": "/espaldaid6.webp",
         "disponibilidad": true,
@@ -92,8 +92,8 @@
     {
         "id": "7",
         "nombre": "Campera College Black",
-        "descripcion": "descripcion de Campera College Black",
         "precio": 54600,
+        "descripcion": "Descripción de Campera College Black",
         "imagen": "/camperacollageblack-hombre.webp",
         "reverse": "/espaldaid7.webp",
         "disponibilidad": true,
@@ -107,8 +107,8 @@
     {
         "id": "8",
         "nombre": "Pantalon Snaps",
-        "descripcion": "descripcion de Pantalon Snaps",
         "precio": 35700,
+        "descripcion": "Descripción de Pantalon Snaps",
         "imagen": "/pantalonnab-hombre.webp",
         "reverse": "/espaldaid8.webp",
         "disponibilidad": true,
@@ -122,8 +122,8 @@
     {
         "id": "9",
         "nombre": "Pantalon Track Black",
-        "descripcion": "descripcion de Pantalon Track Black",
         "precio": 32500,
+        "descripcion": "Descripción de Pantalon Track Black",
         "imagen": "/pantalontrackpantblack-mujer.webp",
         "reverse": "/espaldaid9.webp",
         "disponibilidad": true,
@@ -137,8 +137,8 @@
     {
         "id": "10",
         "nombre": "Pantalon Carpenter Black",
-        "descripcion": "descripcion de Pantalon Carpenter Black",
         "precio": 31500,
+        "descripcion": "Descripción de Pantalon Carpenter Black",
         "imagen": "/carpenterblackpant-hombre.webp",
         "reverse": "/espaldaid10.webp",
         "disponibilidad": true,
@@ -152,8 +152,8 @@
     {
         "id": "11",
         "nombre": "Pantalon Parachute NAB Black",
-        "descripcion": "descripcion de Pantalon Parachute NAB Black",
         "precio": 35700,
+        "descripcion": "Descripción de Pantalon Parachute NAB Black",
         "imagen": "/pantalonpanchutenabblack-mujer.webp",
         "reverse": "/espaldaid11.webp",
         "disponibilidad": true,
@@ -167,8 +167,8 @@
     {
         "id": "12",
         "nombre": "Buzo Ninja Hood",
-        "descripcion": "descripcion de Buzo Ninja Hood",
         "precio": 52500,
+        "descripcion": "Descripción de Buzo Ninja Hood",
         "imagen": "/buzoninjahood.webp",
         "reverse": "/espaldaid12.webp",
         "disponibilidad": true,
@@ -182,8 +182,8 @@
     {
         "id": "13",
         "nombre": "Buzo College",
-        "descripcion": "descripcion de Buzo College",
         "precio": 50000,
+        "descripcion": "Descripción de Buzo College",
         "imagen": "/buzocollege.webp",
         "reverse": "/espaldaid13.webp",
         "disponibilidad": true,
@@ -197,8 +197,8 @@
     {
         "id": "14",
         "nombre": "Remeron Not a Brand Wash",
-        "descripcion": "descripcion de Remeron Not a Brand Wash",
         "precio": 21000,
+        "descripcion": "Descripción de Remeron Not a Brand Wash",
         "imagen": "/remeronnotabrandwash.webp",
         "reverse": "/espaldaid14.webp",
         "disponibilidad": true,
@@ -212,8 +212,8 @@
     {
         "id": "15",
         "nombre": "Campera Track Grey",
-        "descripcion": "descripcion de Campera Track Grey",
         "precio": 48000,
+        "descripcion": "Descripción de Campera Track Grey",
         "imagen": "/camperatrackgrey-mujer.webp",
         "reverse": "/espaldaid15.webp",
         "disponibilidad": true,
@@ -227,8 +227,8 @@
     {
         "id": "16",
         "nombre": "Campera Kongo Black",
-        "descripcion": "descripcion de Campera Kong Black",
         "precio": 48000,
+        "descripcion": "Descripción de Campera Kong Black",
         "imagen": "/camperakongoblack.webp",
         "reverse": "/espaldaid16.webp",
         "disponibilidad": true,

@@ -47,7 +47,6 @@ const validateRegister = (req, res, next) => {
         }*/
         
         if (errors.isEmpty()) {
-
             if (password === passwordVerify){
                 const newUser = {
                     id:  (users.length + 1).toString(),

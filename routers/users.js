@@ -7,8 +7,8 @@ const upload = require('../middlewares/multer');
 
 /** VALIDACIONES **/
 const { arrRegister, validateRegister } = require('../middlewares/validateRegister');
-
-routerUsers.get('/', usersController.renderLogin);
+/* 
+routerUsers.get('/', usersController.renderLogin); */
 
 routerUsers.get('/register', usersController.renderRegister);
 
