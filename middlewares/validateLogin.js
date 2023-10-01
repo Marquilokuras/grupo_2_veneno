@@ -16,7 +16,7 @@ const arrLogin = [
             }
         }
         return false;
-    }).withMessage('Usuario no se encuntra registrado'),
+    }).withMessage('Usuario no se encuentra registrado'),
     body('password').custom( (value, {req}) => {
         for(let i = 0; i < fileUsers.length; i++){
             if(fileUsers[i].email == req.body.email){
