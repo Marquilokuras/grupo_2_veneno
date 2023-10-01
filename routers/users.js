@@ -8,17 +8,21 @@ const upload = require('../middlewares/multer');
 /** VALIDACIONES **/
 const { arrRegister, validateRegister } = require('../middlewares/validateRegister');
 const { arrLogin, validateLogin } = require('../middlewares/validateLogin');
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 /* 
 routerUsers.get('/', usersController.renderLogin); */
 
-routerUsers.get('/register', usersController.renderRegister);
+routerUsers.get('/register', guestMiddleware, usersController.renderRegister);
 
 routerUsers.post('/register', upload.single("image"), arrRegister, validateRegister, usersController.createUser);   // /register(POST) Accion de creacion, donde se envia el formulario del Usuario
 
-routerUsers.get('/login', usersController.renderLogin);
+routerUsers.get('/login', guestMiddleware, usersController.renderLogin);
 
 routerUsers.post('/login', arrLogin, validateLogin, usersController.enterHome );
 
-routerUsers.get('/logout', usersController.logout);
+routerUsers.get('/logout', authMiddleware, usersController.logout);
+
+routerUsers.get('/profile', authMiddleware, usersController.renderProfile);
 
 module.exports = routerUsers;

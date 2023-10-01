@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <%- include('./partials/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/loginStyles.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Mi Perfil</title>
+</head>
+<body>
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+    <main>
+        <div class="profile-container">
+            <h1>Mi perfil</h1>
+            <div class="profile">
+                <h2><%= user.userName %> </h2>
+            </div>
+        </div>
+    </main>
+    
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

@@ -26,6 +26,10 @@ const usersController = {
         req.session.destroy();
 
         res.redirect('/');
+    },
+    renderProfile : (req,res) => {
+        res.render('profile', {user : req.session.usuario});
+
     }
 };
 

@@ -110,3 +110,13 @@ Si se encontró algún impedimento:
 Qué va hacer hoy:
     # Corregir el guardado de las imagenes en el registro de usuarios.
 
+Día 01/10/2023 - Joaquin Yarbi
+
+Qué hizo ayer.
+    # Observar los codigos para situarse.
+
+Si se encontró algún impedimento: 
+    # No habiamos creado la vista del profile
+    
+Qué va hacer hoy:
+    # Redireccionar las rutas para los logeados y los que no estan logeados.
