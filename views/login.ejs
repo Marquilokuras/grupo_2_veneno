@@ -15,16 +15,26 @@
     <main>
         <div class="form-login">
             <h1>Inicia Sesión</h1>
-            <form action="/login"  method="post">
+            <form action="/users/login"  method="post">
                 <div class="correo-user">
-                    <label for="correo">Correo electrónico </label>
-                    <input type="email" id="correo" >
+                    <label for="email">Correo electrónico </label>
+                    <input type="email" id="email"  name="email" value="<%= (typeof old != 'undefined' ) ? old.email : ' ' %>">
                 </div>
+                <% if(typeof(errors) != 'undefined' && errors.email) {%>
+                    <span class="text-danger">
+                        <%= errors.email.msg %>
+                    </span>
+                <% } %>
                 <div class="password">
-                    <label for="contraseña">Contraseña</label>
+                    <label for="password">Contraseña</label>
                     <a href="">¿Olvidaste tu contraseña?</a>
-                    <input type="password" id="contraseña">
+                    <input type="password" id="password" name="password">
                 </div>
+                <% if(typeof(errors) != 'undefined' && errors.password) {%>
+                    <span class="text-danger">
+                        <%= errors.password.msg %>
+                    </span>
+                <% } %>
                 <div class="container-button">
                     <button>Iniciar Sesión</button>
                 </div>

@@ -2,8 +2,8 @@
     {
         "id": "1",
         "nombre": "Remeron Manifest",
-        "descripcion": "descripcion de Remeron Manifest",
         "precio": 18000,
+        "descripcion": "Descripción de Remeron Manifest",
         "imagen": "/remeronmanifest-hombre.webp",
         "reverse": "/espaldaid1.webp",
         "disponibilidad": true,
@@ -17,8 +17,8 @@
     {
         "id": "2",
         "nombre": "Remeron Essential Black",
-        "descripcion": "descripcion de Remeron Essential Black",
         "precio": 17400,
+        "descripcion": "Descripción de Remeron Essential Black",
         "imagen": "/remeronessentialblack-mujer.webp",
         "reverse": "/espaldaid2.webp",
         "disponibilidad": true,
@@ -32,8 +32,8 @@
     {
         "id": "3",
         "nombre": "Remeron Balance",
-        "descripcion": "descripcion de Remeron Balance",
         "precio": 17400,
+        "descripcion": "Descripción de Remeron Balance",
         "imagen": "/remeronbalance-mujer.webp",
         "reverse": "/espaldaid3.webp",
         "disponibilidad": true,
@@ -47,8 +47,8 @@
     {
         "id": "4",
         "nombre": "Buzo Top Essential",
-        "descripcion": "descripcion de Buzo Top Essential",
         "precio": 42000,
+        "descripcion": "Descripción de Buzo Top Essential",
         "imagen": "/buzotopessential-mujer.webp",
         "reverse": "/espaldaid4.webp",
         "disponibilidad": true,
@@ -62,8 +62,8 @@
     {
         "id": "5",
         "nombre": "Campera Velvet Track",
-        "descripcion": "descripcion de Campera Velvet Track",
         "precio": 29400,
+        "descripcion": "Descripción de Campera Velvet Track",
         "imagen": "/camperavelvettrack-mujer.webp",
         "reverse": "/espaldaid5.webp",
         "disponibilidad": true,
@@ -77,8 +77,8 @@
     {
         "id": "6",
         "nombre": "Buzo Be Night",
-        "descripcion": "descripcion de Buzo Be Night",
         "precio": 48000,
+        "descripcion": "Descripción de Buzo Be Night",
         "imagen": "/buzobenight-hombre-.webp",
         "reverse": "/espaldaid6.webp",
         "disponibilidad": true,
@@ -92,8 +92,8 @@
     {
         "id": "7",
         "nombre": "Campera College Black",
-        "descripcion": "descripcion de Campera College Black",
         "precio": 54600,
+        "descripcion": "Descripción de Campera College Black",
         "imagen": "/camperacollageblack-hombre.webp",
         "reverse": "/espaldaid7.webp",
         "disponibilidad": true,
