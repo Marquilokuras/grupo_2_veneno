@@ -274,7 +274,9 @@ footer{
     border-top: solid white 1px ;
 }
 footer .div-footer{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 10px 30px;
 }
 footer .div-footer h4{
@@ -297,7 +299,9 @@ footer .tarjetas img{
 footer .atajo{
     display: flex;
     flex-direction: column;
-    text-align: center;
+}
+footer .atajo h4{
+    text-align: left;
 }
 footer .atajo a{
     font-size: 0.9rem;

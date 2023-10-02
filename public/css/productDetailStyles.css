@@ -10,11 +10,10 @@
 
 body {
   font-family: "Ubuntu";
-  max-width: 1335px;
   background-color: #202020;
 }
 nav {
-  width: 40%;
+  width: 25%;
 }
 nav img {
   width: 100%;
@@ -41,6 +40,7 @@ main {
   display: flex;
   gap: 30px;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 .conteiner-img {
@@ -49,9 +49,9 @@ main {
 }
 
 .conteiner-info-product {
-  flex: 1;
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 
 .conteiner-price {
@@ -369,56 +369,70 @@ span {
 
 /*Footer*/
 
-footer {
-  border-top: solid white 1px;
-  background-color: #202020;
+footer{
+  border-top: solid white 1px ;
 }
-footer .div-footer {
+footer .div-footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px 30px;
 }
-footer .div-footer h4 {
+footer .div-footer h4{
   color: rgb(128, 128, 128);
   margin-bottom: 10px;
-}
-footer .tarjetas h4 {
   text-align: center;
 }
-footer .tarjetas img {
+footer .cards{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .tarjetas h4{
+  text-align: center;
+}
+footer .tarjetas img{
   width: 40px;
   height: 25px;
 }
-footer .atajo {
+footer .atajo{
   display: flex;
   flex-direction: column;
 }
-footer .atajo a {
+footer .atajo h4{
+  text-align: left;
+}
+footer .atajo a{
   font-size: 0.9rem;
   margin-bottom: 20px;
-  color: white;
+  color:white;
   text-decoration: none;
 }
-footer .sede p {
+footer .sede p{
   color: white;
   margin-bottom: 15px;
-}
-footer .seguinos h4 {
   text-align: center;
 }
-footer .seguinos a i {
+footer .seguinos h4{
+  text-align: center; 
+}
+footer .seguinos a i{
   font-size: 30px;
 }
-footer .seguinos a img {
+footer .seguinos a img{
   width: 30px;
   object-fit: cover;
   margin: 10px 10px;
 }
-footer .div-copyrigth {
+footer .redes{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .div-copyrigth{
   margin-top: 25px;
 }
-footer .copyrigth {
+footer .copyrigth{
   color: white;
 }
 
