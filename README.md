@@ -1,4 +1,4 @@
-# grupo_2_Veneno
+# GRUPO 9 VENENO
 
 **Temática: Ropa Urbana**
 
