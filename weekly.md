@@ -116,7 +116,18 @@ Qué hizo ayer.
     # Observar los codigos para situarse.
 
 Si se encontró algún impedimento: 
-    # No habiamos creado la vista del profile
+    # No habiamos creado la vista del profile.
     
 Qué va hacer hoy:
     # Redireccionar las rutas para los logeados y los que no estan logeados.
+
+Día 04/10/2023 - Todos 
+
+Qué hizo ayer.
+    # Verificar que todas las tareas del sprint esten terminadas.
+
+Si se encontró algún impedimento: 
+    # No hubo impedimentos.
+    
+Qué va hacer hoy:
+    # Realizamos el Diagrama Entidad Relación.
