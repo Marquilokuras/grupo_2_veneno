@@ -19,20 +19,20 @@
             <div>
                 <% data.forEach((carrito)=>{ %>
 
-                    <div class="prenda">
+                    <div class="prendas">
                         <div class="nombrePrenda">
-                            <img src="/img<%= carrito.imagen %>" alt="<%= carrito.nombre %>">
+                            <img src="/img<%= carrito.image %>" alt="<%= carrito.name %>">
                             <p>
-                                <%= carrito.nombre %>
+                                <%= carrito.name %>
                             </p>
                         </div>
 
                         <div class="datosPrenda">
                             <p>
-                                <%= carrito.precio %>
+                                <%= carrito.price %>
                             </p>
                             <p>
-                                Cantidad: <%= carrito.cantidad %>
+                                Cantidad: <%= carrito.amount %>
                             </p>
                         </div>
                         

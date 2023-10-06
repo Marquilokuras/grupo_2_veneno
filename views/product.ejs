@@ -17,12 +17,12 @@
                 <article>
                     <div class="descripcion">
                         <a href="/products/<%=prenda.id%>">
-                            <img src="img/<%=prenda.imagen %>" alt="<%=prenda.nombre%>">
+                            <img src="img/<%=prenda.image %>" alt="<%=prenda.name%>">
                         </a>
-                        <h3 class="desc"> <%=prenda.nombre %></h3>
-                        <p class="precio">$<%=prenda.precio %></p>
-                        <%if(prenda.oferta===true){%>
-                        <p class="descuento"><%=prenda.descuento%>% de descuento</p>
+                        <h3 class="desc"> <%=prenda.name %></h3>
+                        <p class="precio">$<%=prenda.price %></p>
+                        <%if(prenda.offer===true){%>
+                        <p class="descuento"><%=prenda.discount%>% de descuento</p>
                         <%}%>
                         <form action="products/productCart/<%=prenda.id%>" method="post">
                             <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
