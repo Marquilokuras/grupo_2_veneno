@@ -8,7 +8,7 @@ const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
 
     renderProductCart: (req, res) => {
-        const prendasCarrito = arrayPrendas.filter((prenda) => prenda.carritoVenta === true)
+        const prendasCarrito = arrayPrendas.filter((prenda) => prenda.cartSale === true)
         res.render('productCart', { data: prendasCarrito })
     },
 
@@ -19,18 +19,18 @@ const productsController = {
 
         arrayPrendas[indexProduct] = {
             id: productId.id,
-            nombre: productId.nombre,
-            descripcion: productId.descripcion,
-            precio: productId.precio,
-            imagen: productId.imagen,
+            name: productId.name,
+            description: productId.description,
+            price: productId.price,
+            image: productId.image,
             reverse: productId.reverse,
-            disponibilidad: productId.disponibilidad,
-            cantidad: productId.cantidad,
-            carritoVenta: true,
-            categoria: productId.categoria,
-            genero: productId.genero,
-            oferta: productId.oferta,
-            descuento: productId.descuento
+            disponibility: productId.disponibility,
+            amount: productId.amount,
+            cartSale: true,
+            category: productId.category,
+            genre: productId.genre,
+            offer: productId.offer,
+            discount: productId.discount
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         res.redirect(`/products/productCart`);
@@ -44,18 +44,18 @@ const productsController = {
 
         arrayPrendas[indexProduct] = {
             id: productId.id,
-            nombre: productId.nombre,
-            descripcion: productId.descripcion,
-            precio: productId.precio,
-            imagen: productId.imagen,
+            name: productId.name,
+            description: productId.description,
+            price: productId.price,
+            image: productId.image,
             reverse: productId.reverse,
-            disponibilidad: productId.disponibilidad,
-            cantidad: productId.cantidad,
-            carritoVenta: false,
-            categoria: productId.categoria,
-            genero: productId.genero,
-            oferta: productId.oferta,
-            descuento: productId.descuento
+            disponibility: productId.disponibility,
+            amount: productId.amount,
+            cartSale: false,
+            category: productId.category,
+            genre: productId.genre,
+            offer: productId.offer,
+            discount: productId.discount
         }
 
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
@@ -73,25 +73,25 @@ const productsController = {
     detail: (req, res) => {
         const { id } = req.params;
         const IdProducto = arrayPrendas.find((producto) => producto.id === id);
-        const productosRelacionados = arrayPrendas.filter((prod)=> prod.categoria === IdProducto.categoria && prod.id !== id);
+        const productosRelacionados = arrayPrendas.filter((prod)=> prod.category === IdProducto.category && prod.id !== id);
         res.render('detail', { data: IdProducto , products: productosRelacionados});
     },
 
     store: (req, res) => {
         const nuevoProducto = {
             id: arrayPrendas.length + 1,
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            imagen: req.file.filename,
+            name: req.body.nombre,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.file.filename,
             reverse: req.body.reverse,
-            disponibilidad: req.body.disponibilidad,
-            cantidad: req.body.cantidad,
-            carritoVenta: req.body.carritoVenta,
-            categoria: req.body.categoria,
-            genero: req.body.genero,
-            oferta: req.body.oferta,
-            descuento: req.body.descuento
+            disponibility: req.body.disponibility,
+            amount: req.body.amount,
+            cartSale: req.body.cartSale,
+            category: req.body.category,
+            genre: req.body.genre,
+            offer: req.body.offer,
+            discount: req.body.discount
         }
         arrayPrendas.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
@@ -114,7 +114,7 @@ const productsController = {
 
         const ifElse = (elem) => {
             if (!elem) {
-                return productId.imagen;
+                return productId.image;
             }
             else {
                 return req.file.filename;
@@ -123,18 +123,18 @@ const productsController = {
 
         arrayPrendas[indexProduct] = {
             id: productId.id,
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            imagen: ifElse(req.file),
+            name: req.body.nombre,
+            description: req.body.description,
+            price: req.body.price,
+            image: ifElse(req.file),
             reverse: req.body.reverse,
-            disponibilidad: req.body.disponibilidad,
-            cantidad: req.body.cantidad,
-            carritoVenta: req.body.carritoVenta,
-            categoria: req.body.categoria,
-            genero: req.body.genero,
-            oferta: req.body.oferta,
-            descuento: req.body.descuento
+            disponibility: req.body.disponibility,
+            amount: req.body.amount,
+            cartSale: req.body.cartSale,
+            category: req.body.category,
+            genre: req.body.genre,
+            offer: req.body.offer,
+            discount: req.body.discount
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         //res.send("Se editó el producto");

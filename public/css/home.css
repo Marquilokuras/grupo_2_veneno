@@ -145,43 +145,30 @@ main .section-opcion-prendas{
 main .conteiner{
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
 }
 main .div-opcion-prendas{
-    width: 48%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     margin: 1px 2px;
+    position: relative;
 }
 main .div-opcion-prendas img{
     width: 100%;
-    height: auto;
+    height: 100%; /*auto*/
+    object-fit: cover;
     border: solid rgb(252, 239, 239);
-    position: relative;
+    opacity: 75%;
 }
-main .div-remeras{
+main .div-opcion-prendas .prenda{
     position: absolute;
-    top:52%;
-    left: 13%;
-    letter-spacing: 2px;
-}
-main .div-camperas{
-    position: absolute;
-    top:52%;
-    left: 61%;
-    letter-spacing: 2px;
-}
-main .div-jeans{
-    position: absolute;
-    top:73%;
-    left: 10%;
-    letter-spacing: 2px;
-}
-main .div-accesorios{
-    position: absolute;
-    top: 73%;
-    left: 60%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     letter-spacing: 2px;
 }
 main .div-opcion-prendas a{
@@ -331,7 +318,8 @@ footer .redes{
     justify-content: space-evenly;
 }
 footer .div-copyrigth{
-    margin-top: 25px;
+    margin-top: 30px;
+    text-align: center;
 }
 footer .copyrigth{
     color: white;
@@ -351,9 +339,9 @@ footer .copyrigth{
 .div-hombre-mujer a:hover{
     filter: brightness(120%);
 }
-.div-opcion-prendas img:hover{
-    filter: brightness(130%);
-    transition: 0.3s; 
+.div-opcion-prendas:hover{
+    filter: brightness(150%);
+    transition: 0.3s;
 }
 .seguinos img:hover{
     filter: brightness(160%);
@@ -362,8 +350,8 @@ footer .copyrigth{
 .atajo a:hover{
     color:grey;
 }
-main .contenedor-de-articulos article a img:hover{
-    filter: brightness(120%); 
+main .contenedor-de-articulos article:hover{
+    filter: brightness(115%); 
 }
 .mas-informacion:hover{
     color:black;
@@ -372,8 +360,8 @@ main .contenedor-de-articulos article a img:hover{
     color: rgb(1, 184, 11);
     cursor: pointer;
 }
-main .div-remeras a:hover, .div-camperas a:hover, .div-jeans a:hover, .div-accesorios a:hover{
-    filter: brightness(130%);
+main .prenda a:hover{
+    text-decoration: underline;
 }
 
 
@@ -409,31 +397,7 @@ Media queries para dispositivos!
     main .div-opcion-prendas{
         position: relative;
     }
-    main .div-remeras{
-        position: absolute;
-        top: 44%;
-        left: 31%;
-        font-size: 2rem;
-        letter-spacing: 15px;
-    }
-    main .div-camperas{
-        position: absolute;
-        top: 44%;
-        left: 28%;
-        font-size: 2rem;
-        letter-spacing: 15px;
-    }
-    main .div-jeans{
-        position: absolute;
-        top: 45%;
-        left: 25%;
-        font-size: 2rem;
-        letter-spacing: 15px;
-    }
-    main .div-accesorios{
-        position: absolute;
-        top: 45%;
-        left: 25%;
+    main .prenda{
         font-size: 2rem;
         letter-spacing: 15px;
     }

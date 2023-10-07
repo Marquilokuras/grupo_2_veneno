@@ -18,20 +18,20 @@
             <h2 class="producto-edit"> <%=datos.nombre%></h2>
             <form action="/products/<%=datos.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="nombre">Nombre del Producto:</label>
-                    <input type="text" id="nombre" name="nombre" required value="<%=datos.nombre%>">
+                    <label for="name">Nombre del Producto:</label>
+                    <input type="text" id="name" name="name" required value="<%=datos.nombre%>">
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" required><%=datos.descripcion%></textarea>
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" name="description" required><%=datos.descripcion%></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="imagen">Imagen del Producto:</label>
-                    <input type="file" id="imagen" name="imagen" required accept="image/*"> 
+                    <label for="image">Imagen del Producto:</label>
+                    <input type="file" id="image" name="image" required accept="image/*"> 
                 </div>
                 <div class="form-group">
-                    <label for="categoria">Categoria del Producto:</label>
-                    <input type="text" id="categoria" name="categoria" required value="<%=datos.categoria%>">
+                    <label for="category">Categoria del Producto:</label>
+                    <input type="text" id="category" name="category" required value="<%=datos.category%>">
                 </div>
                 <div class="form-group">
                     <label for="colore">Colores del Producto:</label>
@@ -51,8 +51,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="precio">Precio del Producto:</label>
-                    <input type="number" id="precio" name="precio" required value="<%=datos.precio%>">
+                    <label for="price">Precio del Producto:</label>
+                    <input type="number" id="price" name="price" required value="<%=datos.price%>">
                 </div>
                 <div class="form-group">
                     <button type="submit">Editar Producto</button>

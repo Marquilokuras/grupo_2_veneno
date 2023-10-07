@@ -19,15 +19,15 @@
     </header>
     
     <form action="/products/productCart/<%=data.id%>" method="post">
-    <div class="conteiner-tittle"><%=data.nombre%></div>
+    <div class="conteiner-tittle"><%=data.name%></div>
     <main>
         
-            <nav id="imgs"><img src="/img/<%=data.imagen%>" alt="<%=data.nombre%>"></nav>
+            <nav id="imgs"><img src="/img/<%=data.image%>" alt="<%=data.name%>"></nav>
 
             <div class="conteiner-info-product">
                 <div class="conteiner-price">
                     <!--<span><%=data.nombre%></span>-->
-                    <span>Precio: $<%=data.precio%></span>
+                    <span>Precio: $<%=data.price%></span>
 
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
@@ -61,14 +61,15 @@
                     </div>
                 </div>
                 <div class="conteiner-add-cart">
+                    <p style="color:aliceblue">Cantidad :</p>
                     <div class="conteiner-quantity">
                         <input type="number" placeholder="1" value="1" min="1" class="input-quatity" />
-                        <div class="btn-incremet-decrement">
+                        <!--<div class="btn-incremet-decrement">
                             <i class="fa-solid fa-chevron-up" id="increment"></i>
                             <i class="fa-solid fa-chevron-down" id="decrement"></i>
-                        </div>
+                        </div>-->
                     </div>
-                    <button class="btn-add-to-cart">
+                    <button class="btn-add-to-card">
                         <i class="fa-solid fa-plus"></i>
                         Añadir al carrito
                     </button>
@@ -81,7 +82,7 @@
                     </div>
                     <div class="text-description hidden">
                         <p>
-                            <%=data.descripcion%>
+                            <%=data.description%>
                         </p>
                     </div>
                 </div>
@@ -124,19 +125,19 @@
                 <div class="card">
                     <%products.forEach((prenda)=>{%>
                         <div class="card-img">
-                            <img src="/img/<%=prenda.imagen %>" alt="img/<%=prenda.nombre %>">
+                            <img src="/img/<%=prenda.image %>" alt="img/<%=prenda.name %>">
                         </div>
                         <div class="info-card">
                             <div class="text-product">
                                 <h3>
-                                    <%=prenda.nombre%>
+                                    <%=prenda.name%>
                                 </h3>
                                 <P class="category">
-                                    <%=prenda.descripcion%>
+                                    <%=prenda.description%>
                                 </P>
                             </div>
                         </div>
-                        <div class="price">$<%=prenda.precio%>
+                        <div class="price">$<%=prenda.price%>
                         </div>
                         <%})%>
                 </div>

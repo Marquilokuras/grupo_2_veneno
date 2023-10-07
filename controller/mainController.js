@@ -8,13 +8,13 @@ const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController = {
 
     home:(req,res) => {
-        const productosEnOferta = arrayPrendas.filter((producto)=>producto.oferta === true);
+        const productosEnOferta = arrayPrendas.filter((producto)=>producto.offer === true);
         res.render('index', { title: 'Prendas', data: productosEnOferta})
     },
     
     search: (req,res) => {
         const palabra = req.query.search;
-		const productosSearch = arrayPrendas.filter((producto)=>producto.nombre.toLowerCase().includes(palabra.toLowerCase()));
+		const productosSearch = arrayPrendas.filter((producto)=>producto.name.toLowerCase().includes(palabra.toLowerCase()));
 
         res.render('search', {results: productosSearch});
     },

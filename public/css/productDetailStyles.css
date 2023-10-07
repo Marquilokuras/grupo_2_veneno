@@ -104,14 +104,14 @@ main {
   position: relative;
 }
 
-.input-quantity {
+.input-quatity {
   background-color: #f7f7f7;
   border: none;
   padding: 10px;
   width: 60px;
-  height: 100%;
+  height: 15px;
   color: #666;
-  font-weight: 500;
+  font-weight: 50;
 }
 
 .input-quantity:focus {
@@ -126,14 +126,17 @@ main {
 
 .btn-add-to-card {
   border: none;
-  background-color: #252525;
+  background-color: white;
   padding: 10px;
-  color: #f7f7f7;
+  color: green;
   display: flex;
   align-items: center;
   gap: 5px;
-  font-weight: 700;
+  width: fit-content;
+  height: 20px;
+  font-size: .8rem;
   cursor: pointer;
+  border-radius: 50px;
 }
 
 .btn-increment-decrement {

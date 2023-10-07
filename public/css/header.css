@@ -30,7 +30,7 @@ header{
 .nav  a{
     text-decoration: none;
     color: white;
-    padding-right: 8px; padding-left: 8px;
+    padding-right: 25px; padding-left: 8px;
 }
 
 .nav ul{
@@ -58,9 +58,6 @@ div.burger-menu i{
 .barra-search{
     display: flex;
     border-radius: 7px;
-}
-
-.barra-search{
     background-color: white;
 }
 
@@ -69,6 +66,7 @@ div.burger-menu i{
     padding: 3px;
     border-radius: 10px;
     outline: none;
+    font-size: large;
 }
 
 .barra-search button{
