@@ -30,10 +30,19 @@
                 </div>
                 <div class="form-group">
                     <label for="category">Categoria del Producto:</label>
-                    <input type="text" id="category" name="category" required placeholder="Ingrese Categoria">
+                    <select id="category" name="category" required placeholder="Ingrese Categoria">
+                        <option value="remera" class="color-option">Remera
+                        </option>
+                        <option value="abrigo" class="color-option">Abrigo
+                        </option>
+                        <option value="pantalon" class="color-option">Pantalon
+                        </option>
+                        <option value="accesorio" class="color-option">Accesorio
+                        </option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="colore">Colores del Producto:</label>
+                    <label for="colore">Color del Producto:</label>
                     <select id="colore">
                         <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo
                         </option>
@@ -51,7 +60,30 @@
                 </div>
                 <div class="form-group">
                     <label for="price">Precio del Producto:</label>
-                    <input type="number" id="price" name="price" required placeholder="Ingrese precio del Producto"></textarea>
+                    <input type="number" id="price" name="price" required placeholder="Ingrese Precio del Producto" min="0"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Cantidad:</label>
+                    <input type="number" id="amount" name="amount" min="0" required placeholder="Ingrese Cantidad" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="genre">Género:</label>
+                    <select id="genre" name="genre" required placeholder="Ingrese Género">
+                        <option value="mujer" class="color-option">Mujer
+                        </option>
+                        <option value="varon" class="color-option">Varon
+                        </option>
+                        <option value="unisex" class="color-option">Unisex
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="offer">Oferta:</label>Si
+                    <input type="checkbox" id="offer" name="offer" value="true">
+                </div>
+                <div class="form-group">
+                    <label for="discount">Descuento (%):</label>
+                    <input type="number" id="discount" name="discount" required placeholder="Ingrese Descuento" min="0" max="100">
                 </div>
                 <div class="form-group">
                     <button type="submit">Crear Producto</button>
