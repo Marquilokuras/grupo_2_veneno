@@ -49,7 +49,7 @@ const productsController = {
             price: productId.price,
             image: productId.image,
             reverse: productId.reverse,
-            disponibility: productId.disponibility,
+            disponibility: true,
             amount: productId.amount,
             cartSale: false,
             category: productId.category,
@@ -73,31 +73,34 @@ const productsController = {
     detail: (req, res) => {
         const { id } = req.params;
         const IdProducto = arrayPrendas.find((producto) => producto.id === id);
-        const productosRelacionados = arrayPrendas.filter((prod)=> prod.category === IdProducto.category && prod.id !== id);
+        console.log(IdProducto)
+        const productosRelacionados = arrayPrendas.find((prod)=> prod.category === IdProducto.category && prod.id !== id);
+        console.log(IdProducto ,  productosRelacionados)
         res.render('detail', { data: IdProducto , products: productosRelacionados});
     },
 
     store: (req, res) => {
+        console.log(req.body)
+        if(req.body.offer === "true"){
+            req.body.offer = true
+        }
         const nuevoProducto = {
-            id: arrayPrendas.length + 1,
-            name: req.body.nombre,
+            id: parseInt(arrayPrendas.length) + 1, // Convierte a número
+            name: req.body.name,
             description: req.body.description,
-            price: req.body.price,
+            price: parseFloat(req.body.price), // Convierte a número de coma flotante
             image: req.file.filename,
-            reverse: req.body.reverse,
-            disponibility: req.body.disponibility,
-            amount: req.body.amount,
-            cartSale: req.body.cartSale,
+            disponibility: true,
+            amount: parseInt(req.body.amount), // Convierte a número
+            cartSale: false,
             category: req.body.category,
             genre: req.body.genre,
-            offer: req.body.offer,
-            discount: req.body.discount
+            offer: req.body.offer !== null ? req.body.offer : false,
+            discount: parseFloat(req.body.discount)
         }
         arrayPrendas.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
-
         const nuevoArrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        //res.send("Se cargó el producto");
         res.render("product", { data: nuevoArrayPrendas });
     },
 
@@ -123,7 +126,7 @@ const productsController = {
 
         arrayPrendas[indexProduct] = {
             id: productId.id,
-            name: req.body.nombre,
+            name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             image: ifElse(req.file),
