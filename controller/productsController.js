@@ -72,8 +72,8 @@ const productsController = {
 
     detail: (req, res) => {
         const { id } = req.params;
-        const IdProducto = arrayPrendas.find((producto) => producto.id === id);
-        console.log(IdProducto)
+        console.log(arrayPrendas)
+        const IdProducto = arrayPrendas.filter((producto) => producto.id === id);
         const productosRelacionados = arrayPrendas.find((prod)=> prod.category === IdProducto.category && prod.id !== id);
         console.log(IdProducto ,  productosRelacionados)
         res.render('detail', { data: IdProducto , products: productosRelacionados});
@@ -149,7 +149,9 @@ const productsController = {
         //fs.writeFileSync(productsFilePath, JSON.stringify(productsReplace));
         //res.send("Se eliminó el producto");
         const { id } = req.params;
+        console.log(req.params)
         const productFind = arrayPrendas.find((prod) => prod.id === id);
+        console.log(productFind)
         const indexProduct = arrayPrendas.indexOf(productFind);
         arrayPrendas.splice(indexProduct, 1);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));

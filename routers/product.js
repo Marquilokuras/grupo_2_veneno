@@ -27,6 +27,6 @@ router.get('/:id', productController.detail);                                   
 router.post('/', upload.single("image"), productController.store);                //4_ /products (POST) Accion de creacion, donde se envia el formulario
 router.get('/edit/:id', productController.edit)                                   //5_ /products/:id/edit (GET) Formulario de edición de productos
 router.put('/:id',upload.single("image"),productController.update)              //6_ /products/:id (PUT) Acción de edición (a donde se envía el formulario):
-router.delete('/:id', productController.delete)                                 //7_ /products/:id (DELETE) Acción de borrado
+router.delete('/delete/:id', productController.delete)                                 //7_ /products/:id (DELETE) Acción de borrado
 
 module.exports = router;

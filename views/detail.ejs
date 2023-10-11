@@ -17,7 +17,7 @@
         <%- include('./partials/header.ejs') %>
 
     </header>
-    
+    <% data.forEach((data) =>{ %>
     <form action="/products/productCart/<%=data.id%>" method="post">
     <div class="conteiner-tittle"><%=data.name%></div>
     <main>
@@ -73,6 +73,15 @@
                         <i class="fa-solid fa-plus"></i>
                         Añadir al carrito
                     </button>
+                    <button class="btn-add-to-card">
+                        <i class="fa-solid fa-plus"></i>
+                        <a href="/products/edit/<%=data.id%>">Editar
+                    </button>
+                    <button class="btn-add-to-card">
+                        <i class="fa-solid fa-plus"></i>
+                        <a href="/products/delete/<%=data.id%>">Eliminar
+                    </button>
+
                 </div>
 
                 <div class="conteiner-description">
@@ -119,6 +128,7 @@
 
             </div>
         </main>
+        <%})%>
         <section class="related-product">
             <h2>Productos relacionados</h2>
             <div class="card-list-products">
