@@ -5,5 +5,6 @@ const {validateSearch, validationSearch} = require("../middlewares/validateSearc
 
 router.get('/', homeController.home);
 router.get('/search', validateSearch, validationSearch, homeController.search);
+router.get('/redes', homeController.redes);
 
 module.exports = router;
