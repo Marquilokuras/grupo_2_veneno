@@ -8,7 +8,7 @@ const usersFilePath = path.join(__dirname, '..','data','users.json');
 
 const arrLogin = [
     body('email').isEmail().notEmpty().withMessage('Agregar un email válido'),
-    body('password').notEmpty().isLength({min : 6}).withMessage('La contraseña debe tener un minimo de 6 caractéres'),
+    body('password').notEmpty().withMessage('Ingrese una constraseña'),
     body('email').custom( (value) => {
         for(let i = 0; i < fileUsers.length; i++){
             if(fileUsers[i].email == value) {
@@ -34,18 +34,12 @@ const validateLogin = (req, res, next) => {
 
     const errors = validationResult(req);
 
-
-
         if(errors.isEmpty()) {
             const userLogged = fileUsers.find(usuario => usuario.email == req.body.email);
-
             delete userLogged.password;
             req.session.usuario = userLogged;
-            //console.log(userLogged)
-
             next();
         }else{
-            //console.log(errors)
             res.render('login', {errors: errors.mapped(), old: req.body})
         }
     
