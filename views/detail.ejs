@@ -11,73 +11,76 @@
 </head>
 
 <body>
-
     <header>
-
         <%- include('./partials/header.ejs') %>
-
     </header>
-    <form action="/products/productCart/<%=data.id%>" method="POST" enctype="multipart/form-data">
+    <main>
         <div class="conteiner-tittle">
             <%=data.name%>
         </div>
-        <main>
 
-            <nav id="imgs"><img src="/img/<%=data.image%>" alt="<%=data.name%>"></nav>
+        <div class="caja-padre">
+            <nav id="imgs">
+                <img src="/img/<%=data.image%>" alt="<%=data.name%>">
+            </nav>
 
             <div class="conteiner-info-product">
-                <div class="conteiner-price">
-                    <!--<span><%=data.nombre%></span>-->
-                    <span>Precio: $<%=data.price%></span>
-
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-
-                <div class="conteiner-detail-product">
-                    <!-- <div class="form-group">
-                        <label for="colour"> Seleccione un color</label>
-                        <select name="colour" id="colour">
-                            <option disabled selected value="">
-                                Elegí una opción
-                            </option>
-                            <option value="rojo"> Rojo </option>
-                            <option value="blanco"> Blanco </option>
-                            <option value="beige"> Beige </option>
-                            <option value="marron">Marrón</option>
-                        </select>
-                    </div> -->
-                    <div class="form-group">
-                        <label for="size"> Talles </label>
-                        <select name="size" id="size">
-                            <option disabled selected value="">
-                                Elegí una opción
-                            </option>
-                            <option value="XS">XS</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                            <option value="XXL">XXL</option>
-                        </select>
+                <form action="/products/productCart/<%=data.id%>" method="POST" enctype="multipart/form-data">
+                    <div class="conteiner-price">
+                        <span>Precio: $<%=data.price%></span>
+                        <i class="fa-solid fa-angle-right"></i>
                     </div>
-                </div>
-                <div class="conteiner-add-cart">
-                    <p style="color:aliceblue">Cantidad :</p>
-                    <div class="conteiner-quantity">
-                        <input type="number" placeholder="1" value="1" min="1" class="input-quatity" />
+    
+                    <div class="conteiner-detail-product">
+                        <!-- <div class="form-group">
+                            <label for="colour"> Seleccione un color</label>
+                            <select name="colour" id="colour">
+                                <option disabled selected value="">
+                                    Elegí una opción
+                                </option>
+                                <option value="rojo"> Rojo </option>
+                                <option value="blanco"> Blanco </option>
+                                <option value="beige"> Beige </option>
+                                <option value="marron">Marrón</option>
+                            </select>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="size"> Talles </label>
+                            <select name="size" id="size">
+                                <option disabled selected value="">
+                                    Elegí una opción
+                                </option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
                     </div>
-                    <button class="btn-add-to-card">
-                        <i class="fa-solid fa-plus"></i>
-                        Añadir al carrito
-                    </button>
-                </div>
-                <button class="btn-add-to-card">
-                    <a href="/products/edit/<%=data.id%>">Editar
+    
+                    <div class="conteiner-add-cart">
+                        <p style="color:aliceblue">Cantidad :</p>
+                        <div class="conteiner-quantity">
+                            <input type="number" placeholder="1" value="1" min="1" class="input-quatity" />
+                        </div>
+                        <button type="submit" class="btn-add-to-card">
+                            <i class="fa-solid fa-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>   
+                </form>
+
+                <button type="submit" class="btn-add-to-card">
+                    <a href="/products/edit/<%=data.id%>">Editar</a>
                 </button>
-                <form action="/products/delete/:<%=data.id%>?_method=DELETE" method="POST"></form>
-                <button class="btn-add-to-card">
-                    <a href="/products/delete/<%=data.id%>">Eliminar
-                </button>
+                
+
+                <form action="/products/delete/<%=data.id%>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn-add-to-card">Eliminar</button>
+                </form>
+
                 <div class="conteiner-description">
                     <div class="tittle-description">
                         <h4>Descripción</h4>
@@ -89,6 +92,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="conteiner-info-additional">
                     <div class="tittle-info-additional">
                         <h4>Informacion Adicional</h4>
@@ -98,7 +102,7 @@
                         <p>--------------</p>
                     </div>
                 </div>
-
+    
                 <div class="conteiner-reviews">
                     <div class="tittle-reviews">
                         <h4>Reseñas</h4>
@@ -108,7 +112,7 @@
                         <p>--------------</p>
                     </div>
                 </div>
-
+    
                 <div class="conteiner-social">
                     <span>Compartir</span>
                     <div class="conteiner-buttons-social">
@@ -119,17 +123,19 @@
                         <a href="a"><i class="fa-brands fa-pinterest"></i></a>
                     </div>
                 </div>
-
             </div>
-        </main>
+        </div>
+    </main>
         <section class="related-product">
             <h2>Productos relacionados</h2>
             <div class="card-list-products">
                 <div class="card">
-                    <%products.forEach((prenda)=>{%>
+                    <% products.forEach((prenda)=>{%>
                         <div class="card-img">
-                            <img src="/img/<%=prenda.image %>" alt="img/<%=prenda.name %>">
-                        </div>
+                            <a href="/products/<%=prenda.id%>">
+                                <img src="/img/<%= prenda.image %>" alt="img/<%= prenda.name %>">
+                            </a>
+                            </div>
                         <div class="info-card">
                             <div class="text-product">
                                 <h3>

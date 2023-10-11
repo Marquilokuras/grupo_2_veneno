@@ -12,8 +12,15 @@ body {
   font-family: "Ubuntu";
   background-color: #202020;
 }
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
 nav {
   width: 25%;
+  margin-right: 20px;
 }
 nav img {
   width: 100%;
@@ -27,6 +34,18 @@ header {
   justify-content: center;
 }
 
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.caja-padre{
+  display: flex;
+  justify-content: center;
+}
 .conteiner-tittle {
   padding: 30px;
   background-color: #9cd42c;
@@ -35,14 +54,6 @@ header {
   color: #222;
   font-size: 20px;
 }
-
-main {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 10px;
-  justify-content: center;
-}
-
 .conteiner-img {
   background-color: #f7f7f9;
   flex: 1;
@@ -124,7 +135,7 @@ main {
   appearance: none;
 }
 
-.btn-add-to-card {
+.btn-add-to-card{
   border: none;
   background-color: white;
   padding: 10px;
@@ -162,7 +173,7 @@ fa-chevron-down:hover {
   color: #1bbeb4;
 }
 
-.btn-add-to-card:hover {
+.btn-add-to-card:hover, a:hover{
   color: #1bbeb4;
 }
 
