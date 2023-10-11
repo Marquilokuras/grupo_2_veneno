@@ -73,7 +73,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" min="6">
                     <%if (locals.errors && errors.password){%>
                         <div>
                             <i>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="form-group">
                     <label for="passwordVerify">Contraseña de Verificacion:</label>
-                    <input type="password" id="passwordVerify" name="passwordVerify" placeholder="Ingrese su contraseña nuevamente">
+                    <input type="password" id="passwordVerify" name="passwordVerify" placeholder="Ingrese su contraseña nuevamente" min="6">
                     <%if (locals.errors && errors.passwordVerify){%>
                         <div>
                             <i>
@@ -114,17 +114,6 @@
                     <input type="file" id="image" name="image" accept=".jpg, .png, .jpeg">
                 </div>
                 <div class="form-group">
-                    <label for="birthday">Fecha de nacimiento:</label>
-                    <input type="date" id="birthday" name="birthday" value="<%= (locals.old && old.birthday) ? old.birthday : '' %>">
-                    <%if (locals.errors && errors.birthday){%>
-                        <div>
-                            <i>
-                                <%=errors.birthday.msg%>
-                            </i>
-                        </div>
-                    <%}%>
-                </div>
-                <div class="form-group">
                     <label for="age">Edad:</label>
                     <input type="number" id="age" name="age" placeholder="Ingrese su edad" value="<%= (locals.old && old.age) ? old.age : '' %>">
                     <%if (locals.errors && errors.age){%>
@@ -145,6 +134,21 @@
                                 </i>
                             </div>
                         <%}%>
+                </div>
+                <div class="form-group">
+                    <label for="rol">Rol:</label>
+                    <select id="rol" name="rol" value="<%= (locals.old && old.rol) ? old.rol : ''%>">
+                        <option value="" disabled selected>Selecciona un rol</option>
+                        <option value="user">Usuario</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                    <%if (locals.errors && errors.rol){%>
+                        <div>
+                            <i>
+                                <%=errors.rol.msg%>
+                            </i>
+                        </div>
+                    <%}%>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Registrarse">

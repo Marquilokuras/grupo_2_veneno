@@ -23,11 +23,6 @@ const mainController = {
         res.sendFile(path.resolve(__dirname,'/'))
     },
 
-    /*
-    renderFormAdministrador: (req,res) => {
-        res.render('formsAdministrador')
-    },
-    */
 }
 
 module.exports = mainController;

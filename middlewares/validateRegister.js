@@ -14,7 +14,7 @@ const arrRegister = [
     body('password').notEmpty().withMessage('Debe ingresar una contraseña'),
     body('passwordVerify').notEmpty().withMessage('Debe ingresar la contraseña nuevamente'),
     body('gender').notEmpty().withMessage('Debe seleccionar un género'),
-    body('birthday').notEmpty().withMessage('Debe ingresar su año de nacimiento'),
+    body('rol').notEmpty().withMessage('Debe ingresar un rol'),
     body('age').notEmpty().withMessage('Debe ingresar su edad'),
     body('direction').notEmpty().withMessage('Debe ingresar su domicilio')
 ];
@@ -22,9 +22,8 @@ const arrRegister = [
 const validateRegister = (req, res, next) => {
     const errors = validationResult(req);
 
-    const {name, lastname,userName, email, password,passwordVerify, gender, birthday, age, direction } = req.body;
+    const {name, lastname,userName, email, password,passwordVerify, gender, age, direction,rol } = req.body;
     const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-    //const existingUser = users.find((user) => user.email === email);
 
     const imageExist = (element) => {
         if(element){
@@ -49,7 +48,7 @@ const validateRegister = (req, res, next) => {
         if (errors.isEmpty()) {
             if (password === passwordVerify){
                 const newUser = {
-                    id:  (users.length + 1).toString(),
+                    id:  (users.length + 1),
                     name,
                     lastname,
                     userName,
@@ -58,17 +57,18 @@ const validateRegister = (req, res, next) => {
                     passwordVerify: hashSync(passwordVerify,10),
                     gender,
                     image: imageExist(req.file),
-                    birthday,
-                    age,
-                    direction
+                    age:parseInt(req.body.age),
+                    direction,
+                    rol
                 }
+                console.log(newUser)
                 delete newUser.passwordVerify;
                 users.push(newUser)
+                console.log(users)
                 fs.writeFileSync(usersFilePath, JSON.stringify(users));
             }
             else {
                 return res.status(400).json({ message: 'Las contraseñas no coinciden' });
-                //res.render('register', {errors:{msg:'Las contraseñas no coinciden'}});
             }
             
             next()
