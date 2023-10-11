@@ -17,11 +17,12 @@
         <%- include('./partials/header.ejs') %>
 
     </header>
-    <% data.forEach((data) =>{ %>
-    <form action="/products/productCart/<%=data.id%>" method="post">
-    <div class="conteiner-tittle"><%=data.name%></div>
-    <main>
-        
+    <form action="/products/productCart/<%=data.id%>" method="POST" enctype="multipart/form-data">
+        <div class="conteiner-tittle">
+            <%=data.name%>
+        </div>
+        <main>
+
             <nav id="imgs"><img src="/img/<%=data.image%>" alt="<%=data.name%>"></nav>
 
             <div class="conteiner-info-product">
@@ -33,7 +34,7 @@
                 </div>
 
                 <div class="conteiner-detail-product">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="colour"> Seleccione un color</label>
                         <select name="colour" id="colour">
                             <option disabled selected value="">
@@ -44,7 +45,7 @@
                             <option value="beige"> Beige </option>
                             <option value="marron">Marrón</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="size"> Talles </label>
                         <select name="size" id="size">
@@ -64,26 +65,19 @@
                     <p style="color:aliceblue">Cantidad :</p>
                     <div class="conteiner-quantity">
                         <input type="number" placeholder="1" value="1" min="1" class="input-quatity" />
-                        <!--<div class="btn-incremet-decrement">
-                            <i class="fa-solid fa-chevron-up" id="increment"></i>
-                            <i class="fa-solid fa-chevron-down" id="decrement"></i>
-                        </div>-->
                     </div>
                     <button class="btn-add-to-card">
                         <i class="fa-solid fa-plus"></i>
                         Añadir al carrito
                     </button>
-                    <button class="btn-add-to-card">
-                        <i class="fa-solid fa-plus"></i>
-                        <a href="/products/edit/<%=data.id%>">Editar
-                    </button>
-                    <button class="btn-add-to-card">
-                        <i class="fa-solid fa-plus"></i>
-                        <a href="/products/delete/<%=data.id%>">Eliminar
-                    </button>
-
                 </div>
-
+                <button class="btn-add-to-card">
+                    <a href="/products/edit/<%=data.id%>">Editar
+                </button>
+                <form action="/products/delete/:<%=data.id%>?_method=DELETE" method="POST"></form>
+                <button class="btn-add-to-card">
+                    <a href="/products/delete/<%=data.id%>">Eliminar
+                </button>
                 <div class="conteiner-description">
                     <div class="tittle-description">
                         <h4>Descripción</h4>
@@ -128,7 +122,6 @@
 
             </div>
         </main>
-        <%})%>
         <section class="related-product">
             <h2>Productos relacionados</h2>
             <div class="card-list-products">

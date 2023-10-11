@@ -3,71 +3,103 @@
 
 <head>
     <%- include('./partials/head.ejs') %>
-    <title>Formulario de Productos</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/registerStyle.css">
+        <title>Formulario de Productos</title>
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/registerStyle.css">
 </head>
 
 <body>
 
     <%- include('./partials/header') %>
 
-    <main>
-        <div class="form-container">
-            <h2>Formulario de Edición de Productos</h2>
-            <h2 class="producto-edit"> <%=datos.nombre%></h2>
-            <form action="/products/<%=datos.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name">Nombre del Producto:</label>
-                    <input type="text" id="name" name="name" required value="<%=datos.nombre%>">
-                </div>
-                <div class="form-group">
-                    <label for="description">Descripción:</label>
-                    <textarea id="description" name="description" required><%=datos.descripcion%></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="image">Imagen del Producto:</label>
-                    <input type="file" id="image" name="image" required accept="image/*"> 
-                </div>
-                <div class="form-group">
-                    <label for="category">Categoria del Producto:</label>
-                    <input type="text" id="category" name="category" required value="<%=datos.category%>">
-                </div>
-                <div class="form-group">
-                    <label for="colore">Colores del Producto:</label>
-                    <select id="colore">
-                        <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo
-                        </option>
-                        <option value="#00FF00" class="color-option" style="background-color: #00FF00;">Verde
-                        </option>
-                        <option value="#0000FF" class="color-option" style="background-color: #0000FF;">Azul
-                        </option>
-                        <option value="#FFFF00" class="color-option" style="background-color: #FFFF00;">Amarillo
-                        </option>
-                        <option value="#FF00FF" class="color-option" style="background-color: #FF00FF;">Magenta
-                        </option>
-                        <option value="#00FFFF" class="color-option" style="background-color: #00FFFF;">Cian
-                        </option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="price">Precio del Producto:</label>
-                    <input type="number" id="price" name="price" required value="<%=datos.price%>">
-                </div>
-                <div class="form-group">
-                    <button type="submit">Editar Producto</button>
-                </div>
-                <div class="form-group">
-                    <input type="reset" value="Borrar">
-                </div>
-            </form>
-            <form action="/products/<%=datos.id%>?_method=DELETE" method="POST">
-                <button type="submit">Eliminar Producto</button>
-            </form>
-        </div>
-    </main>
-    
-    <%- include('./partials/footer') %>
+        <main>
+            <div class="form-container">
+                <h2>Formulario de Edición de Productos</h2>
+                <h2 class="producto-edit">
+                    <%=datos.nombre%>
+                </h2>
+                <form action="/products/<%=datos.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Nombre del Producto:</label>
+                        <input type="text" id="name" name="name" required value="<%=datos.name%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción:</label>
+                        <textarea id="description" name="description" required><%=datos.description%></textarea>
+                    </div>
+               
+
+                    <div class="form-group">
+                        <label for="category">Categoria del Producto:</label>
+                        <select id="category" value="<%=datos.category%>" name="category" required placeholder="Ingrese Categoria">
+                            <option value="remera" class="color-option">Remera
+                            </option>
+                            <option value="abrigo" class="color-option">Abrigo
+                            </option>
+                            <option value="pantalon" class="color-option">Pantalon
+                            </option>
+                            <option value="accesorio" class="color-option">Accesorio
+                            </option>
+                        </select>
+                    </div>
+                   <!--  <div class="form-group">
+                        <label for="colore">Color del Producto:</label>
+                        <select id="colore" name="colore" required value="<%=datos.colore%>">
+                            <option value="#FF0000" class="color-option" style="background-color: #FF0000;">Rojo
+                            </option>
+                            <option value="#00FF00" class="color-option" style="background-color: #00FF00;">Verde
+                            </option>
+                            <option value="#0000FF" class="color-option" style="background-color: #0000FF;">Azul
+                            </option>
+                            <option value="#FFFF00" class="color-option" style="background-color: #FFFF00;">Amarillo
+                            </option>
+                            <option value="#FF00FF" class="color-option" style="background-color: #FF00FF;">Magenta
+                            </option>
+                            <option value="#00FFFF" class="color-option" style="background-color: #00FFFF;">Cian
+                            </option>
+                        </select>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="price">Precio del Producto:</label>
+                        <input type="number" id="price" value="<%=datos.price%>" name="price" required placeholder="Ingrese Precio del Producto"
+                            min="0"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Cantidad:</label>
+                        <input type="number" value="<%=datos.amount%>" id="amount" name="amount" min="0" required placeholder="Ingrese Cantidad"
+                            min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">Género:</label>
+                        <select id="genre" name="genre" required placeholder="Ingrese Género" value="<%=datos.genre%>">
+                            <option value="mujer" class="color-option">Mujer
+                            </option>
+                            <option value="varon" class="color-option">Varon
+                            </option>
+                            <option value="unisex" class="color-option">Unisex
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="offer">Oferta:</label>Si
+                        <input type="checkbox" id="offer" name="offer" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="discount">Descuento (%):</label>
+                        <input type="number" id="discount" name="discount" value="<%=datos.discount%>" required placeholder="Ingrese Descuento"
+                            min="0" max="100">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Editar Producto</button>
+                    </div>
+                    <div class="form-group">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <%- include('./partials/footer') %>
 </body>
 
 </html>
