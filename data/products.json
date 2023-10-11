@@ -152,6 +152,7 @@
     {
         "id": 11,
         "name": "Pantalon Parachute NAB Black",
+        "price": 31500,
         "description": "Descripción de Pantalon Parachute NAB Black",
         "image": "/pantalonpanchutenabblack-mujer.webp",
         "reverse": "/espaldaid11.webp",
