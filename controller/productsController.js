@@ -14,7 +14,7 @@ const productsController = {
 
     processProductCart: (req,res) => {
         const { id } = req.params;
-        const productId = arrayPrendas.find((prod) => prod.id === id);
+        const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
 
         arrayPrendas[indexProduct] = {
@@ -39,7 +39,7 @@ const productsController = {
     // Delete - Delete one product from DB
     destroy: (req, res) => {
         const { id } = req.params;
-        const productId = arrayPrendas.find((prod) => prod.id === id);
+        const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
 
         arrayPrendas[indexProduct] = {
