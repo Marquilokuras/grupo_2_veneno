@@ -23,6 +23,10 @@ const mainController = {
         res.sendFile(path.resolve(__dirname,'/'))
     },
 
+    redes: (req,res) => {
+        res.render('redes')
+    },
+
 }
 
 module.exports = mainController;
