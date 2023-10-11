@@ -257,13 +257,13 @@
         "id": 18,
         "name": "Bufanda",
         "description": "bufanda",
-        "price": 1000,
-        "image": "1696981168209.jfif",
+        "price": 2100,
+        "image": "1696986814447.jfif",
         "disponibility": true,
         "amount": 23,
         "cartSale": false,
-        "category": "accesorio",
-        "genre": "unisex",
+        "category": "remera",
+        "genre": "mujer",
         "offer": true,
         "discount": 23
     }

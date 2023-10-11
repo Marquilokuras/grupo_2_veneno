@@ -72,11 +72,14 @@ const productsController = {
 
     detail: (req, res) => {
         const { id } = req.params;
-        console.log(arrayPrendas)
-        const IdProducto = arrayPrendas.filter((producto) => producto.id === id);
-        const productosRelacionados = arrayPrendas.find((prod)=> prod.category === IdProducto.category && prod.id !== id);
-        console.log(IdProducto ,  productosRelacionados)
-        res.render('detail', { data: IdProducto , products: productosRelacionados});
+        const numericId = parseInt(id, 10); // Convertir id a número
+        const IdProducto = arrayPrendas.find((producto) => producto.id === numericId);
+        if (!IdProducto) {
+            res.status(404).send("Producto no encontrado");
+            return;
+        }
+        const productosRelacionados = arrayPrendas.filter((prod) => prod.category === IdProducto.category && prod.id !== numericId);
+        res.render('detail', { data: IdProducto, products: productosRelacionados });
     },
 
     store: (req, res) => {
@@ -128,16 +131,15 @@ const productsController = {
             id: productId.id,
             name: req.body.name,
             description: req.body.description,
-            price: req.body.price,
+            price: parseFloat(req.body.price),
             image: ifElse(req.file),
-            reverse: req.body.reverse,
-            disponibility: req.body.disponibility,
-            amount: req.body.amount,
-            cartSale: req.body.cartSale,
+            disponibility: true,
+            amount: parseInt(req.body.amount),
+            cartSale: false,
             category: req.body.category,
             genre: req.body.genre,
-            offer: req.body.offer,
-            discount: req.body.discount
+            offer: req.body.offer !== null ? req.body.offer : false,
+            discount: parseFloat(req.body.discount)
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         //res.send("Se editó el producto");
@@ -148,10 +150,18 @@ const productsController = {
         //const productsReplace = arrayPrendas.filter((prod)=> prod.id != req.params.id);
         //fs.writeFileSync(productsFilePath, JSON.stringify(productsReplace));
         //res.send("Se eliminó el producto");
+        console.log("entro")
         const { id } = req.params;
-        console.log(req.params)
-        const productFind = arrayPrendas.find((prod) => prod.id === id);
-        console.log(productFind)
+        const numericId = parseInt(id, 10); // Convertir id a número
+    
+        const productFind = arrayPrendas.find((prod) => prod.id === numericId);
+    
+        if (!productFind) {
+            // Manejar el caso en que el producto no se encuentra
+            res.status(404).send("Producto no encontrado");
+            return;
+        }
+    
         const indexProduct = arrayPrendas.indexOf(productFind);
         arrayPrendas.splice(indexProduct, 1);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
