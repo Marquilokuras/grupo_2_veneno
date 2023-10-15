@@ -1,10 +1,10 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "User_Product";
+    const alias = "Shopping_Cart";
     const cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true 
         },
         user_id: {
             type: dataTypes.INTEGER,
@@ -19,16 +19,28 @@ module.exports = (sequelize, dataTypes) => {
                 model: Product,
                 key: id
             }
+        },
+        amount: {
+            type: dataTypes.INTEGER,
+        },
+        price: {
+            type: dataTypes.DECIMAL(3,1)
+        },
+        gift: {
+            type: dataTypes.BOOLEAN
+        },
+        address: {
+            type: dataTypes.STRING(255)
         }
     };
     const config = {
-        tableName: "users_products",
+        tableName: "shopping_carts",
         timestamps: false
-    }
+    };
 
-    const UserProduct = sequelize.define(alias,cols,config);
+    const ShoppingCart = sequelize.define(alias,cols,config);
 
     //Faltan las asociaciones
-    
-    return UserProduct;
+
+    return ShoppingCart;
 }
