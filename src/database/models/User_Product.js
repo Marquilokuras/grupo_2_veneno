@@ -19,6 +19,9 @@ module.exports = (sequelize, dataTypes) => {
                 model: Product,
                 key: id
             }
+        },
+        quantity_purchases: {
+            type: dataTypes.INTEGER
         }
     };
     const config = {

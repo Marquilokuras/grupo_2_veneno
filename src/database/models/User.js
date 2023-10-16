@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
         lastname: {
             type: dataTypes.STRING(255)
         },
-        userName: {
+        username: {
             type: dataTypes.STRING(255)
         },
         email: {
