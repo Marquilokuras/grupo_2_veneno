@@ -3,21 +3,21 @@
         "id": 1,
         "name": "Remeron Manifest",
         "description": "Descripción de Remeron Manifest",
-        "price": 18000,
+        "price": 15000,
         "image": "/remeronmanifest-hombre.webp",
         "disponibility": true,
         "amount": 10,
         "cartSale": false,
         "category": "remera",
-        "genre": "hombre",
+        "genre": "varon",
         "offer": true,
-        "discount": 20
+        "discount": 15
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "Remeron Balance",
-        "price": 18000,
         "description": "Descripción de Remeron Balance",
+        "price": 15000,
         "image": "remeronbalance-mujer.webp",
         "disponibility": true,
         "amount": 15,
@@ -25,10 +25,10 @@
         "category": "remera",
         "genre": "mujer",
         "offer": true,
-        "discount": 20
+        "discount": 15
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Buzo Top Essential",
         "price": 42000,
         "description": "Descripción de Buzo Top Essential",
@@ -42,7 +42,7 @@
         "discount": 20
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "Campera Velvet Track",
         "price": 18000,
         "description": "Descripción de Campera Velvet Track",
@@ -57,7 +57,7 @@
         "discount": 20
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Buzo Be Night",
         "price": 48000,
         "description": "Descripción de Buzo Be Night",
@@ -72,7 +72,7 @@
         "discount": 20
     },
     {
-        "id": 7,
+        "id": 6,
         "name": "Campera College Black",
         "price": 54600,
         "description": "Descripción de Campera College Black",
@@ -87,37 +87,34 @@
         "discount": 20
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Pantalon Snaps",
-        "price": 35700,
         "description": "Descripción de Pantalon Snaps",
+        "price": 35700,
         "image": "/pantalonnab-hombre.webp",
-        "reverse": "/espaldaid8.webp",
         "disponibility": true,
         "amount": 14,
         "cartSale": false,
         "category": "pantalon",
-        "genre": "hombre",
+        "genre": "varon",
         "offer": true,
-        "discount": 20
+        "discount": 10
     },
     {
-        "id": 9,
+        "id": 8,
         "name": "Pantalon Track Black",
-        "price": 32500,
         "description": "Descripción de Pantalon Track Black",
+        "price": 32500,
         "image": "/pantalontrackpantblack-mujer.webp",
-        "reverse": "/espaldaid9.webp",
         "disponibility": true,
         "amount": 18,
         "cartSale": false,
         "category": "pantalon",
         "genre": "mujer",
-        "offer": true,
-        "discount": 20
+        "discount": 10
     },
     {
-        "id": 10,
+        "id": 9,
         "name": "Pantalon Carpenter Black",
         "price": 31500,
         "description": "Descripción de Pantalon Carpenter Black",
@@ -132,22 +129,21 @@
         "discount": 20
     },
     {
-        "id": 11,
+        "id": 10,
         "name": "Pantalon Parachute NAB Black",
-        "price": 31500,
         "description": "Descripción de Pantalon Parachute NAB Black",
+        "price": 31500,
         "image": "/pantalonpanchutenabblack-mujer.webp",
-        "reverse": "/espaldaid11.webp",
         "disponibility": true,
         "amount": 11,
         "cartSale": false,
         "category": "pantalon",
         "genre": "mujer",
         "offer": true,
-        "discount": 20
+        "discount": 10
     },
     {
-        "id": 12,
+        "id": 11,
         "name": "Buzo Ninja Hood",
         "price": 52500,
         "description": "Descripción de Buzo Ninja Hood",
@@ -162,7 +158,7 @@
         "discount": 20
     },
     {
-        "id": 13,
+        "id": 12,
         "name": "Buzo College",
         "price": 50000,
         "description": "Descripción de Buzo College",
@@ -177,22 +173,21 @@
         "discount": 20
     },
     {
-        "id": 14,
+        "id": 13,
         "name": "Remeron Not a Brand Wash",
-        "price": 21000,
         "description": "Descripción de Remeron Not a Brand Wash",
+        "price": 21000,
         "image": "/remeronnotabrandwash.webp",
-        "reverse": "/espaldaid14.webp",
         "disponibility": true,
         "amount": 11,
         "cartSale": false,
         "category": "remera",
-        "genre": "hombre",
+        "genre": "varon",
         "offer": true,
-        "discount": 20
+        "discount": 15
     },
     {
-        "id": 15,
+        "id": 14,
         "name": "Campera Track Grey",
         "price": 48000,
         "description": "Descripción de Campera Track Grey",
@@ -207,7 +202,7 @@
         "discount": 20
     },
     {
-        "id": 16,
+        "id": 15,
         "name": "Campera Kongo Black",
         "price": 48000,
         "description": "Descripción de Campera Kong Black",
@@ -222,7 +217,7 @@
         "discount": 20
     },
     {
-        "id": 17,
+        "id": 16,
         "name": "Gorro pescador",
         "description": "Excelente",
         "price": 15000,
@@ -234,5 +229,45 @@
         "genre": "unisex",
         "offer": true,
         "discount": 12
+    },
+    {
+        "id": 17,
+        "name": "Guantes",
+        "description": "sssssssssssssssssssssssssssssssss",
+        "price": 12000,
+        "image": "1697630038338.jpeg",
+        "disponibility": true,
+        "amount": 100,
+        "cartSale": false,
+        "category": "accesorio",
+        "genre": "unisex",
+        "discount": 10
+    },
+    {
+        "id": 18,
+        "name": "Guantes",
+        "description": "ssssssssssssssssssss",
+        "price": 10000,
+        "image": "1697630297181.avif",
+        "disponibility": true,
+        "amount": 100,
+        "cartSale": false,
+        "category": "accesorio",
+        "genre": "unisex",
+        "offer": true,
+        "discount": 12
+    },
+    {
+        "id": 19,
+        "name": "Gorra Essential",
+        "description": "ssssssssssssssssssssssssss",
+        "price": 15000,
+        "image": "1697630569295.webp",
+        "disponibility": true,
+        "amount": 40,
+        "cartSale": false,
+        "category": "accesorio",
+        "genre": "unisex",
+        "discount": 20
     }
 ]

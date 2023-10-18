@@ -77,7 +77,8 @@
                             <img src="img/<%=prenda.image %>" alt="<%=prenda.name%>">
                         </a>
                         <h3 class="desc"> <%=prenda.name %></h3>
-                        <p class="precio">$<%=prenda.price %></p>
+                        <p class="precioDesc">$<%=prenda.price %></p>
+                        <p class="precio-descuento">$<%=prenda.price - ((prenda.discount*prenda.price)/100)%></p>
                         <p class="descuento"><%=prenda.discount%>% de descuento</p>
                         <form action="/products/productCart/<%=prenda.id%>" method="post">
                             <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>

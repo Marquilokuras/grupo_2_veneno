@@ -224,6 +224,8 @@ main .contenedor-de-articulos article{
     border: solid black 3px;
     background-color: #e9e9e9;
     margin: 0 14px 30px;
+    width: 306px;
+    height: 505px;
 }
 main .contenedor-de-articulos article a img{
     width: 300px;
@@ -238,9 +240,15 @@ main .descripcion{
 main .descripcion p{
     font-size: 18px;
 }
-main .descuento{
-    font-size: 15px;
+main .descripcion .descuento{
+    font-size: 16px;
     color:rgb(207, 18, 18);
+}
+main .descripcion .precioDesc{
+    font-size: 14px;
+    color: #a48b80;
+    text-decoration: line-through;
+    text-decoration-color: black;
 }
 main .descripcion .carrito{
     background-color: inherit;

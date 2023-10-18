@@ -8,8 +8,10 @@ const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
 
     renderProductCart: (req, res) => {
-        const prendasCarrito = arrayPrendas.filter((prenda) => prenda.cartSale === true)
-        res.render('productCart', { data: prendasCarrito })
+        const prendasCarrito = arrayPrendas.filter((prenda) => prenda.cartSale === true);
+        const descuento = (prendasCarrito.discount * prendasCarrito.price) / 100;
+        const precioDescuento = prendasCarrito.price - descuento;  
+        res.render('productCart', { data: prendasCarrito, precioDescuento })
     },
 
     processProductCart: (req, res) => {
@@ -83,7 +85,6 @@ const productsController = {
     },
 
     store: (req, res) => {
-        console.log(req.body)
         if (req.body.offer === "true") {
             req.body.offer = true
         }
@@ -118,6 +119,10 @@ const productsController = {
         const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
 
+        if (req.body.offer === "true") {
+            req.body.offer = true
+        }
+        
         const ifElse = (elem) => {
             if (!elem) {
                 return productId.image;
