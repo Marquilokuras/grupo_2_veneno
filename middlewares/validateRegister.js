@@ -9,20 +9,20 @@ const usersFilePath = path.join(__dirname, '..','data','users.json');
 const arrRegister = [
     body('name').notEmpty().withMessage('Debe ingresar su nombre'),
     body('lastname').notEmpty().withMessage('Debe ingresar su apellido'),
-    body('userName').notEmpty().withMessage('Debe ingresar un nombre de usuario'),
+    body('username').notEmpty().withMessage('Debe ingresar un nombre de usuario'),
     body('email').notEmpty().withMessage('Debe ingresar un email').bail().isEmail().withMessage('Debe ingresar un formato de email válido'),
     body('password').notEmpty().withMessage('Debe ingresar una contraseña'),
     body('passwordVerify').notEmpty().withMessage('Debe ingresar la contraseña nuevamente'),
     body('gender').notEmpty().withMessage('Debe seleccionar un género'),
-    body('rol').notEmpty().withMessage('Debe ingresar un rol'),
+    body('role').notEmpty().withMessage('Debe ingresar un rol'),
     body('age').notEmpty().withMessage('Debe ingresar su edad'),
-    body('direction').notEmpty().withMessage('Debe ingresar su domicilio')
+    body('address').notEmpty().withMessage('Debe ingresar su domicilio')
 ];
 
 const validateRegister = (req, res, next) => {
     const errors = validationResult(req);
 
-    const {name, lastname,userName, email, password,passwordVerify, gender, age, direction,rol } = req.body;
+    const {name, lastname,username, email, password,passwordVerify, gender, age, address,role } = req.body;
     const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
     const imageExist = (element) => {
@@ -47,31 +47,32 @@ const validateRegister = (req, res, next) => {
         
         if (errors.isEmpty()) {
             if (password === passwordVerify){
-                const newUser = {
+                next()
+                /*const newUser = {
                     id:  (users.length + 1),
                     name,
                     lastname,
-                    userName,
+                    username,
                     email,
                     password: hashSync(password,10),
                     passwordVerify: hashSync(passwordVerify,10),
                     gender,
                     image: imageExist(req.file),
                     age:parseInt(req.body.age),
-                    direction,
-                    rol
+                    address,
+                    role
                 }
                 console.log(newUser)
                 delete newUser.passwordVerify;
                 users.push(newUser)
                 console.log(users)
-                fs.writeFileSync(usersFilePath, JSON.stringify(users));
+                fs.writeFileSync(usersFilePath, JSON.stringify(users));*/
             }
             else {
                 return res.status(400).json({ message: 'Las contraseñas no coinciden' });
             }
             
-            next()
+            //next()
 
         }
         else {

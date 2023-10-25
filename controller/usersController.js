@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 
 const User = require('../data/users.json')
 const usersFilePath = path.join(__dirname, '..','data','users.json');
+const db = require("../src/database/models");
 
 const usersController = {
     renderLogin : (req, res) => {
@@ -15,7 +16,8 @@ const usersController = {
     },
 
     createUser: async (req,res) => {
-      res.redirect("/users/login");
+        db.User.create(req.body);
+        res.redirect("/users/login");
     },
 
     enterHome : (req, res) => {
