@@ -6,6 +6,11 @@ const {hashSync} = require('bcryptjs');
 const User = require('../data/users.json')
 const usersFilePath = path.join(__dirname, '..','data','users.json');
 
+const db = require('../src/database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const Users = db.User;
+
 const arrRegister = [
     body('name').notEmpty().withMessage('Debe ingresar su nombre'),
     body('lastname').notEmpty().withMessage('Debe ingresar su apellido'),
@@ -66,6 +71,7 @@ const validateRegister = (req, res, next) => {
                 users.push(newUser)
                 console.log(users)
                 fs.writeFileSync(usersFilePath, JSON.stringify(users));
+                Users.create(users);
             }
             else {
                 return res.status(400).json({ message: 'Las contraseñas no coinciden' });

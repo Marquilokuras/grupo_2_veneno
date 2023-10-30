@@ -4,6 +4,7 @@ const { json } = require('express');
 const products = require('../data/products.json');
 const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
 const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../src/database/models'); 
 
 const productsController = {
 
@@ -65,7 +66,10 @@ const productsController = {
     },
 
     products: (req, res) => {
-        res.render('product', { data: arrayPrendas });
+        db.Product.findAll()
+            .then(product => {
+                res.render('product', {product})
+            })
     },
 
     create: (req, res) => {

@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #202020;
+}
+nav{
+    padding-bottom: 5px;
+    border-bottom: solid 1px #ffeced;
+}
+nav a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #fdfdfd;
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+nav a i{
+    color: rgb(145, 209, 7);
+    width: 40px;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+nav img{
+    width: 300px;
+    margin: auto;
+}
+main .section-div-anuncios .div-anuncios{
+    text-align: center;
+    padding-top: 15px;
+}
+main .section-div-anuncios .div-anuncios img{
+    width: 280px;
+}
+main .section-div-anuncios .div-anuncios button{
+    background-color: inherit;
+    border: none;
+}
+main .section-div-anuncios .div-anuncios button i{
+    width: 25px;
+    font-size: 30px;
+}
+
+/* prueba del slider para las imagenes*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: lato;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2 rem;
+}
+
+.slider-frame {
+    width: 400px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+   
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 12s infinite;
+}
+
+.slider-frame li {
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img {
+    width: 100%;
+
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+
+
+
+
+.copyrigth{
+    color: #fdfdfd;
+    font-size: .9rem;
+    text-align: center;
+}
