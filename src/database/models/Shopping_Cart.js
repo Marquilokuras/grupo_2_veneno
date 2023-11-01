@@ -12,6 +12,7 @@ module.exports = (sequelize, dataTypes) => {
                 model: User,
                 key: id
             } */
+
         },
         product_id: {
             type: dataTypes.INTEGER,
