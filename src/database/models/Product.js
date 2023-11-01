@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.STRING(255)
         },
-        disponibility: {
+        availability: {
             type: dataTypes.BOOLEAN
         },
         amount: {
@@ -37,8 +37,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         offer: {
-            type: dataTypes.BIT
-        }
+            type: dataTypes.INTEGER
+        } 
     };
     const config = {
         tableName: "products",

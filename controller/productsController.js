@@ -41,10 +41,11 @@ const productsController = {
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
-        const { id } = req.params;
+        db.Product.destroy({where:{id:req.params.id}}).then(()=>{ res.redirect('/products/productCart')});       
+        /*const { id } = req.params;
         const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
-
+        
         arrayPrendas[indexProduct] = {
             id: productId.id,
             name: productId.name,
@@ -62,7 +63,7 @@ const productsController = {
         }
 
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
-        res.redirect(`/products/productCart`);
+        res.redirect(`/products/productCart`);*/
     },
 
     products: (req, res) => {
@@ -77,22 +78,29 @@ const productsController = {
     },
 
     detail: (req, res) => {
-        const { id } = req.params;
+       /* const { id } = req.params;
         const numericId = parseInt(id, 10); // Convertir id a número
         const IdProducto = arrayPrendas.find((producto) => producto.id === numericId);
         if (!IdProducto) {
             res.status(404).send("Producto no encontrado");
             return;
         }
-        const productosRelacionados = arrayPrendas.filter((prod) => prod.category === IdProducto.category && prod.id !== numericId);
+        const productosRelacionados = arrayPrendas.filter((prod) => prod.category === IdProducto.category && prod.id !== numericId); */
+        db.Product.findByPk(req.params.id)
+        .then(product => {
+        //    db.Product.findAll
+        })
         res.render('detail', { data: IdProducto, products: productosRelacionados });
     },
 
     store: (req, res) => {
         if (req.body.offer === "true") {
-            req.body.offer = true
+            req.body.offer = 1
         }
-        const nuevoProducto = {
+        db.Product.create(req.body)
+        .then( product =>{  
+            res.redirect("/products")});
+        /*const nuevoProducto = {
             id: parseInt(arrayPrendas.length) + 1, // Convierte a número
             name: req.body.name,
             description: req.body.description,
@@ -109,7 +117,7 @@ const productsController = {
         arrayPrendas.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         const nuevoArrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("product", { data: nuevoArrayPrendas });
+        res.render("product", { data: nuevoArrayPrendas }); */
     },
 
     edit: (req, res) => {
