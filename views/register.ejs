@@ -43,12 +43,12 @@
                     <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="userName">Nombre de usuario:</label>
-                    <input type="text" id="userName" name="userName" placeholder="Ingrese un nombre de usuario" value="<%= (locals.old && old.userName) ? old.userName : '' %>">
-                    <%if (locals.errors && errors.userName){%>
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username" placeholder="Ingrese un nombre de usuario" value="<%= (locals.old && old.username) ? old.username : '' %>">
+                    <%if (locals.errors && errors.username){%>
                         <div>
                             <i>
-                                <%=errors.userName.msg%>
+                                <%=errors.username.msg%>
                             </i>
                         </div>
                     <%}%>
@@ -125,27 +125,27 @@
                     <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="direction">Dirección de domicilio:</label>
-                    <input type="text" id="direction" name="direction" placeholder="Ingrese su domicilio" value="<%= (locals.old && old.direction) ? old.direction : '' %>">
-                        <%if (locals.errors && errors.direction){%>
+                    <label for="address">Dirección de domicilio:</label>
+                    <input type="text" id="address" name="address" placeholder="Ingrese su domicilio" value="<%= (locals.old && old.address) ? old.address : '' %>">
+                        <%if (locals.errors && errors.address){%>
                             <div>
                                 <i>
-                                    <%=errors.direction.msg%>
+                                    <%=errors.address.msg%>
                                 </i>
                             </div>
                         <%}%>
                 </div>
                 <div class="form-group">
-                    <label for="rol">Rol:</label>
-                    <select id="rol" name="rol" value="<%= (locals.old && old.rol) ? old.rol : ''%>">
+                    <label for="role">Rol:</label>
+                    <select id="role" name="role" value="<%= (locals.old && old.role) ? old.role : ''%>">
                         <option value="" disabled selected>Selecciona un rol</option>
                         <option value="user">Usuario</option>
                         <option value="admin">Administrador</option>
                     </select>
-                    <%if (locals.errors && errors.rol){%>
+                    <%if (locals.errors && errors.role){%>
                         <div>
                             <i>
-                                <%=errors.rol.msg%>
+                                <%=errors.role.msg%>
                             </i>
                         </div>
                     <%}%>
