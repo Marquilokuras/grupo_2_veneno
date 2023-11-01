@@ -6,7 +6,13 @@ const User = require('../data/users.json')
 const usersFilePath = path.join(__dirname, '..','data','users.json');
 const db = require("../src/database/models");
 
+const db = require('../src/database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const Users = db.User;
+
 const usersController = {
+
     renderLogin : (req, res) => {
         res.render('login');
     },
@@ -16,7 +22,7 @@ const usersController = {
     },
 
     createUser: async (req,res) => {
-        db.User.create(req.body);
+      await db.User.create(req.body)
         res.redirect("/users/login");
     },
 
