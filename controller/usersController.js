@@ -6,7 +6,6 @@ const User = require('../data/users.json')
 const usersFilePath = path.join(__dirname, '..','data','users.json');
 const db = require("../src/database/models");
 
-const db = require('../src/database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const Users = db.User;
