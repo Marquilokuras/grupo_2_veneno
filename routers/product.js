@@ -27,7 +27,6 @@ router.get('/remeras',productController.remeras);
 router.get('/abrigos',productController.abrigos);
 router.get('/pantalones',productController.pantalones);
 router.get('/accesorios',productController.accesorios);
-
 router.get('/', productController.products);                                          //1_ /products (GET) Listado de productos
 router.get('/create',productController.create)                                       //2_ /products/create (GET) Formulario de creacion de productos
 router.get('/:id', productController.detail);                                       //3_ /products/:id (GET) Detalle de un producto particular

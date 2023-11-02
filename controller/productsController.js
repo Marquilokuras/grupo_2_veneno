@@ -27,11 +27,11 @@ const productsController = {
             price: productId.price,
             image: productId.image,
             reverse: productId.reverse,
-            disponibility: productId.disponibility,
+            availibility: productId.disponibility,
             amount: productId.amount,
             cartSale: true,
             category: productId.category,
-            genre: productId.genre,
+            gender: productId.genre,
             offer: productId.offer,
             discount: productId.discount
         }
@@ -73,7 +73,7 @@ const productsController = {
             })
     },
 
-    create: (req, res) => {
+    create: (req, res) => { // Renderiza Formulario de Creacion de Producto
         res.render("create");
     },
 
@@ -97,6 +97,8 @@ const productsController = {
         if (req.body.offer === "true") {
             req.body.offer = 1
         }
+        req.body.image = req.file.filename;
+        console.log(req.body)
         db.Product.create(req.body)
         .then( product =>{  
             res.redirect("/products")});

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head.ejs') %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/home.css">
-    <title>Productos</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/css/home.css">
+        <title>Productos</title>
 </head>
+
 <body>
     <header>
         <%- include('./partials/header.ejs') %>
@@ -13,43 +17,34 @@
     <main>
         <section class="section-articulos-en-exhibicion">
             <div class="contenedor-de-articulos">
-                <% product.forEach((prenda) =>{ %>
-                    <%if(prenda.offer===1){%>
-                        <article>
-                            <div class="descripcion">
-                                <a href="/products/<%=prenda.id%>">
-                                    <img src="/img/<%=prenda.image %>" alt="<%=prenda.name%>">
-                                </a>
-                                <h3 class="desc"> <%=prenda.name %></h3>
-                                <p class="precioDesc">$<%=prenda.price %></p>
-                                <p class="precio-descuento">$<%=prenda.price - ((prenda.discount*prenda.price)/100)%></p>
-                                <p class="descuento"><%=prenda.discount%>% de descuento</p>
-                                <form action="products/productCart/<%=prenda.id%>" method="post">
-                                    <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
-                                </form>
-                                <a class="mas-informacion" href="/products/<%=prenda.id%>">Más información</a>                  
-                            </div>
-                        </article>
-                    <%}%>
-                    <%if(prenda.offer!==true){%>
-                        <article>
-                            <div class="descripcion">
-                                <a href="/products/<%=prenda.id%>">
-                                    <img src="/img/<%=prenda.image %>" alt="<%=prenda.name%>">
-                                </a>
-                                <h3 class="desc"> <%=prenda.name %></h3>
-                                <p class="precio">$<%=prenda.price %></p>
-                                <form action="products/productCart/<%=prenda.id%>" method="post">
-                                    <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
-                                </form>
-                                <a class="mas-informacion" href="/products/<%=prenda.id%>">Más información</a>                  
-                            </div>
-                        </article>
-                    <%}%>
-                <%})%>
+                <% product.forEach((prenda)=>{ %>
+
+                    <article>
+                        <div class="descripcion">
+                            <a href="/products/<%=prenda.id%>">
+                                <img src="/img/<%=prenda.image %>" alt="<%=prenda.name%>">
+                            </a>
+                            <h3 class="desc">
+                                <%=prenda.name %>
+                            </h3>
+                            <p class="precioDesc">$<%=prenda.price %>
+                            </p>
+                            <p class="precio-descuento">$<%=prenda.price - ((prenda.discount*prenda.price)/100)%>
+                            </p>
+                            <p class="descuento">
+                                <%=prenda.discount%>% de descuento
+                            </p>
+                            <form action="products/productCart/<%=prenda.id%>" method="post">
+                                <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                            </form>
+                            <a class="mas-informacion" href="/products/<%=prenda.id%>">Más información</a>
+                        </div>
+                    </article>
+                    <%})%>
             </div>
         </section>
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>
