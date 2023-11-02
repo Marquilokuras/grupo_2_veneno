@@ -30,7 +30,7 @@
                         <span>Precio: $<%=data.price%></span>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
-    
+
                     <div class="conteiner-detail-product">
                         <div class="form-group">
                             <label for="size"> Talles </label>
@@ -47,7 +47,7 @@
                             </select>
                         </div>
                     </div>
-    
+
                     <div class="conteiner-add-cart">
                         <p style="color:aliceblue">Cantidad :</p>
                         <div class="conteiner-quantity">
@@ -57,13 +57,13 @@
                             <i class="fa-solid fa-plus"></i>
                             Añadir al carrito
                         </button>
-                    </div>   
+                    </div>
                 </form>
 
                 <button type="submit" class="btn-add-to-card">
                     <a href="/products/edit/<%=data.id%>">Editar</a>
                 </button>
-                
+
 
                 <form action="/products/delete/<%=data.id%>?_method=DELETE" method="POST">
                     <button type="submit" class="btn-add-to-card">Eliminar</button>
@@ -72,35 +72,30 @@
                 <div class="conteiner-description">
                     <div class="tittle-description">
                         <h4>Descripción</h4>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="text-description hidden">
-                        <p>
+                        <h4>
                             <%=data.description%>
-                        </p>
+                        </h4>
                     </div>
                 </div>
 
                 <div class="conteiner-info-additional">
                     <div class="tittle-info-additional">
-                        <h4>Informacion Adicional</h4>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="text-additional hidden">
-                        <p>--------------</p>
+                        <h4>Categoria</h4>
+                        <h4>
+                            <%=data.category%>
+                        </h4>
                     </div>
                 </div>
-    
+
                 <div class="conteiner-reviews">
                     <div class="tittle-reviews">
-                        <h4>Reseñas</h4>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="text-reviews hidden">
-                        <p>--------------</p>
+                        <h4>Stock</h4>
+                        <h4>
+                            <%=data.amount%>
+                        </h4>
                     </div>
                 </div>
-    
+
                 <div class="conteiner-social">
                     <span>Compartir</span>
                     <div class="conteiner-buttons-social">
@@ -114,33 +109,37 @@
             </div>
         </div>
     </main>
-        <section class="related-product">
-            <h2>Productos relacionados</h2>
-            <div class="card-list-products">
-                <div class="card">
-                    <% products.forEach((prenda)=>{%>
-                        <div class="card-img">
-                            <a href="/products/<%=prenda.id%>">
-                                <img src="/img/<%= prenda.image %>" alt="img/<%= prenda.name %>">
-                            </a>
+    <section class="related-product">
+        <h2>Productos relacionados</h2>
+        <%if(products.length==0){%>
+                <h3 style="color: greenyellow;">No se encuentran productos relacionados</h3>
+            <%}else{%>
+                <div class="card-list-products">
+                    <div class="card">
+                        <% products.forEach((prenda)=>{%>
+                            <div class="card-img">
+                                <a href="/products/<%=prenda.id%>">
+                                    <img src="/img/<%= prenda.image %>" alt="img/<%= prenda.name %>">
+                                </a>
                             </div>
-                        <div class="info-card">
-                            <div class="text-product">
-                                <h3>
-                                    <%=prenda.name%>
-                                </h3>
-                                <P class="category">
-                                    <%=prenda.description%>
-                                </P>
+                            <div class="info-card">
+                                <div class="text-product">
+                                    <h3>
+                                        <%=prenda.name%>
+                                    </h3>
+                                    <P class="category">
+                                        <%=prenda.description%>
+                                    </P>
+                                </div>
                             </div>
-                        </div>
-                        <div class="price">$<%=prenda.price%>
-                        </div>
-                        <%})%>
+                            <div class="price">$<%=prenda.price%>
+                            </div>
+                            <%})%>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- </form>
+                <%}%>
+    </section>
+    <!-- </form>
                         <div id="envio">
                             <p>
                             <h3>¡PAGA HASTA 3 CUOTAS SIN INTERÉS!</h3>
@@ -155,10 +154,10 @@
                 </article>
             </section> -->
 
-        <footer>
-            <%- include('./partials/footer.ejs') %>
+    <footer>
+        <%- include('./partials/footer.ejs') %>
 
-        </footer>
+    </footer>
 
 </body>
 

@@ -4,14 +4,14 @@ const { json } = require('express');
 const products = require('../data/products.json');
 const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
 const arrayPrendas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const db = require('../src/database/models'); 
+const db = require('../src/database/models');
 
 const productsController = {
 
     renderProductCart: (req, res) => {
         const prendasCarrito = arrayPrendas.filter((prenda) => prenda.cartSale === true);
         const descuento = (prendasCarrito.discount * prendasCarrito.price) / 100;
-        const precioDescuento = prendasCarrito.price - descuento;  
+        const precioDescuento = prendasCarrito.price - descuento;
         res.render('productCart', { data: prendasCarrito, precioDescuento })
     },
 
@@ -41,7 +41,7 @@ const productsController = {
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
-        db.Product.destroy({where:{id:req.params.id}}).then(()=>{ res.redirect('/products/productCart')});       
+        db.Product.destroy({ where: { id: req.params.id } }).then(() => { res.redirect('/products/productCart') });
         /*const { id } = req.params;
         const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
@@ -69,7 +69,7 @@ const productsController = {
     products: (req, res) => {
         db.Product.findAll()
             .then(product => {
-                res.render('product', {product})
+                res.render('product', { product })
             })
     },
 
@@ -78,19 +78,27 @@ const productsController = {
     },
 
     detail: (req, res) => {
-       /* const { id } = req.params;
-        const numericId = parseInt(id, 10); // Convertir id a número
-        const IdProducto = arrayPrendas.find((producto) => producto.id === numericId);
-        if (!IdProducto) {
-            res.status(404).send("Producto no encontrado");
-            return;
-        }
-        const productosRelacionados = arrayPrendas.filter((prod) => prod.category === IdProducto.category && prod.id !== numericId); */
+        /* const { id } = req.params;
+         const numericId = parseInt(id, 10); // Convertir id a número
+         const IdProducto = arrayPrendas.find((producto) => producto.id === numericId);
+         if (!IdProducto) {
+             res.status(404).send("Producto no encontrado");
+             return;
+         }
+         const productosRelacionados = arrayPrendas.filter((prod) => prod.category === IdProducto.category && prod.id !== numericId); */
         db.Product.findByPk(req.params.id)
-        .then(product => {
-        //    db.Product.findAll
-        })
-        res.render('detail', { data: IdProducto, products: productosRelacionados });
+            .then(product => {
+                db.Product.findAll({
+                    where: {
+                        category: product.category,
+                        // Excluye el producto actual de la lista de productos relacionados
+                        id: { [db.Sequelize.Op.ne]: product.id }
+                    }
+                })
+                    .then(productosRelacionados => {
+                        res.render('detail', { data: product, products: productosRelacionados });
+                    })
+            })
     },
 
     store: (req, res) => {
@@ -100,8 +108,9 @@ const productsController = {
         req.body.image = req.file.filename;
         console.log(req.body)
         db.Product.create(req.body)
-        .then( product =>{  
-            res.redirect("/products")});
+            .then(product => {
+                res.redirect("/products")
+            });
         /*const nuevoProducto = {
             id: parseInt(arrayPrendas.length) + 1, // Convierte a número
             name: req.body.name,
@@ -123,9 +132,14 @@ const productsController = {
     },
 
     edit: (req, res) => {
-        const { id } = req.params;
-        const productId = arrayPrendas.find((prod) => prod.id == id);
-        res.render("edit", { datos: productId });
+        /*  const { id } = req.params;
+         const productId = arrayPrendas.find((prod) => prod.id == id);
+         res.render("edit", { datos: productId }); */
+
+        db.Product.findByPk(req.params.id)
+            .then(product => {
+                res.render("edit", { datos: product });
+            })
     },
 
     update: (req, res) => {
@@ -136,7 +150,7 @@ const productsController = {
         if (req.body.offer === "true") {
             req.body.offer = true
         }
-        
+
         const ifElse = (elem) => {
             if (!elem) {
                 return productId.image;
@@ -167,7 +181,7 @@ const productsController = {
     delete: (req, res) => {
         console.log("entro")
         const { id } = req.params;
-        const numericId = parseInt(id, 10); 
+        const numericId = parseInt(id, 10);
 
         const productFind = arrayPrendas.find((prod) => prod.id === numericId);
 
@@ -203,7 +217,7 @@ const productsController = {
     },
 
     remeras: (req, res) => {
-        let arrayPrendasRemera= [];
+        let arrayPrendasRemera = [];
         for (let j = 0; j < arrayPrendas.length; j++) {
             if (arrayPrendas[j].category === "remera") {
                 arrayPrendasRemera.push(arrayPrendas[j]);
@@ -215,7 +229,7 @@ const productsController = {
     abrigos: (req, res) => {
         let arrayPrendasAbrigos = [];
         for (let j = 0; j < arrayPrendas.length; j++) {
-            if (arrayPrendas[j].category === "buzo" ||  arrayPrendas[j].category === "campera" ) {
+            if (arrayPrendas[j].category === "buzo" || arrayPrendas[j].category === "campera") {
                 arrayPrendasAbrigos.push(arrayPrendas[j]);
             }
         }
@@ -239,7 +253,7 @@ const productsController = {
                 arrayPrendasAccesorios.push(arrayPrendas[j]);
             }
         }
-        res.render('product', { data: arrayPrendasAccesorios});
+        res.render('product', { data: arrayPrendasAccesorios });
     }
 }
 
