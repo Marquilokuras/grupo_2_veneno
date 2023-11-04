@@ -21,8 +21,7 @@ const usersController = {
     },
 
     createUser: async (req,res) => {
-      await db.User.create(req.body)
-        res.redirect("/users/login");
+      res.redirect("/users/login");
     },
 
     enterHome : (req, res) => {
