@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(30)
         },
         image: {
-            type: dataTypes.TEXT(255)
+            type: dataTypes.STRING(255)
         },
         age: {
             type: dataTypes.INTEGER(100)

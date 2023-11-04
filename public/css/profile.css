@@ -1,0 +1,39 @@
+.profile-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgProfile img {
+    border-radius: 50%;
+    border: 3px solid #9bcf29;
+    width: 250px;
+    text-align: center;
+}
+.btnLogout{
+    color: aliceblue;
+    background-color: #9bcf29;
+    border-style: none;
+    padding: 10px;
+}
+
+h2 {
+    color: aliceblue;
+
+    padding-top: 20px;
+    padding-bottom: 7px;
+
+    border-bottom: solid 1px grey;
+
+}
+
+
+@media screen and (min-width: 768px){
+    .profile-container{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70%;
+
+    }
+    
+}

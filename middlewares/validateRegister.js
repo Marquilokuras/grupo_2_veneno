@@ -21,14 +21,17 @@ const arrRegister = [
     body('gender').notEmpty().withMessage('Debe seleccionar un género'),
     body('role').notEmpty().withMessage('Debe ingresar un rol'),
     body('age').notEmpty().withMessage('Debe ingresar su edad'),
-    body('address').notEmpty().withMessage('Debe ingresar su domicilio')
+    body('address').notEmpty().withMessage('Debe ingresar su domicilio'),
 ];
 
 const validateRegister = (req, res, next) => {
     const errors = validationResult(req);
-
-    const {name, lastname,username, email, password,passwordVerify, gender, age, address,role } = req.body;
+    req.body.image = req.file.filename;
+    
+    const {name, lastname,username, email, password,passwordVerify, gender,image , age, address,role } = req.body;
+    
     const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+    
 
     const imageExist = (element) => {
         if(element){
@@ -38,6 +41,7 @@ const validateRegister = (req, res, next) => {
             return "/img/users/usuario.png";
         }
     }
+    
 
     try {
         for(let i=0;i<users.length;i++){
@@ -49,10 +53,26 @@ const validateRegister = (req, res, next) => {
         /*if (existingUser) {
             res.render('register', {errors:{msg: "Este correo electrónico ya está registrado"},old:req.body});
         }*/
-        
+        console.log(imageExist(req.file))
         if (errors.isEmpty()) {
             if (password === passwordVerify){
                 next()
+                delete passwordVerify;
+                console.log(req.body);
+                db.User.create(
+                    {
+                        name: name,
+                        lastname: lastname,
+                        username: username,
+                        email: email,
+                        password:  hashSync(password,10),
+                        gender: gender,
+                        image: req.body.image,
+                        age: age,
+                        address: address,
+                        role: role
+                    }
+                )
                 /*const newUser = {
                     id:  (users.length + 1),
                     name,

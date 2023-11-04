@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="/css/loginStyles.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/profile.css">
     <title>Mi Perfil</title>
 </head>
 <body>
@@ -13,10 +14,23 @@
         <%- include('./partials/header.ejs') %>
     </header>
     <main>
+        
         <div class="profile-container">
-            <h1>Mi perfil</h1>
+            
+            <div class="imgProfile">
+                <img src="/img/users/<%=user.image%>" alt="<%=user.name%>">
+            </div>
             <div class="profile">
-                <h2><%= user.userName %> </h2>
+                <h2> Nombre de Usuario: <%= user.username %> </h2>
+                <h2> Nombre: <%= user.name %> </h2>
+                <h2> Apellido: <%= user.lastname %> </h2>
+                <h2> Email: <%= user.email %> </h2>
+                <h2> Rol del Usuario: <%= user.role %> </h2>
+            </div>
+            <div class="buton-profile">
+                <form action="/users/logout" method="get">
+                    <button class="btnLogout" type="submit" >Cerrar Sesion</button>
+                </form>
             </div>
         </div>
     </main>
