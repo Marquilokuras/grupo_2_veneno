@@ -179,8 +179,8 @@ const productsController = {
     },
 
     delete: (req, res) => {
-        console.log("entro")
-        const { id } = req.params;
+
+        /* const { id } = req.params;
         const numericId = parseInt(id, 10);
 
         const productFind = arrayPrendas.find((prod) => prod.id === numericId);
@@ -193,7 +193,14 @@ const productsController = {
         const indexProduct = arrayPrendas.indexOf(productFind);
         arrayPrendas.splice(indexProduct, 1);
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
-        res.redirect("/products");
+        res.redirect("/products"); */
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(product => {
+            res.redirect('/products');
+        })
     },
 
     girl: (req, res) => {
