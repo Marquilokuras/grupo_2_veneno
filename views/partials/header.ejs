@@ -11,9 +11,11 @@
         <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/products">Productos</a></li>
-            <% if(locals.isAnUserLogged && locals.userData.role == 'admin') {%>
+            <!--
+                <% if(locals.isAnUserLogged && locals.userData.role == 'admin') {%>
                 <li><a href="/products/create">Crear Productos</a></li>   
             <% } %> 
+                -->
             <li><a href="/products/create">Crear Productos</a></li>  
             <li><a href="/redes">Redes</a></li>
             <li><a href="">Preguntas Frecuentes</a></li>
