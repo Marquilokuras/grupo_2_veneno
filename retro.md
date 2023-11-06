@@ -137,3 +137,35 @@ Lo que deberiamos dejar de hacer:
     * Utilizar dos idomas en la escritura (ingles - español).
 
     * Posponer la modificación de los diseños del sitio web.
+
+Sprint 6:
+
+Lo que hicimos bien:
+
+    * Distribuirnos las tareas con anterioridad.
+
+    * Buena comunicación entre los miembros del equipo para poder llegar a presentar las tareas en tiempo y forma.
+
+    * Apoyo grupal en las tareas faltantes.
+
+    * Arreglar fallos en el sitio y incorporar mas sitios de relleno.
+
+Lo que hicimos mal:
+
+    * No usar constantemente el tablero.
+
+    * No priorizar el CRUD de bd primero.
+
+Lo que deberiamos comenzar a hacer:
+
+    * Mejorar nomenclatura en la escritura de los commits.
+
+    * Utilizar más el weekly para que todos los miembros del equipo observen los avances.
+
+    * Dar mayor interes al tablero de tareas.
+
+Lo que deberiamos dejar de hacer:
+
+    * Utilizar dos idomas en la escritura (ingles - español).
+
+    * Posponer la modificación de los diseños del sitio web.

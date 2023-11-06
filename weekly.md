@@ -131,3 +131,15 @@ Si se encontró algún impedimento:
     
 Qué va hacer hoy:
     # Realizamos el Diagrama Entidad Relación.
+
+Día 06/11/2023 - Marcos Quinteros
+
+Qué hizo ayer.
+    # Arreglar cambios de busqueda en la base de datos de los productos.
+
+Si se encontró algún impedimento: 
+    # No tuve impedimentos.
+    
+Qué va hacer hoy:
+    # Corregir el filtrado por categoria de producto y por genero.
+
