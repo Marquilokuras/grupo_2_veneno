@@ -27,9 +27,15 @@
             <div class="conteiner-info-product">
                 <form action="/products/productCart/<%=data.id%>" method="POST" enctype="multipart/form-data">
                     <div class="conteiner-price">
-                        <span>Precio: $<%=data.price%></span>
+                        <%if(data.offer === 0){%>
+                            <span>Precio: $<%=data.price %></span>
+                        </p>
+                        <%}%>
+                        <% if(data.offer === 1){%>
+                        <span>Precio: $<%=data.price - ((data.discount*data.price)/100)%></span>
                         <i class="fa-solid fa-angle-right"></i>
-                    </div>
+                        <%}%>
+                 </div>
 
                     <div class="conteiner-detail-product">
                         <div class="form-group">
