@@ -18,7 +18,6 @@
         <section class="section-articulos-en-exhibicion">
             <div class="contenedor-de-articulos">
                 <% product.forEach((prenda)=>{ %>
-
                     <article>
                         <div class="descripcion">
                             <a href="/products/<%=prenda.id%>">
@@ -27,6 +26,11 @@
                             <h3 class="desc">
                                 <%=prenda.name %>
                             </h3>
+                            <%if(prenda.offer === 0){%>
+                            <p class="precio">$<%=prenda.price %>
+                            </p>
+                            <%}%>
+                            <% if(prenda.offer === 1){%>
                             <p class="precioDesc">$<%=prenda.price %>
                             </p>
                             <p class="precio-descuento">$<%=prenda.price - ((prenda.discount*prenda.price)/100)%>
@@ -34,6 +38,7 @@
                             <p class="descuento">
                                 <%=prenda.discount%>% de descuento
                             </p>
+                            <%}%>
                             <form action="products/productCart/<%=prenda.id%>" method="post">
                                 <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
                             </form>

@@ -117,6 +117,10 @@ const productsController = {
         if (req.body.offer === "true") {
             req.body.offer = 1
         }
+        else if(req.body.offer === "false"){
+            req.body.offer = 0;
+        };
+
         req.body.image = req.file.filename;
         db.Product.create(req.body)
             .then(product => {
@@ -154,6 +158,21 @@ const productsController = {
     },
 
     update: (req, res) => {
+        if (req.body.offer === "true") {
+            req.body.offer = 1;
+        }
+        else if(req.body.offer === "false"){
+            req.body.offer = 0;
+        };
+
+        db.Product.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        });
+
+        res.redirect("/products/" + req.params.id);
+        /*
         const { id } = req.params;
         const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
@@ -187,6 +206,7 @@ const productsController = {
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
         res.redirect("/products");
+        */
     },
 
     delete: (req, res) => {
