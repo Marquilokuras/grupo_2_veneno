@@ -9,10 +9,22 @@ const db = require('../src/database/models');
 const productsController = {
 
     renderProductCart: (req, res) => {
-        const prendasCarrito = arrayPrendas.filter((prenda) => prenda.cartSale === true);
+       /*  const prendasCarrito = arrayPrendas.filter((prenda) => prenda.cartSale === true);
         const descuento = (prendasCarrito.discount * prendasCarrito.price) / 100;
         const precioDescuento = prendasCarrito.price - descuento;
-        res.render('productCart', { data: prendasCarrito, precioDescuento })
+        res.render('productCart', { data: prendasCarrito, precioDescuento }) */
+        db.Product.findAll()
+        .then(product => {
+            const prendasCarrito = [];
+            for (let i = 0; i < product.length; i++) {
+                if (product[i].cartSale === true) {
+                    prendasCarrito.push(product[i]);
+                }
+            }
+            const descuento = (prendasCarrito.discount * prendasCarrito.price) / 100;
+            const precioDescuento = prendasCarrito.price - descuento;
+            res.render('productCart', { data: prendasCarrito, precioDescuento })
+        })
     },
 
     processProductCart: (req, res) => {
@@ -106,7 +118,6 @@ const productsController = {
             req.body.offer = 1
         }
         req.body.image = req.file.filename;
-        console.log(req.body)
         db.Product.create(req.body)
             .then(product => {
                 res.redirect("/products")
@@ -204,63 +215,123 @@ const productsController = {
     },
 
     girl: (req, res) => {
-        let arrayPrendasMujer = [];
+        /* let arrayPrendasMujer = [];
         for (let i = 0; i < arrayPrendas.length; i++) {
             if (arrayPrendas[i].genre === "mujer") {
                 arrayPrendasMujer.push(arrayPrendas[i]);
             }
         }
-        res.render('product', { data: arrayPrendasMujer });
+        res.render('product', { data: arrayPrendasMujer }); */
+        db.Product.findAll()
+            .then(product => {
+                let arrayPrendasMujer = [];
+                for (let i = 0; i < product.length; i++) {
+                    if (product[i].gender === "mujer") {
+                        arrayPrendasMujer.push(product[i]);
+                    }
+                }
+                res.render('product', { product: arrayPrendasMujer });
+            })
     },
 
     man: (req, res) => {
-        let arrayPrendasHombre = [];
+        /* let arrayPrendasHombre = [];
         for (let j = 0; j < arrayPrendas.length; j++) {
             if (arrayPrendas[j].genre === "hombre") {
                 arrayPrendasHombre.push(arrayPrendas[j]);
             }
         }
-        res.render('product', { data: arrayPrendasHombre });
+        res.render('product', { data: arrayPrendasHombre }); */
+        db.Product.findAll()
+            .then(product => {
+                let arrayPrendasHombre = [];
+                for (let i = 0; i < product.length; i++) {
+                    if (product[i].gender === "hombre") {
+                        arrayPrendasHombre.push(product[i]);
+                    }
+                }
+                res.render('product', { product: arrayPrendasHombre });
+            })
     },
 
     remeras: (req, res) => {
-        let arrayPrendasRemera = [];
+        /* let arrayPrendasRemera = [];
         for (let j = 0; j < arrayPrendas.length; j++) {
             if (arrayPrendas[j].category === "remera") {
                 arrayPrendasRemera.push(arrayPrendas[j]);
             }
         }
-        res.render('product', { data: arrayPrendasRemera });
+        res.render('product', { data: arrayPrendasRemera }); */
+        db.Product.findAll()
+        .then(product => {
+            let arrayPrendasRemera = [];
+            for (let i = 0; i < product.length; i++) {
+                if (product[i].category === "remera") {
+                    arrayPrendasRemera.push(product[i]);
+                }
+            }
+            res.render('product', { product: arrayPrendasRemera });
+        })
     },
 
     abrigos: (req, res) => {
-        let arrayPrendasAbrigos = [];
+        /* let arrayPrendasAbrigos = [];
         for (let j = 0; j < arrayPrendas.length; j++) {
             if (arrayPrendas[j].category === "buzo" || arrayPrendas[j].category === "campera") {
                 arrayPrendasAbrigos.push(arrayPrendas[j]);
             }
         }
-        res.render('product', { data: arrayPrendasAbrigos });
+        res.render('product', { data: arrayPrendasAbrigos }); */
+        db.Product.findAll()
+        .then(product => {
+            let arrayPrendasAbrigos = [];
+            for (let i = 0; i < product.length; i++) {
+                if (product[i].category === "abrigo") {
+                    arrayPrendasAbrigos.push(product[i]);
+                }
+            }
+            res.render('product', { product: arrayPrendasAbrigos });
+        })
     },
 
     pantalones: (req, res) => {
-        let arrayPrendasPantalones = [];
+       /*  let arrayPrendasPantalones = [];
         for (let j = 0; j < arrayPrendas.length; j++) {
             if (arrayPrendas[j].category === "pantalon") {
                 arrayPrendasPantalones.push(arrayPrendas[j]);
             }
         }
-        res.render('product', { data: arrayPrendasPantalones });
+        res.render('product', { data: arrayPrendasPantalones }); */
+        db.Product.findAll()
+        .then(product => {
+            let arrayPrendasPantalones = [];
+            for (let i = 0; i < product.length; i++) {
+                if (product[i].category === "pantalon") {
+                    arrayPrendasPantalones.push(product[i]);
+                }
+            }
+            res.render('product', { product: arrayPrendasPantalones });
+        })
     },
 
     accesorios: (req, res) => {
-        let arrayPrendasAccesorios = [];
+        /* let arrayPrendasAccesorios = [];
         for (let j = 0; j < arrayPrendas.length; j++) {
             if (arrayPrendas[j].category === "accesorio") {
                 arrayPrendasAccesorios.push(arrayPrendas[j]);
             }
         }
-        res.render('product', { data: arrayPrendasAccesorios });
+        res.render('product', { data: arrayPrendasAccesorios }); */
+        db.Product.findAll()
+        .then(product => {
+            let arrayPrendasAccesorios = [];
+            for (let i = 0; i < product.length; i++) {
+                if (product[i].category === "accesorio") {
+                    arrayPrendasAccesorios.push(product[i]);
+                }
+            }
+            res.render('product', { product: arrayPrendasAccesorios });
+        })
     }
 }
 
