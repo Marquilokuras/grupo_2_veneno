@@ -1,0 +1,79 @@
+
+footer{
+    border-top: solid white 1px ;
+}
+footer .div-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 30px;
+}
+footer .div-footer h4{
+    color: rgb(128, 128, 128);
+    margin-bottom: 10px;
+    text-align: center;
+}
+footer .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer .tarjetas h4{
+    text-align: center;
+}
+footer .tarjetas img{
+    width: 40px;
+    height: 25px;
+}
+footer .atajo{
+    display: flex;
+    flex-direction: column;
+}
+footer .atajo h4{
+    text-align: left;
+}
+footer .atajo a{
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color:white;
+    text-decoration: none;
+}
+footer .sede p{
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+footer .seguinos h4{
+    text-align: center; 
+}
+footer .seguinos a i{
+    font-size: 30px;
+}
+footer .seguinos a img{
+    width: 30px;
+    object-fit: cover;
+    margin: 10px 10px;
+}
+footer .redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer .div-copyrigth{
+    margin-top: 30px;
+    text-align: center;
+}
+footer .copyrigth{
+    color: white;
+}
+
+
+
+
+.seguinos img:hover{
+    filter: brightness(160%);
+    transition: 0.3s; 
+}
+.atajo a:hover{
+    color:grey;
+}
