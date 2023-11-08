@@ -1,4 +1,5 @@
 @import "header.css";
+@import "footer.css";
 
 *{
     margin: 0;
@@ -6,71 +7,11 @@
     box-sizing: border-box;
 }
 
-
 body{
     background-color: #202020;
 }
 
-
-/* ----Header---- */
-/*
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-    flex-wrap: wrap;
-}
-.nav-img a img{
-    width: 200px;
-    align-self: flex-start;
-    justify-self: flex-start;
-}
-.nav-secciones{
-    display: flex;
-    flex-direction: row;
-    padding-left: 200px;
-    padding-top: 20px;
-}
-.nav-secciones a{
-    text-decoration: none;
-    list-style-type: none;
-    color: #fdfdfd;
-    font-size: 1rem;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-top: 5px;
-    height: fit-content;
-}
-.nav-search-carrito-usuario{
-    display: flex;
-    flex-direction: row;
-    padding-left: 40px;
-    padding-top: 20px;
-}
-.nav-search-carrito-usuario a i{
-    color: rgb(145, 209, 7);
-    width: 40px;
-    font-size: 23px;
-    text-align: center;
-    margin: 0 5px 0 5px;
-}
-.nav-search-carrito-usuario form input{
-    font-size: 20px;
-    background-color: #ffffff;
-    border: none;
-}
-.nav-search-carrito-usuario form button{
-    border: none;
-    background-color: inherit;
-}
-.nav-search-carrito-usuario form button i{
-    width: 40px;
-    font-size: 23px;
-} */
-
 /* ----Main---- */
-
 
 /* prueba del slider para las imagenes*/
 main .section-div-anuncios{
@@ -113,6 +54,8 @@ main .section-div-anuncios{
 }
 /* prueba del slider para las imagenes*/
 
+
+
 main{
     margin-bottom: 50px;
 }
@@ -135,7 +78,6 @@ main .div-hombre-mujer a img{
     height: 100%;
     object-fit: cover;
 }
-
 
 
 
@@ -178,11 +120,6 @@ main .div-opcion-prendas a{
 
 
 
-
-
-
-
-
 main .div-busqueda{
     display: flex;
     flex-direction: column;
@@ -204,11 +141,6 @@ main .articulos-en-ofertas{
 }
 
 
-
-
-
-
-/*Aquí estoy....*/
 
 main .contenedor-de-articulos{
     margin-top: 100px;
@@ -265,77 +197,6 @@ main .mas-informacion{
 
 
 
-footer{
-    border-top: solid white 1px ;
-}
-footer .div-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 30px;
-}
-footer .div-footer h4{
-    color: rgb(128, 128, 128);
-    margin-bottom: 10px;
-    text-align: center;
-}
-footer .cards{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-footer .tarjetas h4{
-    text-align: center;
-}
-footer .tarjetas img{
-    width: 40px;
-    height: 25px;
-}
-footer .atajo{
-    display: flex;
-    flex-direction: column;
-}
-footer .atajo h4{
-    text-align: left;
-}
-footer .atajo a{
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    color:white;
-    text-decoration: none;
-}
-footer .sede p{
-    color: white;
-    margin-bottom: 15px;
-    text-align: center;
-}
-footer .seguinos h4{
-    text-align: center; 
-}
-footer .seguinos a i{
-    font-size: 30px;
-}
-footer .seguinos a img{
-    width: 30px;
-    object-fit: cover;
-    margin: 10px 10px;
-}
-footer .redes{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-footer .div-copyrigth{
-    margin-top: 30px;
-    text-align: center;
-}
-footer .copyrigth{
-    color: white;
-}
-
-
-
-
 /*Estilos extras*/
 .nav-secciones a:hover{
     color:rgb(145,209,7)
@@ -350,13 +211,6 @@ footer .copyrigth{
 .div-opcion-prendas:hover{
     filter: brightness(150%);
     transition: 0.3s;
-}
-.seguinos img:hover{
-    filter: brightness(160%);
-    transition: 0.3s; 
-}
-.atajo a:hover{
-    color:grey;
 }
 main .contenedor-de-articulos article:hover{
     filter: brightness(115%); 
@@ -409,20 +263,4 @@ Media queries para dispositivos!
         font-size: 2rem;
         letter-spacing: 15px;
     }
-    /*
-    main .div-opcion-prendas{
-        padding: 2px;
-        position: relative;
-    }
-    main .div-opcion-prendas img{
-        width:650px;
-        height: 650px;
-        object-fit: cover;
-        border: solid rgb(252, 239, 239) ;
-    }
-    main .div-remeras a, .div-camperas a, .div-jeans a, .div-accesorios a{
-        text-decoration: none;
-        color:rgb(121, 255, 128);
-    }
-    */
 }
