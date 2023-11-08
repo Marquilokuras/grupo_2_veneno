@@ -201,8 +201,8 @@ main .mas-informacion{
 .nav-secciones a:hover{
     color:rgb(145,209,7)
 }
-.nav-search-carrito-usuario form button i:hover, .nav-search-carrito-usuario a i:hover{
-    filter: brightness(160%);
+.nav-search form button i:hover, .nav-carrito-usuario a i:hover{
+    filter: brightness(130%);
     cursor:pointer;
 }
 .div-hombre-mujer a:hover{
