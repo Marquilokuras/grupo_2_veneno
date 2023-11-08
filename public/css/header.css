@@ -109,11 +109,19 @@ div.burger-menu i{
 
 .nav-carrito-usuario a{
     padding: 0 5px;
-    color: #9bcf29;
 }
 
 .nav-carrito-usuario a i{
+    color: #9bcf29;
     font-size: 20px
+}
+
+.nav-secciones a:hover{
+    color:rgb(145,209,7)
+}
+.nav-search form button i:hover, .nav-carrito-usuario a i:hover{
+    filter: brightness(130%);
+    cursor:pointer;
 }
 
 
