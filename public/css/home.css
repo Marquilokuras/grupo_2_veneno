@@ -14,20 +14,19 @@ body{
 /* ----Main---- */
 
 /* prueba del slider para las imagenes*/
-main .section-div-anuncios{
-    margin-bottom: 100px;
+.section-div-anuncios{
+    margin-top: 10px;
+    margin-bottom: 25px;
     display: none;
 }
 .slider-frame {
     width: 100%;
-    height: auto;
-    margin: 50px auto 0;
+    height: 300px;
     overflow: hidden;
     border:solid black 3px;
 }
 .slider-frame ul {
     display: flex;
-    padding: 0;
     width: 400%;
     animation: slide 12s infinite;
 }
@@ -37,7 +36,8 @@ main .section-div-anuncios{
 }
 .slider-frame img {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    object-fit: fill;
 }
 @keyframes slide {
     0% {margin-left: 0%;}
@@ -55,55 +55,59 @@ main .section-div-anuncios{
 /* prueba del slider para las imagenes*/
 
 
-
 main{
     margin-bottom: 50px;
 }
-main .section-hombre-mujer{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-main .div-hombre-mujer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-main .div-hombre-mujer a{
-    width: 50%;
-}
-main .div-hombre-mujer a img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-
-
-main .section-opcion-prendas{
-    margin-bottom:100px;
+.section-hombre-mujer{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #1c1c1c;
 }
-main .conteiner{
-    width: 100%;
+.div-hombre-mujer{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-main .div-opcion-prendas{
-    width: 100%;
-    height: 100%;
+.div-hombre-mujer a{
+    margin: 5px 0;
+    padding: 0 32px;
+    text-align: center;
+}
+.div-hombre-mujer a img{
+    width: 320px;
+    height: 200px; /*230px*/
+    object-fit: fill; /*fill*/
+    padding: 0 5px;
+}
+
+
+
+.section-opcion-prendas{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: #1c1c1c;
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.div-opcion-prendas{
+    width: 170px;
+    height: 205px;
     margin: 1px 2px;
     position: relative;
 }
-main .div-opcion-prendas img{
+.div-opcion-prendas img{
     width: 100%;
     height: 100%; /*auto*/
     object-fit: cover;
     border: solid rgb(252, 239, 239);
     opacity: 75%;
 }
-main .div-opcion-prendas .prenda{
+.prenda{
     position: absolute;
     top: 0;
     display: flex;
@@ -113,31 +117,35 @@ main .div-opcion-prendas .prenda{
     height: 100%;
     letter-spacing: 2px;
 }
-main .div-opcion-prendas a{
+.div-opcion-prendas a{
     text-decoration: none;
     color:rgb(121, 255, 128);
 }
 
 
 
-main .div-busqueda{
+.div-busqueda{
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 30px 150px;
+    justify-content: center;
+    margin-top: 15px;
 }
-main .resultado-busqueda{
+.resultado-busqueda{
     color:rgb(189, 185, 185);
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
-main .resultado-busqueda-nula{
+.div-busqueda-nula{
+    display: flex;
+}
+/*Falta esto*/
+.resultado-busqueda-nula{
+    font-size: .5rem;
     color:rgb(145,209,7)
 }
-main .articulos-en-ofertas{
-    margin-bottom: -60px;
+/*Falta esto*/
+.articulos-en-ofertas{
     text-align: center;
     color:rgb(189, 185, 185);
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 
@@ -212,6 +220,8 @@ main .mas-informacion{
     filter: brightness(150%);
     transition: 0.3s;
 }
+
+/***** FALTA *****/
 main .contenedor-de-articulos article:hover{
     filter: brightness(115%); 
 }
@@ -222,7 +232,7 @@ main .contenedor-de-articulos article:hover{
     color: rgb(1, 184, 11);
     cursor: pointer;
 }
-main .prenda a:hover{
+.prenda a:hover{
     text-decoration: underline;
 }
 
@@ -232,35 +242,77 @@ Media queries para dispositivos!
 
 /* Estilos para tablets (ancho mínimo 361px) */
 @media screen and (min-width: 768px) {
-    main .section-div-anuncios{
+    .section-div-anuncios{
         display: block;
     }
-    main .section-hombre-mujer{
-        margin-top: 0;
-        margin-bottom: 100px;
+    .div-hombre-mujer a{
+        width: 36%;
+        margin: 0;
+        padding: 0 0;
+        text-align: center;
     }
-    main .div-opcion-prendas{
-        width: 33%;
+    .div-hombre-mujer a img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    .div-opcion-prendas{
+        width: 23%;
+        height: auto;
         margin: 2px 4px;
     }
-}
-
-
-@media screen and (min-width: 920px){
-    main .div-hombre-mujer a{
-        min-width: 25%;
-        max-width: 35%;
+    .div-opcion-prendas img{
+        object-fit: fill;
+    }
+    .prenda{
+        font-size: .9rem;
+        letter-spacing: 8px;
+    }
+    .articulos-en-ofertas{
+        font-size: 1.5rem;
+    }
+    /*.div-busqueda{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 30px 150px;
+    }*/
+    .resultado-busqueda{
+        font-size: 1.5rem;
+    }
+    .resultado-busqueda-nula{
+        font-size: 1rem;
     }
 }
 
-
+                                       
 /* Estilos para desktops (ancho mínimo 769px) */
-@media screen and (min-width: 1024px) {
-    main .div-opcion-prendas{
-        position: relative;
+@media screen and (min-width: 960px) {
+    .prenda{
+        font-size: 1.2rem;
+        letter-spacing: 10px;
     }
-    main .prenda{
-        font-size: 2rem;
-        letter-spacing: 15px;
+    .slider-frame {
+        height: 600px;
     }
-}
+    .slider-frame img {
+        height: 600px;
+    }
+    .articulos-en-ofertas{
+        font-size: 1.8rem;
+    }
+    .div-busqueda{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 30px 30px;
+    }
+    .resultado-busqueda{
+        font-size: 1.8rem;
+    }
+    .resultado-busqueda-nula{
+        font-size: 1.3rem;
+    }
+};
+
+@media screen and (min-width: 1024px) {}
