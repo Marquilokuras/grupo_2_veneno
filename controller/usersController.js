@@ -20,7 +20,12 @@ const usersController = {
         res.render('register');
     },
 
-    createUser: async (req,res) => {
+    createUser:(req,res) => {
+        let fileUsers;
+        db.User.findAll()
+        .then((users) => {
+             fileUsers = users
+        });
       res.redirect("/users/login");
     },
 
