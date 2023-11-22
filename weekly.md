@@ -143,3 +143,15 @@ Si se encontró algún impedimento:
 Qué va hacer hoy:
     # Corregir el filtrado por categoria de producto y por genero.
 
+Día 22/11/2023 - Marcos Quinteros
+
+Qué hizo ayer.
+    # Mergear ramas a la main.
+
+Si se encontró algún impedimento: 
+    # No tuve impedimentos.
+    
+Qué va hacer hoy:
+    # Retrospectiva y división de tareas para el Sprint 8.
+
+

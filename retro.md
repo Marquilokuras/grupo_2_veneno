@@ -169,3 +169,30 @@ Lo que deberiamos dejar de hacer:
     * Utilizar dos idomas en la escritura (ingles - español).
 
     * Posponer la modificación de los diseños del sitio web.
+
+Sprint 7:
+
+Lo que hicimos bien:
+
+    * Distribuirnos las tareas con anterioridad.
+
+    * Rapidez en la realización de las tareas.
+
+    * Arreglar fallos en el sitio.
+
+Lo que hicimos mal:
+
+    * No usar constantemente el tablero.
+
+    * No usar los weekly.
+
+Lo que deberiamos comenzar a hacer:
+
+    * Utilizar más el weekly para que todos los miembros del equipo observen los avances.
+
+    * Dar mayor interes al tablero de tareas.
+
+
+Lo que deberiamos dejar de hacer:
+
+    * Utilizar dos idomas en la escritura (ingles - español).
