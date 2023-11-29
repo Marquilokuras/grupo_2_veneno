@@ -1,0 +1,121 @@
+
+footer{
+    border-top: solid white 1px ;
+}
+
+.div-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas, .atajo, .sede, .seguinos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+h4{
+    /*color: rgb(189, 185, 185);*/
+    color: rgb(205, 248, 111);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cards, .redes {
+    display: flex;
+    flex-direction: row;
+}
+.cards img{
+    width: 32px;
+    height: 20px;
+    margin: 0 2px;
+}
+
+.atajo{
+    text-align: center;
+}
+.atajo a{
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    color: rgb(189, 185, 185);
+    /*color:white;*/
+    text-decoration: none;
+}
+
+.sede{
+    margin: 10px;
+}
+.sede p{
+    /*color: white;*/
+    color: rgb(189, 185, 185);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.seguinos a img{
+    width: 30px;
+    object-fit: cover;
+    margin: 0 15px;
+}
+
+.div-copyrigth{
+    margin-top: 30px;
+    text-align: center;
+}
+.copyrigth{
+    color: white;
+    font-size: 0.8rem;
+}
+
+/* EFECTOS */
+
+.seguinos img:hover{
+    filter: brightness(160%);
+    transition: 0.3s; 
+}
+.atajo a:hover{
+    color:grey;
+}
+
+/**/
+
+
+
+@media screen and (min-width: 900px) {
+    .div-footer{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        margin: 10px 30px;
+    }
+    /*h4{
+        color: rgb(128, 128, 128);
+    }*/
+    .cards img{
+        width: 40px;
+        height: 25px;
+    }
+    /*.atajo h4{
+        text-align: left;
+    }*/
+    .atajo a{
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    .seguinos a img{
+        margin: 10px 10px;
+    }
+
+    .div-copyrigth{
+        text-align: left;
+        /*text-align: center;*/ 
+    }
+    .copyrigth{
+        font-size: 1rem;
+    }
+}

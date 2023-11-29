@@ -1,19 +1,22 @@
 <div class="nav">
-    <div class="burger-menu">
-        <i class="fas fa-bars"></i>
-    </div>
     <div class="nav-img">
         <a href="/">
             <img src="/img/logoVeneno2.png" alt="Logo-Veneno" class="logo">
         </a>
     </div>
+    <div class="burger-menu">
+        <i class="fas fa-bars"></i>
+    </div>
     <div class="nav-secciones">
         <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/products">Productos</a></li>
-            <% if(locals.isAnUserLogged && locals.userData.role == 'admin') {%>
+            <!--
+                <% if(locals.isAnUserLogged && locals.userData.role == 'admin') {%>
                 <li><a href="/products/create">Crear Productos</a></li>   
             <% } %> 
+                -->
+            <li><a href="/products/create">Crear Productos</a></li>  
             <li><a href="/redes">Redes</a></li>
             <li><a href="">Preguntas Frecuentes</a></li>
         </ul>

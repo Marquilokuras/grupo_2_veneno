@@ -12,8 +12,8 @@ const { Op } = require("sequelize");
 const Users = db.User;
 
 const arrRegister = [
-    body('name').notEmpty().withMessage('Debe ingresar su nombre'),
-    body('lastname').notEmpty().withMessage('Debe ingresar su apellido'),
+    body('name').notEmpty().isLength({ min: 2 }).withMessage('Debe ingresar su nombre'),
+    body('lastname').notEmpty().isLength({ min: 2 }).withMessage('Debe ingresar su apellido'),
     body('username').notEmpty().withMessage('Debe ingresar un nombre de usuario'),
     body('email').notEmpty().withMessage('Debe ingresar un email').bail().isEmail().withMessage('Debe ingresar un formato de email válido'),
     body('password').notEmpty().withMessage('Debe ingresar una contraseña'),

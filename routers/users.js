@@ -7,7 +7,7 @@ const upload = require('../middlewares/multer');
 
 /** VALIDACIONES **/
 const { arrRegister, validateRegister } = require('../middlewares/validateRegister');
-const { arrLogin, validateLogin } = require('../middlewares/validateLogin');
+const { arrLogin} = require('../middlewares/validateLogin');
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 /* 
@@ -19,7 +19,7 @@ routerUsers.post('/register', upload.single("image"), arrRegister, validateRegis
 
 routerUsers.get('/login', guestMiddleware, usersController.renderLogin);
 
-routerUsers.post('/login', arrLogin, validateLogin, usersController.enterHome );
+routerUsers.post('/login', arrLogin, usersController.enterHome );
 
 routerUsers.get('/logout', authMiddleware, usersController.logout);
 
