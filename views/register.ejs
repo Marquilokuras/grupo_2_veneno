@@ -18,10 +18,11 @@
     <main>
         <div class="form-container">
             <h2>Formulario de Registro</h2>
-            <form action="/users/register" method="post" enctype="multipart/form-data">
+            <form class="form-register" action="/users/register" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo" value="<%= (locals.old && old.name) ? old.name : '' %>">
+                    <div class="div-name"></div>
                     <%if (locals.errors && errors.name){%>
                         <div>
                             <i>
@@ -33,6 +34,7 @@
                 <div class="form-group">
                     <label for="lastname">Apellido:</label>
                     <input type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido" value="<%= (locals.old && old.lastname) ? old.lastname : '' %>">
+                    <div class="div-lastname"></div>
                     <%if (locals.errors && errors.lastname){%>
                         <div>
                             <i>
@@ -44,6 +46,7 @@
                 <div class="form-group">
                     <label for="username">Nombre de usuario:</label>
                     <input type="text" id="username" name="username" placeholder="Ingrese un nombre de usuario" value="<%= (locals.old && old.username) ? old.username : '' %>">
+                    <div class="div-username"></div>
                     <%if (locals.errors && errors.username){%>
                         <div>
                             <i>
@@ -55,8 +58,9 @@
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Ingrese su email; Ej: mail@gmail.com" value="<%= (locals.old && old.email) ? old.email : '' %>">
+                    <div class="div-email"></div>
                     <%if (locals.errors){%>
-                        <div>
+                        <div class="div-email">
                             <i>
                                 <%=errors.msg%>
                             </i>
@@ -73,6 +77,7 @@
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
                     <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" min="6">
+                    <div class="div-password"></div>
                     <%if (locals.errors && errors.password){%>
                         <div>
                             <i>
@@ -150,7 +155,7 @@
                     <%}%>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Registrarse">
+                    <button type="submit" id="button">Registrarse</button>
                 </div>
                 <div class="form-group">
                     <input type="reset" value="Borrar">
@@ -160,6 +165,7 @@
     </main>
 
     <%- include('./partials/footer') -%>
+    <script src="/js/val-register.js" type="text/javascript"></script>
 </body>
 
 </html>
