@@ -26,7 +26,7 @@ window.addEventListener("load", ()=>{
             descriptionError.innerHTML += "<i> Debe contener al menos 20 caracteres </i>";
         }
         
-        if(error){
+        if(error.length > 0){
             e.preventDefault();
         }
         //Falta imagen.

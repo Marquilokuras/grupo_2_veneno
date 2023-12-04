@@ -25,7 +25,7 @@ window.addEventListener("load",()=>{
             passwordError.innerHTML += "<span> Debe ingresar una contraseña </span>";
         }
         
-        if(error){
+        if(error.length>0){
             e.preventDefault();
         }
     })
