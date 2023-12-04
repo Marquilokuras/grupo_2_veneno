@@ -63,8 +63,7 @@ window.addEventListener("load", ()=>{
 
         } 
 
-        if(error){
-
+        if(error.length > 0){
             e.preventDefault();
         }
     })
