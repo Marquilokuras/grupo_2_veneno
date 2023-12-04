@@ -246,7 +246,8 @@ Media queries para dispositivos!
         display: block;
     }
     .div-hombre-mujer a{
-        width: 36%;
+        width: 34%;
+        height: 350px;
         margin: 0;
         padding: 0 0;
         text-align: center;
@@ -293,10 +294,10 @@ Media queries para dispositivos!
         letter-spacing: 10px;
     }
     .slider-frame {
-        height: 600px;
+        height: 400px;
     }
     .slider-frame img {
-        height: 600px;
+        height: 400px;
     }
     .articulos-en-ofertas{
         font-size: 1.8rem;
