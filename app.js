@@ -7,6 +7,7 @@ const app = express();
 const homeRouter = require('./routers/home');
 const productRouter = require('./routers/product');
 const usersRouter = require('./routers/users');
+const apiMainRouter = require("./routers/api/apiHome");
 
 const loggedMiddleware = require('./middlewares/loggedMiddleware');
 
@@ -37,3 +38,5 @@ app.use('/',homeRouter);
 app.use('/products',productRouter);
 
 app.use('/users', usersRouter);
+
+app.use('/products', apiMainRouter);
