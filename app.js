@@ -8,6 +8,7 @@ const homeRouter = require('./routers/home');
 const productRouter = require('./routers/product');
 const usersRouter = require('./routers/users');
 const apiMainRouter = require("./routers/api/apiHome");
+const cors = require('cors');
 
 const loggedMiddleware = require('./middlewares/loggedMiddleware');
 
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use(logger('dev'));
 app.use(methodOverride('_method'));
 app.use(express.static('./public'));
+app.use(cors());
 app.set('view engine','ejs');
 
 
@@ -39,4 +41,4 @@ app.use('/products',productRouter);
 
 app.use('/users', usersRouter);
 
-app.use('/products', apiMainRouter);
+app.use('/api', apiMainRouter);
