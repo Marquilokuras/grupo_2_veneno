@@ -9,9 +9,24 @@ const productsController = {
                     meta: {
                         status: 200,
                         total: product.length,
-                        url: "/products/api/list"
+                        url: "/products/api/list",
                     },
                     data: product
+                }
+                res.json(result);
+            })
+    },
+
+    userList: (req,res) => {
+        db.User.findAll()
+            .then(user => {
+                let result = {
+                    meta: {
+                        status: 200,
+                        total: user.length,
+                        url: "/api/users/list",
+                    },
+                    data: user
                 }
                 res.json(result);
             })
