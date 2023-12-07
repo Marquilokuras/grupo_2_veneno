@@ -14,22 +14,30 @@ const productsController = {
          const descuento = (prendasCarrito.discount * prendasCarrito.price) / 100;
          const precioDescuento = prendasCarrito.price - descuento;
          res.render('productCart', { data: prendasCarrito, precioDescuento }) */
-        db.Product.findAll()
+        db.Product.findAll({
+            where:{
+                cartSale:'1'
+            }
+        })
             .then(product => {
-                const prendasCarrito = [];
+                /*const prendasCarrito = [];
                 for (let i = 0; i < product.length; i++) {
-                    if (product[i].cartSale === true) {
+                    if (product[i].cartSale == '1') {
                         prendasCarrito.push(product[i]);
                     }
-                }
-                const descuento = (prendasCarrito.discount * prendasCarrito.price) / 100;
-                const precioDescuento = prendasCarrito.price - descuento;
-                res.render('productCart', { data: prendasCarrito, precioDescuento })
+                }*/
+                const descuento = (product.discount * product.price) / 100;
+                const precioDescuento = product.price - descuento;
+                res.render('productCart', { data: product, precioDescuento })
             })
     },
 
     processProductCart: (req, res) => {
-        const { id } = req.params;
+        db.Product.findByPk(req.params.id)
+            .then(product => {
+            })
+            res.redirect(`/products/productCart`);
+        /*const { id } = req.params;
         const productId = arrayPrendas.find((prod) => prod.id == id);
         const indexProduct = arrayPrendas.indexOf(productId);
 
@@ -48,8 +56,7 @@ const productsController = {
             offer: productId.offer,
             discount: productId.discount
         }
-        fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));
-        res.redirect(`/products/productCart`);
+        fs.writeFileSync(productsFilePath, JSON.stringify(arrayPrendas));*/
     },
 
     // Delete - Delete one product from DB
@@ -276,7 +283,7 @@ const productsController = {
             .then(product => {
                 let arrayPrendasHombre = [];
                 for (let i = 0; i < product.length; i++) {
-                    if (product[i].gender === "hombre") {
+                    if (product[i].gender === "varon") {
                         arrayPrendasHombre.push(product[i]);
                     }
                 }
