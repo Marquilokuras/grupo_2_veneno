@@ -30,7 +30,7 @@ const usersController = {
         const error = validationResult(req);
 
         if (error.isEmpty()) {
-            db.User.findOne({
+            Users.findOne({
                 where: {
                     email: req.body.email
                 }
@@ -50,7 +50,8 @@ const usersController = {
                         }, old: req.body
                     })
 
-                }
+                } 
+                
             })
 
         } else {

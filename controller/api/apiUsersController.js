@@ -11,15 +11,15 @@ const usersController = {
                         url: "/api/users/list"
                     },
                     users: user
-                    /*
-                    users: {
+                    
+                    /*users: {
                         id: user.id,
                         name: user.name,
                         email: user.email,
-                        [],
+                        
                         detail: `/api/users/${user.id}`
-                    }
-                    */
+                    }*/
+                    
                 }
                 res.json(result);
             })
