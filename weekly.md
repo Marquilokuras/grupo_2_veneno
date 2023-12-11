@@ -154,4 +154,13 @@ Si se encontró algún impedimento:
 Qué va hacer hoy:
     # Retrospectiva y división de tareas para el Sprint 8.
 
+Día 11/12/2023 - Marcos Quinteros
 
+Qué hizo ayer.
+    # Ver tareas por finalizar.
+
+Si se encontró algún impedimento: 
+    # No tuve impedimentos.
+    
+Qué va hacer hoy:
+    # Colocar la imagenes en el Dashboard de React y ver estilos.

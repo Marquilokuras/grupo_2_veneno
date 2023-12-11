@@ -5,6 +5,7 @@ const usersController = {
         db.User.findAll()
             .then(user => {
                 let result = {
+                    
                     meta: {
                         status: 200,
                         count: user.length,
